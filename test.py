@@ -58,10 +58,10 @@ def nonlinearity(sbox):
     n = 8   # 8-bit S-box
     NLs = []
     for bit in range(n):
-        f = [(y >> bit) & 1 for y in sbox]  # lấy bit-th
+        f = [(y >> bit) & 1 for y in sbox]  
         W = walsh_spectrum(f)
         NL = (1 << (n - 1)) - (np.max(np.abs(W)) // 2)
-        NLs.append(int(NL))  # giữ dạng số nguyên
+        NLs.append(int(NL))  
     return NLs
 
 # SAC
@@ -70,11 +70,11 @@ def sac(sbox):
     counts = np.zeros((n, n), dtype=int)
     total = 1 << n  # 256
 
-    for i in range(n):  # flip từng input bit
+    for i in range(n):  
         mask = 1 << i
         for x in range(total):
             diff = sbox[x] ^ sbox[x ^ mask]
-            for j in range(n):  # xét output bit j
+            for j in range(n):  
                 counts[i, j] += (diff >> j) & 1
 
     sac_full = counts / float(total)
@@ -86,7 +86,7 @@ def bic_sac(sbox):
     total = 1 << n
     values = []
 
-    for i in range(n):  # flip từng input bit
+    for i in range(n):  
         mask = 1 << i
         for x in range(total):
             y1 = sbox[x]
@@ -109,7 +109,6 @@ def bic_nonlinearity(sbox):
 
     for b1 in range(n):
         for b2 in range(b1 + 1, n):
-            # tạo hàm Boolean = XOR của 2 bit output
             f = [((y >> b1) & 1) ^ ((y >> b2) & 1) for y in sbox]
             W = walsh_spectrum(f)
             NL = (1 << (n - 1)) - (np.max(np.abs(W)) // 2)
@@ -118,7 +117,6 @@ def bic_nonlinearity(sbox):
     return sum(results) / len(results)
 
 if __name__ == "__main__":
-    # flatten S-box sau khi transpose
     sbox = [val for row in sbox_matrix for val in row]
 
     # check duplicates
