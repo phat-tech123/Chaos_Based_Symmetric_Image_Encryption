@@ -52,13 +52,3 @@ def sbox_to_key(sbox, key_size=16):
     key_bytes = bytes(sbox[:key_size])
     return key_bytes
 
-
-if __name__ == "__main__":
-
-    A = np.array([[0.0, 1/2, 1/20],
-              [1/3, 0.0, 1/3],
-              [1/20, 1/2, 0.0]], dtype=float)
-
-    seq = chaotic_PRNG(A)
-    sbox = build_sbox(seq)
-    print_sbox(sbox)
