@@ -90,13 +90,13 @@ if __name__ == "__main__":
                   [1/3, 0.0, 1/3],
                   [1/20, 1/2, 0.0]], dtype=float)
 
-    seq = chaotic_PRNG(A)
+    seq = chaotic_PRNG(A, 2100, 150)
     sbox = build_sbox(seq)
     print_sbox(sbox)
     # check duplicates
     cnt = Counter(sbox)
     dupes = [val for val, c in cnt.items() if c > 1]
-    print("Số phần tử trùng:", len(dupes))
+    print("\nthe number of duplicate element:", len(dupes))
 
     print("\n                      EVALUATION                           \n")
 
@@ -118,7 +118,7 @@ if __name__ == "__main__":
     print("SAC max, min, average: {:.4f} {:.4f} {:.4f}".format(
         np.max(sac_full), np.min(sac_full), np.mean(sac_full)
     ))
-    print("SAC matrix (rounded):")
+    print("SAC matrix:")
     print(np.round(sac_full, 4))
     print("=========================== SAC ===========================\n\n")
 
