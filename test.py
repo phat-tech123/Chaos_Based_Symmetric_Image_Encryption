@@ -1,7 +1,7 @@
 import numpy as np
 import itertools
 from collections import Counter
-
+from s_box_generation.py import  
 
 # Tạo S-box từ bảng hex (16x16)
 

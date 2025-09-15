@@ -7,6 +7,22 @@ def extract_digits(x, pos=[3,4,5]):
     digits = "".join(s[p-1] for p in pos)  # pos tính từ 1
     return int(digits)
 
+# Hàm nghịch đảo trong GF(2^8) với đa thức AES (0x11B)
+def gf_inverse(x):
+    if x == 0:
+        return 0
+    a, m = x, 0x11B
+    u, v = 1, 0
+    while a > 1:
+        shift = a.bit_length() - m.bit_length()
+        if shift >= 0:
+            a ^= m << shift
+            u ^= v << shift
+        else:
+            a, m = m, a
+            u, v = v, u
+    return u & 0xFF
+
 # Tạo S-Box (256 phần tử)
 def build_sbox(seq, needed=256):
     sbox = []
@@ -16,8 +32,7 @@ def build_sbox(seq, needed=256):
         D2 = extract_digits(x2)
         D3 = extract_digits(x3)
         M1, M2, M3 = D1 % 256, D2 % 256, D3 % 256
-        V = (M1 ^ M2 ^ M3) % 256  # WRONG IN STEP 6
-        #V = (M1 ^ M2 ^ M3) >> 1
+        V = gf_inverse(M1 ^ M2 ^ M3)
         if V not in seen:
             seen.add(V)
             sbox.append(V)
