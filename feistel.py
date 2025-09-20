@@ -5,13 +5,11 @@ import random
 from PRNG import chaotic_PRNG
 from s_box_generation import build_sbox, print_sbox
 
-# ======================= CẤU HÌNH =======================
 BLOCK_SIZE = 32
 HALF = BLOCK_SIZE // 2
 ROUNDS = 5
 KEY_SIZE = 16
 
-# ======================= HÀM HỖ TRỢ =======================
 def xtime(x): return ((x << 1) ^ 0x1B) & 0xFF if x & 0x80 else (x << 1) & 0xFF
 def mul2(x): return xtime(x)
 def mul3(x): return xtime(x) ^ x
@@ -106,25 +104,20 @@ if __name__ == "__main__":
     sbox = build_sbox(seq)
     print_sbox(sbox)
 
-    # 2. Load ảnh grayscale
     img = Image.open("input_image.png").convert("L")
     img_array = np.array(img, dtype=np.uint8)
     plaintext = img_array.flatten().tolist()
 
-    # 3. Round keys
     main_key = [0x2A,0x7E,0x15,0x16,0x28,0xAE,0xD2,0xA6,
                 0xAB,0xF7,0x15,0x88,0x09,0xCF,0x4F,0x3C]
     roundKeys = generate_subkeys(main_key, sbox)
 
-    # 4. IV
     random.seed(42)
     iv = [random.randint(0,255) for _ in range(BLOCK_SIZE)]
 
-    # 5. Mã hóa & giải mã
     ciphertext = feistel_encrypt_cbc(plaintext, roundKeys, iv, sbox)
     decrypted = feistel_decrypt_cbc(ciphertext, roundKeys, iv, sbox)
 
-    # 6. Hiển thị ảnh
     cipher_img = np.array(ciphertext[:img_array.size], dtype=np.uint8).reshape(img_array.shape)
     decrypted_img = np.array(decrypted[:img_array.size], dtype=np.uint8).reshape(img_array.shape)
 
