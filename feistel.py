@@ -10,9 +10,14 @@ HALF = BLOCK_SIZE // 2
 ROUNDS = 5
 KEY_SIZE = 16
 
-def xtime(x): return ((x << 1) ^ 0x1B) & 0xFF if x & 0x80 else (x << 1) & 0xFF
-def mul2(x): return xtime(x)
-def mul3(x): return xtime(x) ^ x
+def xtime(x): 
+    return ((x << 1) ^ 0x1B) & 0xFF if x & 0x80 else (x << 1) & 0xFF
+
+def mul2(x): 
+    return xtime(x)
+
+def mul3(x): 
+    return xtime(x) ^ x
 
 def SubBytes(state, sbox):
     for r in range(4):
@@ -123,6 +128,8 @@ if __name__ == "__main__":
     cipher_img = np.array(ciphertext[:img_array.size], dtype=np.uint8).reshape(img_array.shape)
     decrypted_img = np.array(decrypted[:img_array.size], dtype=np.uint8).reshape(img_array.shape)
 
+    print("PASS" if plaintext == decrypted[:len(plaintext)] else "FAIL")
+
     plt.figure(figsize=(15,5))
 
     plt.subplot(1,3,1)
@@ -141,6 +148,4 @@ if __name__ == "__main__":
     plt.axis('off')
 
     plt.show()
-    # 7. Kiểm tra
-    print("PASS" if plaintext == decrypted[:len(plaintext)] else "FAIL")
 
