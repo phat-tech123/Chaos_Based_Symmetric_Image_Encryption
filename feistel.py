@@ -65,10 +65,10 @@ def pad_data(data):
     pad_len = (-len(data)) % BLOCK_SIZE
     return data + [0]*pad_len
 
-def feistel_encrypt_cbc(plaintext, roundKeys, iv, sbox):
+def feistel_encrypt_cbc(plaintext, roundKeys, init_vector, sbox):
     plaintext = pad_data(plaintext)
     ciphertext = []
-    prev_block = iv[:]
+    prev_block = init_vector[:]
     for i in range(0, len(plaintext), BLOCK_SIZE):
         block = [plaintext[i+j] ^ prev_block[j] for j in range(BLOCK_SIZE)]
         block = feistel_encrypt(block, roundKeys, sbox)
@@ -76,9 +76,9 @@ def feistel_encrypt_cbc(plaintext, roundKeys, iv, sbox):
         prev_block = block[:]
     return ciphertext
 
-def feistel_decrypt_cbc(ciphertext, roundKeys, iv, sbox):
+def feistel_decrypt_cbc(ciphertext, roundKeys, init_vector, sbox):
     plaintext = []
-    prev_block = iv[:]
+    prev_block = init_vector[:]
     for i in range(0, len(ciphertext), BLOCK_SIZE):
         block = feistel_decrypt(ciphertext[i:i+BLOCK_SIZE], roundKeys, sbox)
         block = [block[j] ^ prev_block[j] for j in range(BLOCK_SIZE)]
@@ -112,11 +112,13 @@ if __name__ == "__main__":
                 0xAB,0xF7,0x15,0x88,0x09,0xCF,0x4F,0x3C]
     roundKeys = generate_subkeys(main_key, sbox)
 
-    random.seed(42)
-    iv = [random.randint(0,255) for _ in range(BLOCK_SIZE)]
+    init_vector = [0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,
+                   0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F,
+                   0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17,
+                   0x18, 0x19, 0x1A, 0x1B, 0x1C, 0x1D, 0x1E, 0x1F]
 
-    ciphertext = feistel_encrypt_cbc(plaintext, roundKeys, iv, sbox)
-    decrypted = feistel_decrypt_cbc(ciphertext, roundKeys, iv, sbox)
+    ciphertext = feistel_encrypt_cbc(plaintext, roundKeys, init_vector, sbox)
+    decrypted = feistel_decrypt_cbc(ciphertext, roundKeys, init_vector, sbox)
 
     cipher_img = np.array(ciphertext[:img_array.size], dtype=np.uint8).reshape(img_array.shape)
     decrypted_img = np.array(decrypted[:img_array.size], dtype=np.uint8).reshape(img_array.shape)
