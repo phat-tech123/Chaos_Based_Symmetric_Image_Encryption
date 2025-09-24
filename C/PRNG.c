@@ -101,7 +101,7 @@ void chaotic_PRNG(double A[3][3], int sample, int N, double epsilon, double x0[3
 	// sigma + err
 	double err = 0.1;
 	double sigma = fmax(3 * norm_inf_manual, sqrt(norm_inf_manual + 1.0)+1.0) + err;
-	printf("%.10f\n", sigma);
+	//printf("%.10f\n", sigma);
 
 	//init
 	double x[3];
@@ -134,6 +134,8 @@ void chaotic_PRNG(double A[3][3], int sample, int N, double epsilon, double x0[3
 }
 
 
+// ------- Main -------
+/*
 int main() {
     double A[3][3] = {
         {0.0, 1.0/2, 1.0/20},
@@ -141,17 +143,33 @@ int main() {
         {1.0/20, 1.0/2, 0.0}
     };
 
-    int sample = 200;
+    int sample = 2000;
     int N = 100;
-    double x0[3] = {0.1, 0.01, 0.0};
-    double seq[sample][3];
 
-    chaotic_PRNG(A, sample, N, 0.05, x0, seq);
+    double seq1[sample][3];
+    double seq2[sample][3];
 
-    printf("Generated sequences:\n");
+    double x0_1[3] = {0.1, 0.01, 0.0};
+    double x0_2[3] = {0.10000001, 0.01, 0.0};
+
+    chaotic_PRNG(A, sample, N, 0.05, x0_1, seq1);
+    chaotic_PRNG(A, sample, N, 0.05, x0_2, seq2);
+
+    // Xuất file 1
+    FILE *f1 = fopen("output1.csv", "w");
     for (int i = 0; i < sample; i++) {
-        printf("%f %f %f\n", seq[i][0], seq[i][1], seq[i][2]);
+        fprintf(f1, "%f,%f,%f\n", seq1[i][0], seq1[i][1], seq1[i][2]);
     }
+    fclose(f1);
+
+    // Xuất file 2
+    FILE *f2 = fopen("output2.csv", "w");
+    for (int i = 0; i < sample; i++) {
+        fprintf(f2, "%f,%f,%f\n", seq2[i][0], seq2[i][1], seq2[i][2]);
+    }
+    fclose(f2);
+
+    printf("----------------- DONE -------------------\n");
     return 0;
 }
-
+*/
