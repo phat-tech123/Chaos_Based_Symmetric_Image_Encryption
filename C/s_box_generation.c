@@ -60,7 +60,7 @@ void build_sbox(/* Chaotic system parameterss */ 	double A[3][3], int sample, in
 }
 
 // Lưu S-Box ra CSV
-void save_sbox_csv(int *sbox, int len, const char *path) {
+void save_sbox_csv(unsigned char *sbox, int len, const char *path) {
     FILE *f = fopen(path, "w");
     if (!f) {
         printf("Không mở được file %s\n", path);
@@ -100,6 +100,7 @@ void sbox_to_key(int *sbox, unsigned char *key, int key_size) {
     }
 }
 
+/*
 int main() {
     double A[3][3] = {
         {0.0, 1.0/2, 1.0/20},
@@ -113,10 +114,11 @@ int main() {
 
     unsigned char sbox[256];
     build_sbox(A, sample, N, 0.05, x0, sbox);
+    save_sbox_csv(sbox, 256, "./../outputsFromC/sbox.csv");
 
     print_sbox(sbox, 256);
 
 
     return 0;
 }
-
+*/

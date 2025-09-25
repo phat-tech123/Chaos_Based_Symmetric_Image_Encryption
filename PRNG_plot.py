@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Đọc dữ liệu
-seq1 = np.loadtxt("output1.csv", delimiter=",")
-seq2 = np.loadtxt("output2.csv", delimiter=",")
+seq1 = np.loadtxt("./outputsFromC/output1.csv", delimiter=",")
+seq2 = np.loadtxt("./outputsFromC/output2.csv", delimiter=",")
 
 # --------- Figure 3: Allure of the state variables ---------
 fig, axes = plt.subplots(3, 1, figsize=(10, 6), sharex=True)

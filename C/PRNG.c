@@ -156,14 +156,14 @@ int main() {
     chaotic_PRNG(A, sample, N, 0.05, x0_2, seq2);
 
     // Xuất file 1
-    FILE *f1 = fopen("output1.csv", "w");
+    FILE *f1 = fopen("./../outputsFromC/output1.csv", "w");
     for (int i = 0; i < sample; i++) {
         fprintf(f1, "%f,%f,%f\n", seq1[i][0], seq1[i][1], seq1[i][2]);
     }
     fclose(f1);
 
     // Xuất file 2
-    FILE *f2 = fopen("output2.csv", "w");
+    FILE *f2 = fopen("./../outputsFromC/output2.csv", "w");
     for (int i = 0; i < sample; i++) {
         fprintf(f2, "%f,%f,%f\n", seq2[i][0], seq2[i][1], seq2[i][2]);
     }

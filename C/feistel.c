@@ -2,14 +2,16 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include "s_box_generation.c"
 
-#define BLOCK_SIZE 32   // 256 bit
-#define HALF (BLOCK_SIZE/2) // 16 byte
-#define ROUNDS 16
+#define BLOCK_SIZE 32   	// 256 bit 
+#define HALF (BLOCK_SIZE/2) 	// 16 byte
+#define ROUNDS 5
 #define KEY_SIZE 16
-#define IMAGE_SIZE 256
+#define IMAGE_SIZE 65536 	//256x256 image
 
 // AES S-box
+/*
 static const unsigned char sbox[256] = {
     0x63,0x7c,0x77,0x7b,0xf2,0x6b,0x6f,0xc5,0x30,0x01,0x67,0x2b,0xfe,0xd7,0xab,0x76,
     0xca,0x82,0xc9,0x7d,0xfa,0x59,0x47,0xf0,0xad,0xd4,0xa2,0xaf,0x9c,0xa4,0x72,0xc0,
@@ -28,6 +30,11 @@ static const unsigned char sbox[256] = {
     0xe1,0xf8,0x98,0x11,0x69,0xd9,0x8e,0x94,0x9b,0x1e,0x87,0xe9,0xce,0x55,0x28,0xdf,
     0x8c,0xa1,0x89,0x0d,0xbf,0xe6,0x42,0x68,0x41,0x99,0x2d,0x0f,0xb0,0x54,0xbb,0x16
 };
+*/
+
+unsigned char sbox[256];
+
+
 // ======================= CÁC HÀM PHỤ =======================
 void copy_bytes(unsigned char *dest, const unsigned char *src, int n) {
     for (int i = 0; i < n; i++) {
@@ -186,45 +193,122 @@ void generate_subkeys(unsigned char *main_key, unsigned char roundKeys[ROUNDS][K
 void print_block(unsigned char *block, int size) {
     for (int i = 0; i < size; i++) {
         printf("%02X ", block[i]);
+
+        if ((i + 1) % 16 == 0) {
+            printf("\n");
+        }
     }
-    printf("\n");
+
+    if (size % 16 != 0) {
+        printf("\n");
+    }
+}
+
+
+void save_to_csv(const char *filename, unsigned char *data, int len, int row_len) {
+    FILE *f = fopen(filename, "w");
+    if (!f) {
+        perror("Cannot open file");
+        return;
+    }
+
+    for (int i = 0; i < len; i++) {
+        fprintf(f, "%d", data[i]);
+        if ((i + 1) % row_len == 0)
+            fprintf(f, "\n");
+        else
+            fprintf(f, ",");
+    }
+
+    fclose(f);
 }
 
 // ======================= MAIN =======================
 int main() {
-    unsigned char main_key[KEY_SIZE] = {
-        0x2A, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6,
-        0xAB, 0xF7, 0x15, 0x88, 0x09, 0xCF, 0x4F, 0x3C
-    };
+    	double A[3][3] = {
+        	{0.0, 1.0/2, 1.0/20},
+        	{1.0/3, 0.0, 1.0/3},
+        	{1.0/20, 1.0/2, 0.0}
+    	};
+    	int sample = 2000;
+    	int N = 100;
+    	double seq[sample][3];
+    	double x0[3] = {0.1, 0.01, 0.0};
 
-    // sinh roundKeys (ở đây lặp lại main_key cho đơn giản)
-    unsigned char roundKeys[ROUNDS][KEY_SIZE];
-    generate_subkeys(main_key, roundKeys);
+    	unsigned char sbox[256];
+    	build_sbox(A, sample, N, 0.05, x0, sbox);
 
-    // Dữ liệu giả lập 256 byte
-    unsigned char plaintext[IMAGE_SIZE];
-    for (int i = 0; i < IMAGE_SIZE; i++) plaintext[i] = (unsigned char)i;
+    	print_sbox(sbox, 256);
 
-    unsigned char ciphertext[IMAGE_SIZE];
-    unsigned char decrypted[IMAGE_SIZE];
 
-    // IV ngẫu nhiên
-    unsigned char iv[BLOCK_SIZE];
-    srand(time(NULL));
-    for (int i = 0; i < BLOCK_SIZE; i++) iv[i] = rand() % 256;
+	//unsigned char plaintext[IMAGE_SIZE];
+	unsigned char *plaintext = (unsigned char*) malloc(IMAGE_SIZE);
+	if(!plaintext) { perror("malloc"); return 1; }
 
-    printf("Main key:\n"); print_block(main_key, KEY_SIZE);
-    printf("IV:\n"); print_block(iv, BLOCK_SIZE);
+	FILE *f = fopen("image.csv", "r");
+	if (!f) {
+		perror("Cannot open CSV file");
+		return 1;
+	}
 
-    feistel_encrypt_cbc(plaintext, ciphertext, IMAGE_SIZE, roundKeys, iv);
-    printf("Ciphertext:\n"); print_block(ciphertext, 256);
+	for (int i = 0; i < IMAGE_SIZE; i++) {
+		int val;
+		if (fscanf(f, "%d,", &val) != 1) {
+			fprintf(stderr, "Error reading CSV at index %d\n", i);
+		    	fclose(f);
+		    	return 1;
+		}
+		plaintext[i] = (unsigned char)val;
+	    }
+	fclose(f);
+	
+	/*
+	printf("\n\n--------------  CHECK THE FIRST 16 PIXEL PLAINTEXT -----------------\n\n");
+	for (int i = 0; i < 256; i++) {
+        	printf("%02X ", plaintext[i]);
+    	}
+    	printf("\n");
 
-    feistel_decrypt_cbc(ciphertext, decrypted, IMAGE_SIZE, roundKeys, iv);
-    printf("Decrypted:\n"); print_block(decrypted, 256);
-    if (memcmp(plaintext, decrypted, IMAGE_SIZE) == 0) {
-        printf("PASS: Decrypted == Plaintext\n");
-    } else {
-        printf("FAIL: Decrypted != Plaintext\n");
-    }
-    return 0;
+    	return 0;
+	*/
+
+    	unsigned char main_key[KEY_SIZE] = {
+        	0x2A, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6,
+        	0xAB, 0xF7, 0x15, 0x88, 0x09, 0xCF, 0x4F, 0x3C
+    	};
+
+    	// sinh roundKeys (ở đây lặp lại main_key cho đơn giản)
+	unsigned char roundKeys[ROUNDS][KEY_SIZE];
+	generate_subkeys(main_key, roundKeys);
+
+    	unsigned char ciphertext[IMAGE_SIZE];
+    	unsigned char decrypted[IMAGE_SIZE];
+
+	// IV ngẫu nhiên
+	unsigned char iv[BLOCK_SIZE];
+	srand(time(NULL));
+	for (int i = 0; i < BLOCK_SIZE; i++) iv[i] = rand() % 256;
+
+	printf("Main key:\n"); print_block(main_key, KEY_SIZE);
+	printf("IV:\n"); print_block(iv, BLOCK_SIZE);
+
+	feistel_encrypt_cbc(plaintext, ciphertext, IMAGE_SIZE, roundKeys, iv);
+	save_to_csv("./../outputsFromC/ciphertext.csv", ciphertext, IMAGE_SIZE, 256);
+	//printf("Ciphertext:\n"); print_block(ciphertext, 256);
+
+	feistel_decrypt_cbc(ciphertext, decrypted, IMAGE_SIZE, roundKeys, iv);
+	save_to_csv("./../outputsFromC/decrypted.csv", decrypted, IMAGE_SIZE, 256);
+	//printf("Decrypted:\n"); print_block(decrypted, 256);
+	
+
+	// CHECK FINAL RESULT
+	if (memcmp(plaintext, decrypted, IMAGE_SIZE) == 0) {
+	printf("PASS: Decrypted == Plaintext\n");
+	} else {
+	printf("FAIL: Decrypted != Plaintext\n");
+	}
+
+	free(plaintext);
+	return 0;
+
 }

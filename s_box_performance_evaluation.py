@@ -2,6 +2,7 @@ from s_box_generation import build_sbox
 from s_box_generation import print_sbox
 from PRNG import chaotic_PRNG
 import numpy as np
+import pandas as pd
 import itertools
 from collections import Counter
 
@@ -86,12 +87,13 @@ def bic_nonlinearity(sbox):
 
 
 if __name__ == "__main__":
-    A = np.array([[0.0, 1/2, 1/20],
-                  [1/3, 0.0, 1/3],
-                  [1/20, 1/2, 0.0]], dtype=float)
 
-    seq = chaotic_PRNG(A, 2100, 150)
-    sbox = build_sbox(seq)
+
+    df = pd.read_csv("./outputsFromC/sbox.csv", header=None)
+
+    sbox = df.to_numpy().astype(int)
+    sbox = sbox.flatten()
+
     print_sbox(sbox)
     # check duplicates
     cnt = Counter(sbox)
