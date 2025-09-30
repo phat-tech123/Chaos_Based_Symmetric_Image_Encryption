@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 # Mở ảnh grayscale 256x256
-img = Image.open("./man.png").convert("L")  # "L" = grayscale 8-bit
+img = Image.open("./input_image.png").convert("L")  # "L" = grayscale 8-bit
 
 print("original size to check 256x256:", img.size)
 

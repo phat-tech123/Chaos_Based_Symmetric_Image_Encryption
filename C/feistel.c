@@ -9,6 +9,7 @@
 #define ROUNDS 5
 #define KEY_SIZE 16
 #define IMAGE_SIZE 65536 	//256x256 image
+//#define IMAGE_SIZE 66564 	//258x258 image
 
 // AES S-box
 /*
@@ -262,16 +263,6 @@ int main() {
 	    }
 	fclose(f);
 	
-	/*
-	printf("\n\n--------------  CHECK THE FIRST 16 PIXEL PLAINTEXT -----------------\n\n");
-	for (int i = 0; i < 256; i++) {
-        	printf("%02X ", plaintext[i]);
-    	}
-    	printf("\n");
-
-    	return 0;
-	*/
-
     	unsigned char main_key[KEY_SIZE] = {
         	0x2A, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6,
         	0xAB, 0xF7, 0x15, 0x88, 0x09, 0xCF, 0x4F, 0x3C
