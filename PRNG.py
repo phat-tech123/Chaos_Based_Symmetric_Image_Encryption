@@ -13,7 +13,7 @@ def phi_eps(x, eps=0.05):
 # sample:   The number of sample we need for generating S-box
 # x0:       Initial vector of state variables
 # N :       The first N iterations to avoid the transient state
-def chaotic_PRNG(A, sample=5000, N = 100, eps=0.05, x0=(0.1, 0.01, 0.0)):
+def chaotic_PRNG(A, sample=2000, N = 100, eps=0.05, x0=(0.1, 0.01, 0.0)):
     # Eigenvalues & spectral radius
     eigenvalues = np.linalg.eigvals(A)
     spectral_radius = max(abs(eigenvalues))
