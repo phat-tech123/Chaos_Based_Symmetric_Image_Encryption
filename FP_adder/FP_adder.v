@@ -143,5 +143,22 @@ always @(posedge clk or negedge reset_n) begin
         	result <= {sign_s3, expo_rounded, mant_rounded};
     	end
 end
+integer f;
+
+initial begin
+    f = $fopen("result_log.csv", "w");
+    if (f == 0) begin
+        $display("Error opening file!");
+        $finish;
+    end
+
+    // Ghi dòng tiêu đề (header)
+    $fdisplay(f, "a_operand,b_operand,result");
+end
+
+always @(result) begin
+    $fdisplay(f, "%h,%h,%h", a_operand, b_operand, result);
+end
+
 
 endmodule
