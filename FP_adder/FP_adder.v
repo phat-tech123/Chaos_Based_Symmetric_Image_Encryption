@@ -54,6 +54,7 @@ assign mant_norm_t 	= (a_gt_b) ? mant_a : mant_b;
 assign mant_shift_t 	= (a_gt_b) ? mant_b >> expo_diff : mant_a >> expo_diff;
 
 assign sign_norm 	= (a_gt_b) ? sign_a : sign_b;
+:w
 assign sign_shift 	= (a_gt_b) ? sign_b : sign_a;
 
 assign mant_norm 	= (sign_norm)  ? (~mant_norm_t  + 1'b1) : mant_norm_t;
@@ -67,7 +68,6 @@ always @(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
 		align <= 0;
 	end else begin
-		//align <= { sign_res, expo_larger, (sign_norm)  ? (~mant_norm  + 1'b1) : mant_norm, (sign_shift) ? (~mant_shift + 1'b1) : mant_shift };
 		align <= { sign_norm, sign_shift, sign_res, expo_larger, mant_norm, mant_shift };
 	end
 end
@@ -143,22 +143,5 @@ always @(posedge clk or negedge reset_n) begin
         	result <= {sign_s3, expo_rounded, mant_rounded};
     	end
 end
-integer f;
-
-initial begin
-    f = $fopen("result_log.csv", "w");
-    if (f == 0) begin
-        $display("Error opening file!");
-        $finish;
-    end
-
-    // Ghi dòng tiêu đề (header)
-    $fdisplay(f, "a_operand,b_operand,result");
-end
-
-always @(result) begin
-    $fdisplay(f, "%h,%h,%h", a_operand, b_operand, result);
-end
-
 
 endmodule
