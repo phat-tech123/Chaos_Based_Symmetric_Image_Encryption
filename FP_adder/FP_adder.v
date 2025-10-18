@@ -12,49 +12,51 @@ module FP_adder#(
 );
 
 //---------------------------- EXTRACT ----------------------------//
-wire sign_a;
-wire [EXPONENT-1:0] expo_a;
-wire [FRACTION-1:0] frac_a;
-assign sign_a = a_operand[PRECISION-1];
-assign expo_a = a_operand[PRECISION-2 -: EXPONENT];
-assign frac_a = a_operand[FRACTION-1:0]; 
+reg sign_a;
+reg [EXPONENT-1:0] expo_a;
+reg [FRACTION-1:0] frac_a;
+reg sign_b;
+reg [EXPONENT-1:0] expo_b;
+reg [FRACTION-1:0] frac_b;
 
-wire sign_b;
-wire [EXPONENT-1:0] expo_b;
-wire [FRACTION-1:0] frac_b;
-assign sign_b = b_operand[PRECISION-1];
-assign expo_b = b_operand[PRECISION-2 -: EXPONENT];
-assign frac_b = b_operand[FRACTION-1:0];
+always@(posedge clk or negedge reset_n) begin
+	if(!reset_n) begin 
+		sign_a <= 0;
+		expo_a <= 0;
+		frac_a <= 0;
+		sign_b <= 0;
+		expo_b <= 0;
+		frac_b <= 0;
+	end else begin	
+		sign_a <= a_operand[PRECISION-1];
+		expo_a <= a_operand[PRECISION-2 : PRECISION-EXPONENT-1];
+		frac_a <= a_operand[FRACTION-1:0];
+		sign_b <= b_operand[PRECISION-1];
+		expo_b <= b_operand[PRECISION-2 : PRECISION-EXPONENT-1];
+		frac_b <= b_operand[FRACTION-1:0];
+	end
+end
 //---------------------------- EXTRACT ----------------------------//
 
 // Stage 1: align
-wire signed [EXPONENT:0] expo_unbiased_a;
-wire signed [EXPONENT:0] expo_unbiased_b;
-wire [FRACTION:0] mant_a;
-wire [FRACTION:0] mant_b;
+wire signed [EXPONENT:0] expo_unbiased_a = $signed({1'b0, expo_a}) - $signed(BIAS);
+wire signed [EXPONENT:0] expo_unbiased_b = $signed({1'b0, expo_b}) - $signed(BIAS);
+wire [FRACTION:0] mant_a = {1'b1, frac_a};
+wire [FRACTION:0] mant_b = {1'b1, frac_b};
 
-assign expo_unbiased_a =  $signed({1'b0, expo_a}) - $signed(BIAS);
-assign expo_unbiased_b =  $signed({1'b0, expo_b}) - $signed(BIAS);
-assign mant_a = {1'b1, frac_a};
-assign mant_b = {1'b1, frac_b};
-///////////
-wire a_gt_b;
-assign a_gt_b = (expo_unbiased_a > expo_unbiased_b) ? 1 : 0;
+wire a_gt_b = (expo_unbiased_a > expo_unbiased_b) ? 1 : 0;
 
-wire [EXPONENT:0] expo_diff;
+wire [EXPONENT:0] expo_diff = (a_gt_b) ? expo_unbiased_a - expo_unbiased_b : expo_unbiased_b - expo_unbiased_a; 
 wire signed [EXPONENT:0] expo_larger, expo_norm, expo_shift;
 wire [FRACTION:0] mant_norm_t, mant_shift_t, mant_norm, mant_shift;
 wire sign_norm, sign_shift;
 wire sign_res;
-
-assign expo_diff 	= (a_gt_b) ? expo_unbiased_a - expo_unbiased_b : expo_unbiased_b - expo_unbiased_a; 	
+ 	
 assign expo_larger 	= (a_gt_b) ? expo_unbiased_a : expo_unbiased_b; 					
-
 assign mant_norm_t 	= (a_gt_b) ? mant_a : mant_b; 
 assign mant_shift_t 	= (a_gt_b) ? mant_b >> expo_diff : mant_a >> expo_diff;
 
 assign sign_norm 	= (a_gt_b) ? sign_a : sign_b;
-:w
 assign sign_shift 	= (a_gt_b) ? sign_b : sign_a;
 
 assign mant_norm 	= (sign_norm)  ? (~mant_norm_t  + 1'b1) : mant_norm_t;
@@ -124,7 +126,7 @@ always @(posedge clk or negedge reset_n) begin
     	end
 end
 
-// Stage 5: rounding 
+// Stage 4: rounding 
 wire sign_s3;
 wire signed [EXPONENT:0] expo_s3;
 wire [FRACTION+1:0] mant_sum_s3;

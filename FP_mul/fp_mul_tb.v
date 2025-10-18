@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module FP_adder_tb;
+module FP_mul_tb;
 
 // Parameter match module under test
 parameter PRECISION = 32;
@@ -19,7 +19,7 @@ reg signed [PRECISION-1:0] b_operand;
 wire signed [PRECISION-1:0] result;
 
 // Instantiate DUT
-FP_adder #(
+FP_mul #(
     .PRECISION(PRECISION),
     .EXPONENT(EXPONENT),
     .FRACTION(FRACTION)
@@ -82,10 +82,11 @@ initial begin
 end
 
 initial begin
-    $dumpfile("FP_adder_tb.vcd");
-    $dumpvars(0, FP_adder_tb);
+    $dumpfile("FP_mul_tb.vcd");
+    $dumpvars(0, FP_mul_tb);
 
-//    $monitor("opA = %h | opB = %h | result = %h", a_operand, b_operand, result);
+    $monitor("result = %h",  result);
 end
 
 endmodule
+
