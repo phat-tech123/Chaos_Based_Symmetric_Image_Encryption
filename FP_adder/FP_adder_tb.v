@@ -77,6 +77,10 @@ initial begin
     b_operand = 32'h3a449ba6;
     #10;
 
+    // 0.1352512323 + (-0.51241231234) = -0.37716108004 = bec11b42
+    a_operand = 32'h3e0a7f4d;
+    b_operand = 32'hbf032d74;
+
     #50;
     $finish;
 end
