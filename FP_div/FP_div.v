@@ -100,7 +100,6 @@ reg signed [EXPONENT:0] expo_diff_s2_r;
 reg [FRACTION+3:0] mant_res_s2_r;
 
 reg [1 + (EXPONENT+1) + (FRACTION+3+1) - 1 : 0] normalize;
-//integer j;
 always @(posedge clk or negedge reset_n) begin
     	if (!reset_n) begin
 		normalize <= 0;

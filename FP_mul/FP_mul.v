@@ -125,5 +125,4 @@ always @(posedge clk or negedge reset_n) begin
         	result <= {sign_res_s3, expo_rounded, mant_rounded};
 	end
 end
-
 endmodule
