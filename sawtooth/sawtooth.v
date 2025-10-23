@@ -1,6 +1,6 @@
-`include "./../FP_adder/FP_adder.v"
-`include "./../FP_div/FP_div.v"
-`include "./../FP_mul/FP_mul.v"
+//`include "./../FP_adder/FP_adder.v"
+//`include "./../FP_div/FP_div.v"
+//`include "./../FP_mul/FP_mul.v"
 
 module sawtooth#(
 	parameter PRECISION = 32
@@ -19,9 +19,9 @@ parameter S4 	= 3;
 parameter S5 	= 4;
 parameter S6 	= 5;
 parameter S7 	= 6;
-parameter S8 	= 7;
-parameter DONE 	= 8;
-parameter STOP 	= 9;
+parameter DONE 	= 7;
+parameter STOP 	= 8;
+parameter IDLE  = 9;
 
 reg [2:0] counter;
 reg [3:0] state;
@@ -50,20 +50,26 @@ FP_adder #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) add(
 
 always@(posedge clk or negedge reset_n) begin 
 	if(!reset_n) begin
-		state 	<= S1;
+		state 	<= IDLE;
 		counter <= 0;
-	end else if (counter == 3'd4) begin
+	end else if (state == IDLE) begin
+		state 	<= S1;
+	end else if ( counter == 3'd1 && (state == S3 || state == S4 || state == DONE) ) begin
+		counter <= 0;
+		case(state)
+			S3: state <= S4;
+			S4: state <= S5;
+			DONE: state <= STOP;
+		endcase
+	end else if ( counter == 3'd5) begin
 		counter <= 0;
 		case(state)
 			S1: state <= S2;
 			S2: state <= S3;
-			S3: state <= S4;
-			S4: state <= S5;
 			S5: state <= S6;
 			S6: state <= S7;
-			S7: state <= S8;
-			S8: state <= DONE;
-			DONE: state <= STOP;
+			S7: state <= DONE;
+			STOP: state <= STOP;
 			default: state <= state;
 		endcase
 	end else begin
@@ -83,94 +89,47 @@ always@(posedge clk or negedge reset_n) begin
 		result      	<= 0;
 	end else begin
 		case(state)
-			// Stage 1 : x/epsilon
+			// Stage 1 : x/epsilon (5 clk)
 			S1: begin
 				div_a_op 	<= x;
 				div_b_op 	<= epsilon;
-				mul_a_op 	<= mul_a_op;
-				mul_b_op 	<= mul_b_op;
-				add_a_op 	<= add_a_op;
-				add_b_op 	<= add_b_op;
 			end
 
-			// Stage 2 : x/epsilon + 1.0
+			// Stage 2 : x/epsilon + 1.0 (5 clk)
 			S2: begin
-				div_a_op 	<= div_a_op;
-				div_b_op 	<= div_b_op;
-				mul_a_op 	<= mul_a_op;
-				mul_b_op 	<= mul_b_op;
 				add_a_op 	<= 32'h3f800000; //1.0
 				add_b_op 	<= div_out;
 			end
 
-			// Stage 3 : (x/epsilon + 1.0) / 2.0 = (x/epsilon + 1.0) * 0.5 
+			// Stage 3 : (x/epsilon + 1.0) / 2.0 = (x/epsilon + 1.0) * 0.5 (1 clk)
 			S3: begin
-				div_a_op 	<= div_a_op;
-				div_b_op 	<= div_b_op;
-				mul_a_op 	<= add_out; 
-				mul_b_op 	<= 32'h3f000000; //0.5
-				add_a_op 	<= add_a_op;
-				add_b_op 	<= add_b_op;
+				L 		<= mul_half(add_out);
 			end
 
-			// Stage 4 : L = floor((x/epsilon + 1.0) * 0.5) 
+			// Stage 4 : L = floor((x/epsilon + 1.0) * 0.5) (1clk)
 			S4: begin 
-				L 		<= floor(mul_out);
-				div_a_op 	<= div_a_op;
-				div_b_op 	<= div_b_op;
-				mul_a_op 	<= mul_a_op;
-				mul_b_op 	<= mul_b_op;
-				add_a_op 	<= add_a_op;
-				add_b_op 	<= add_b_op;
+				L 		<= floor(L);
 			end
 
-			// Stage 5 : -2*L
+			// Stage 6 : -2*L*epsilon (5 clk)
 			S5: begin
-				div_a_op 	<= div_a_op;
-				div_b_op 	<= div_b_op;
-				mul_a_op 	<= 32'hc0000000; //-2.0
-				mul_b_op 	<= L;
-				add_a_op 	<= add_a_op;
-				add_b_op 	<= add_b_op;
-			end
-
-			// Stage 6 : -2*L*epsilon
-			S6: begin
-				div_a_op 	<= div_a_op;
-				div_b_op 	<= div_b_op;
-				mul_a_op 	<= mul_out;
+				mul_a_op 	<= mul_neg2(L);
 				mul_b_op 	<= epsilon;
-				add_a_op 	<= add_a_op;
-				add_b_op 	<= add_b_op;
 			end
 
-			// Stage 7 : x + (-2*L*epsilon)
-			S7: begin
-				div_a_op 	<= div_a_op;
-				div_b_op 	<= div_b_op;
-				mul_a_op 	<= mul_a_op;
-				mul_b_op 	<= mul_b_op;
+			// Stage 7 : x + (-2*L*epsilon) (5 clk)
+			S6: begin
 				add_a_op 	<= x;
 				add_b_op 	<= mul_out;
 			end
 
-			// Stage 8 : pow(-1.0, l) * (x - 2 * l * epsilon)
-			S8: begin
-				div_a_op 	<= div_a_op;
-				div_b_op 	<= div_b_op;
+			// Stage 8 : pow(-1.0, l) * (x - 2 * l * epsilon) (5 clk)
+			S7: begin
 				mul_a_op 	<= (is_ood(L)) ? 32'hbf800000 : 32'h3f800000;
 				mul_b_op 	<= add_out;
-				add_a_op 	<= add_a_op;
-				add_b_op 	<= add_b_op;
 			end
 			
 			DONE: begin
-				div_a_op 	<= div_a_op;
-				div_b_op 	<= div_b_op;
-				mul_a_op 	<= mul_a_op;
-				mul_b_op 	<= mul_a_op;
-				add_a_op 	<= add_a_op;
-				add_b_op 	<= add_b_op;
 				result 		<= mul_out;
 			end
 
@@ -247,26 +206,51 @@ function is_ood(input [PRECISION-1:0] x);
 	end
 endfunction
 
-function add_1(input [PRECISION-1:0] x);
+function [31:0] mul_half(input [31:0] x);
+	reg sign;
+    	reg [7:0] exponent;
+    	reg [22:0] fraction;
+
+    	begin
+        	sign = x[31];
+        	exponent = x[30:23];
+        	fraction = x[22:0];
+
+        	if (exponent == 8'd0) begin
+            		fraction = fraction >> 1;
+            		mul_half = {sign, exponent, fraction};
+        	end else if (exponent == 8'd1) begin
+            		exponent = 8'd0;
+            		fraction = ({1'b1, fraction} >> 1);
+            		mul_half = {sign, exponent, fraction[22:0]};
+        	end else begin
+            		exponent = exponent - 8'd1;
+            		mul_half = {sign, exponent, fraction};
+        	end
+    	end
+endfunction
+
+function [31:0] mul_neg2(input [31:0] x);
 	reg sign;
 	reg [7:0] exponent;
-	reg [23:0] mant;
+	reg [22:0] fraction;
 
-	begin
-		sign = x[31];
-		exponent = x[30:23];
-		mant = {1'b1, x[22:0]};
+    	begin
+        	sign = ~x[31];       
+        	exponent = x[30:23];
+        	fraction = x[22:0];
 
-		mant = mant + 24'h800000; // add 1.0
-
-		if(mant[23]) begin 	// OVERFLOW
-			mant = mant >> 1;
-			exponent = exponent + 1;
-		end
-
-		add_1 = {sign, exponent, mant[22:0]};
-	end
-
+        	if (exponent == 8'd255) begin
+            		mul_neg2 = x;
+        	end else if (exponent == 8'd0) begin
+            		exponent = 8'd1;
+            		fraction = fraction << 1;
+            		mul_neg2 = {sign, exponent, fraction};
+        	end else begin
+            		exponent = exponent + 8'd1;
+            		mul_neg2 = {sign, exponent, fraction};
+        	end
+    	end
 endfunction
 
 endmodule

@@ -53,12 +53,16 @@ initial begin
     // Wait a few clocks
     #10;
 
-    // Apply test values
+    $display("---------------- START ----------------");
     // a_operand = 1.75
     // b_operand = 0.05
     a_operand = 32'h3fe00000; 
-    //a_operand = 32'h3f8fc265; 
     b_operand = 32'h3d4ccccd;
+
+    /*
+    a_operand = 32'h42f63d71; 
+    b_operand = 32'h3d4ccccd;
+    */
 
     // Wait enough time for pipeline result
     #2000;
