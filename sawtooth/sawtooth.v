@@ -109,7 +109,7 @@ always@(posedge clk or negedge reset_n) begin
 
 			// Stage 4 : L = floor((x/epsilon + 1.0) * 0.5) 
 			S4: begin 
-				L 		<= floor_ieee32(mul_out);
+				L 		<= floor(mul_out);
 				div_a_op 	<= div_a_op;
 				div_b_op 	<= div_b_op;
 				mul_a_op 	<= mul_a_op;
@@ -152,7 +152,7 @@ always@(posedge clk or negedge reset_n) begin
 			S8: begin
 				div_a_op 	<= div_a_op;
 				div_b_op 	<= div_b_op;
-				mul_a_op 	<= (is_odd_ieee32(L)) ? 32'hbf800000 : 32'h3f800000;
+				mul_a_op 	<= (is_ood(L)) ? 32'hbf800000 : 32'h3f800000;
 				mul_b_op 	<= add_out;
 				add_a_op 	<= add_a_op;
 				add_b_op 	<= add_b_op;
@@ -172,7 +172,7 @@ always@(posedge clk or negedge reset_n) begin
 	end
 end
 
-function signed [31:0] floor_ieee32(input [31:0] x);
+function signed [31:0] floor(input [31:0] x);
 	reg sign;
 	reg [7:0] exponent;
 	reg [22:0] fraction;
@@ -209,11 +209,11 @@ function signed [31:0] floor_ieee32(input [31:0] x);
 			result = {sign, exponent, mantissa[22:0]};
 		end
 
-		floor_ieee32 = result;
+		floor = result;
 	end
 endfunction
 
-function is_odd_ieee32(input [31:0] x);
+function is_ood(input [31:0] x);
 	reg [7:0] exponent;
     	reg [22:0] fraction;
     	reg [23:0] mantissa;
@@ -227,12 +227,12 @@ function is_odd_ieee32(input [31:0] x);
 		int_bits = exponent - 127;
 
 		if (exponent < 127)
-			is_odd_ieee32 = 1'b0;    
+			is_ood = 1'b0;    
 		else if (int_bits >= 24)
-			is_odd_ieee32 = 1'b0;  
+			is_ood = 1'b0;  
 		else begin
 			shifted = mantissa >> (23 - int_bits); 
-			is_odd_ieee32 = shifted[0];           
+			is_ood = shifted[0];           
 		end
 	end
 endfunction
