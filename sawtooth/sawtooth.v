@@ -1,3 +1,7 @@
+`include "./../FP_adder/FP_adder.v"
+`include "./../FP_div/FP_div.v"
+`include "./../FP_mul/FP_mul.v"
+
 module sawtooth#(
 	parameter PRECISION = 32
 )(
@@ -16,7 +20,8 @@ parameter S5 	= 4;
 parameter S6 	= 5;
 parameter S7 	= 6;
 parameter S8 	= 7;
-parameter STOP 	= 8;
+parameter DONE 	= 8;
+parameter STOP 	= 9;
 
 reg [2:0] counter;
 reg [3:0] state;
@@ -57,7 +62,8 @@ always@(posedge clk or negedge reset_n) begin
 			S5: state <= S6;
 			S6: state <= S7;
 			S7: state <= S8;
-			S8: state <= STOP;
+			S8: state <= DONE;
+			DONE: state <= STOP;
 			default: state <= state;
 		endcase
 	end else begin
@@ -74,7 +80,7 @@ always@(posedge clk or negedge reset_n) begin
 		mul_b_op 	<= 0;
 		add_a_op 	<= 0;
 		add_b_op 	<= 0;
-		result      <= 0;
+		result      	<= 0;
 	end else begin
 		case(state)
 			// Stage 1 : x/epsilon
@@ -158,14 +164,18 @@ always@(posedge clk or negedge reset_n) begin
 				add_b_op 	<= add_b_op;
 			end
 			
-			STOP: begin
+			DONE: begin
 				div_a_op 	<= div_a_op;
 				div_b_op 	<= div_b_op;
 				mul_a_op 	<= mul_a_op;
 				mul_b_op 	<= mul_a_op;
 				add_a_op 	<= add_a_op;
 				add_b_op 	<= add_b_op;
-				result <= mul_out;
+				result 		<= mul_out;
+			end
+
+			STOP: begin
+				result <= result;
 			end
 		endcase
 
@@ -213,7 +223,7 @@ function signed [31:0] floor(input [31:0] x);
 	end
 endfunction
 
-function is_ood(input [31:0] x);
+function is_ood(input [PRECISION-1:0] x);
 	reg [7:0] exponent;
     	reg [22:0] fraction;
     	reg [23:0] mantissa;
@@ -235,6 +245,28 @@ function is_ood(input [31:0] x);
 			is_ood = shifted[0];           
 		end
 	end
+endfunction
+
+function add_1(input [PRECISION-1:0] x);
+	reg sign;
+	reg [7:0] exponent;
+	reg [23:0] mant;
+
+	begin
+		sign = x[31];
+		exponent = x[30:23];
+		mant = {1'b1, x[22:0]};
+
+		mant = mant + 24'h800000; // add 1.0
+
+		if(mant[23]) begin 	// OVERFLOW
+			mant = mant >> 1;
+			exponent = exponent + 1;
+		end
+
+		add_1 = {sign, exponent, mant[22:0]};
+	end
+
 endfunction
 
 endmodule
