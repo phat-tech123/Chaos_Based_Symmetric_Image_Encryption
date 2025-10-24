@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 
-#define EPS 1e-12
+
+#define ITER 1000
+#define ESP 1e-9
 //////////////////////////// SUPPORT FUNCTIONS ////////////////////////////
 double sawtooth(double x, double epsilon){
 	int l = (int)floor((x / epsilon + 1.0) / 2.0);
@@ -10,63 +12,40 @@ double sawtooth(double x, double epsilon){
 	return pow(-1.0, l) * (x - 2 * l * epsilon);
 }
 
-int solveCubic(double a, double b, double c, double roots[3]) {
-    double Q = (a * a - 3.0 * b) / 9.0;
-    double R = (2.0 * a * a * a - 9.0 * a * b + 27.0 * c) / 54.0;
-    double D = R * R - Q * Q * Q;
-
-    if (D < -EPS) {
-        double phi = acos(R / sqrt(Q * Q * Q));
-        double t = 2.0 * sqrt(Q);
-        roots[0] = -t * cos(phi / 3.0) - a / 3.0;
-        roots[1] = -t * cos((phi + 2.0 * M_PI) / 3.0) - a / 3.0;
-        roots[2] = -t * cos((phi + 4.0 * M_PI) / 3.0) - a / 3.0;
-        return 3;
-    } else if (fabs(D) <= EPS) {
-        double S = cbrt(R);
-        roots[0] = -2.0 * S - a / 3.0;
-        roots[1] = S - a / 3.0;
-        roots[2] = roots[1];
-        return 2;
-    } else {
-        double sqrtD = sqrt(D);
-        double S = cbrt(R + sqrtD);
-        double T = cbrt(R - sqrtD);
-        roots[0] = (S + T) - a / 3.0;
-        return 1;
+double find_max(double vector[3]) {
+    double max = fabs(vector[0]);
+    for (int i = 1; i < 3; i++) {
+        if (fabs(vector[i]) > max)
+            max = fabs(vector[i]);
     }
-}
-
-void eigenvalues(double A[3][3], double lambda[3]) {
-    double tr = A[0][0] + A[1][1] + A[2][2];
-    double a = -tr;
-
-    double b = A[0][0]*A[1][1] + A[0][0]*A[2][2] + A[1][1]*A[2][2]
-             - (A[0][1]*A[1][0] + A[0][2]*A[2][0] + A[1][2]*A[2][1]);
-
-    double detA = A[0][0]*A[1][1]*A[2][2]
-                + A[0][1]*A[1][2]*A[2][0]
-                + A[0][2]*A[1][0]*A[2][1]
-                - A[0][2]*A[1][1]*A[2][0]
-                - A[0][0]*A[1][2]*A[2][1]
-                - A[0][1]*A[1][0]*A[2][2];
-
-    double c = -detA;
-
-    int n = solveCubic(a, b, c, lambda);
-}
-
-double spectralRadius(double lambda[3]) {
-    double r0 = fabs(lambda[0]);
-    double r1 = fabs(lambda[1]);
-    double r2 = fabs(lambda[2]);
-
-    double max = r0;
-    if (r1 > max) max = r1;
-    if (r2 > max) max = r2;
-
     return max;
 }
+
+// Trả về giá trị eigenvalue lớn nhất
+double spectralRadius(double A[3][3]) {
+    double init_vector[3] = {1, 1, 1};
+    double out_vector[3] = {0, 0, 0};
+
+    double prev = 0;
+    for (int i = 0; i < ITER; i++) {
+        out_vector[0] = A[0][0] * init_vector[0] + A[0][1] * init_vector[1] + A[0][2] * init_vector[2];
+        out_vector[1] = A[1][0] * init_vector[0] + A[1][1] * init_vector[1] + A[1][2] * init_vector[2];
+        out_vector[2] = A[2][0] * init_vector[0] + A[2][1] * init_vector[1] + A[2][2] * init_vector[2];
+
+        double max = find_max(out_vector);
+
+        init_vector[0] = out_vector[0] / max;
+        init_vector[1] = out_vector[1] / max;
+        init_vector[2] = out_vector[2] / max;
+
+        if (fabs(max - prev) < ESP) {
+            return max;  // trả luôn
+        }
+        prev = max;
+    }
+    return prev;  // nếu hết vòng vẫn trả
+}
+
 //////////////////////////// SUPPORT FUNCTIONS ////////////////////////////
 
 
@@ -79,9 +58,7 @@ double spectralRadius(double lambda[3]) {
 // seq_out: pointer to array [sample][3]
 void chaotic_PRNG(double A[3][3], int sample, int N, double epsilon, double x0[3], double (*seq)[3]){
 	//Eigenvalues & spectral radius
-	double lambda[3];
-	eigenvalues(A, lambda);
-	double spectral_radius = spectralRadius(lambda);
+	double spectral_radius = spectralRadius(A);
 
 	if(spectral_radius >= 1) {
 		printf("Matrix A is not stable\n");
