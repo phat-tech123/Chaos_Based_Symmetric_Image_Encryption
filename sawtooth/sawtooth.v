@@ -1,6 +1,6 @@
-//`include "./../FP_adder/FP_adder.v"
-//`include "./../FP_div/FP_div.v"
-//`include "./../FP_mul/FP_mul.v"
+`include "./../FP_adder/FP_adder.v"
+`include "./../FP_div/FP_div.v"
+`include "./../FP_mul/FP_mul.v"
 
 module sawtooth#(
 	parameter PRECISION = 32
@@ -12,23 +12,18 @@ module sawtooth#(
 	output reg [PRECISION-1:0] result
 );
 
-parameter S1 	= 0;
-parameter S2 	= 1;
-parameter S3 	= 2;
-parameter S4 	= 3;
-parameter S5 	= 4;
-parameter S6 	= 5;
-parameter S7 	= 6;
-parameter DONE 	= 7;
-parameter STOP 	= 8;
-parameter IDLE  = 9;
+reg [PRECISION-1:0] L, L_t;
+reg [PRECISION-1:0] div_a_op, div_b_op;
+reg [PRECISION-1:0] mul_a_op_1, mul_b_op_1;
+reg [PRECISION-1:0] mul_a_op_2, mul_b_op_2;
+reg [PRECISION-1:0] add_a_op_1, add_b_op_1;
+reg [PRECISION-1:0] add_a_op_2, add_b_op_2;
 
-reg [2:0] counter;
-reg [3:0] state;
-
-reg [PRECISION-1:0] L;
-reg [PRECISION-1:0] div_a_op, div_b_op, mul_a_op, mul_b_op, add_a_op, add_b_op;
-wire [PRECISION-1:0] div_out, mul_out, add_out;
+wire [PRECISION-1:0] div_out;
+wire [PRECISION-1:0] mul_out_1;
+wire [PRECISION-1:0] add_out_1;
+wire [PRECISION-1:0] mul_out_2;
+wire [PRECISION-1:0] add_out_2;
 
 FP_div #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) div(
 	.clk(clk), .reset_n(reset_n),
@@ -36,107 +31,106 @@ FP_div #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) div(
 	.result(div_out)
 );
 
-FP_mul #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) mul(
+FP_adder #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) add_1(
 	.clk(clk), .reset_n(reset_n),
-	.a_operand(mul_a_op), .b_operand(mul_b_op), 
-	.result(mul_out)
+	.a_operand(add_a_op_1),  .b_operand(add_b_op_1), 
+	.result(add_out_1)
 );
 
-FP_adder #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) add(
+FP_mul #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) mul_1(
 	.clk(clk), .reset_n(reset_n),
-	.a_operand(add_a_op),  .b_operand(add_b_op), 
-	.result(add_out)
+	.a_operand(mul_a_op_1), .b_operand(mul_b_op_1), 
+	.result(mul_out_1)
 );
 
-always@(posedge clk or negedge reset_n) begin 
-	if(!reset_n) begin
-		state 	<= IDLE;
-		counter <= 0;
-	end else if (state == IDLE) begin
-		state 	<= S1;
-	end else if ( counter == 3'd1 && (state == S3 || state == S4 || state == DONE) ) begin
-		counter <= 0;
-		case(state)
-			S3: state <= S4;
-			S4: state <= S5;
-			DONE: state <= STOP;
-		endcase
-	end else if ( counter == 3'd5) begin
-		counter <= 0;
-		case(state)
-			S1: state <= S2;
-			S2: state <= S3;
-			S5: state <= S6;
-			S6: state <= S7;
-			S7: state <= DONE;
-			STOP: state <= STOP;
-			default: state <= state;
-		endcase
-	end else begin
-		counter <= counter + 1;
-	end
-end
+FP_adder #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) add_2(
+	.clk(clk), .reset_n(reset_n),
+	.a_operand(add_a_op_2),  .b_operand(add_b_op_2), 
+	.result(add_out_2)
+);
+
+FP_mul #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) mul_2(
+	.clk(clk), .reset_n(reset_n),
+	.a_operand(mul_a_op_2), .b_operand(mul_b_op_2), 
+	.result(mul_out_2)
+);
+
+reg [PRECISION-1:0] x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20;
+reg [PRECISION-1:0] epsilon0, epsilon1, epsilon2, epsilon3, epsilon4, epsilon5, epsilon6, epsilon7, epsilon8, epsilon9, epsilon10, epsilon11, epsilon12, epsilon13, epsilon14; 
+reg [PRECISION-1:0] L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11, L12, L13, L14, L15, L16, L17, L18, L19;
 
 always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
-		L 		<= 0;
+		L_t 		<= 0;
+		L           	<= 0;
 		div_a_op 	<= 0;
 		div_b_op 	<= 0;
-		mul_a_op 	<= 0;
-		mul_b_op 	<= 0;
-		add_a_op 	<= 0;
-		add_b_op 	<= 0;
+		add_a_op_1 	<= 0;
+		add_b_op_1 	<= 0;
+		mul_a_op_1 	<= 0;
+		mul_b_op_1 	<= 0;
+		add_a_op_2 	<= 0;
+		add_b_op_2 	<= 0;
+		mul_a_op_2	<= 0;
+		mul_b_op_2 	<= 0;
 		result      	<= 0;
+
+		x0<=0; x1<=0; x2<=0; x3<=0; x4<=0; x5<=0; x6<=0; x7<=0; x8<=0; x9<=0; 
+		x10<=0; x11<=0; x12<=0; x13<=0; x14<=0; x15<=0; x16<=0; x17<=0; x18<=0; x19<=0; x20<=0;
+		
+		epsilon0<=0; epsilon1<=0; epsilon2<=0; epsilon3<=0; epsilon4<=0; epsilon5<=0; epsilon6<=0; epsilon7<=0; 
+		epsilon8<=0; epsilon9<=0; epsilon10<=0; epsilon11<=0; epsilon12<=0; epsilon13<=0; epsilon14<=0;
+
+		L1<=0; L2<=0; L3<=0; L4<=0; L5<=0; L6<=0; L7<=0; L8<=0; L9<=0; L10<=0;
+		L11<=0; L12<=0; L13<=0; L14<=0; L15<=0; L16<=0; L17<=0; L18<=0; L19<=0;
 	end else begin
-		case(state)
-			// Stage 1 : x/epsilon (5 clk)
-			S1: begin
-				div_a_op 	<= x;
-				div_b_op 	<= epsilon;
-			end
+		x0 		<= x;
+		epsilon0 	<= epsilon;
 
-			// Stage 2 : x/epsilon + 1.0 (5 clk)
-			S2: begin
-				add_a_op 	<= 32'h3f800000; //1.0
-				add_b_op 	<= div_out;
-			end
+		// 
+		div_a_op 	<= x0;
+		div_b_op 	<= epsilon0;
+		x1 <= x0;  x2 <= x1;  x3 <= x2;  x4 <= x3;  x5 <= x4;
+		epsilon1 <= epsilon0; epsilon2 <= epsilon1; epsilon3 <= epsilon2; epsilon4 <= epsilon3; epsilon5 <= epsilon4; 
 
-			// Stage 3 : (x/epsilon + 1.0) / 2.0 = (x/epsilon + 1.0) * 0.5 (1 clk)
-			S3: begin
-				L 		<= mul_half(add_out);
-			end
+		//
+		add_a_op_1 	<= 32'h3f800000; //1.0
+		add_b_op_1 	<= div_out;
+		x6 <= x5;  x7 <= x6;  x8 <= x7;  x9 <= x8;  x10 <= x9;
+		epsilon6 <= epsilon5; epsilon7 <= epsilon6; epsilon8 <= epsilon7; epsilon9 <= epsilon8; epsilon10 <= epsilon9; 
 
-			// Stage 4 : L = floor((x/epsilon + 1.0) * 0.5) (1clk)
-			S4: begin 
-				L 		<= floor(L);
-			end
+		//
+		L_t 		<= mul_half(add_out_1);
+		x11 <= x10; 
+		epsilon11 <= epsilon10; 
 
-			// Stage 6 : -2*L*epsilon (5 clk)
-			S5: begin
-				mul_a_op 	<= mul_neg2(L);
-				mul_b_op 	<= epsilon;
-			end
+		//
+		L 		<= floor(L_t);
+		x12 <= x11; 
+		epsilon12 <= epsilon11;
+		epsilon13 <= epsilon12;
+		epsilon14 <= epsilon13;
 
-			// Stage 7 : x + (-2*L*epsilon) (5 clk)
-			S6: begin
-				add_a_op 	<= x;
-				add_b_op 	<= mul_out;
-			end
+		//
+		mul_a_op_1 	<= L;
+		mul_b_op_1 	<= mul_neg2(epsilon14);
+		x13 <= x12; x14 <= x13; x15 <= x14; x16 <= x15; x17 <= x16;
+		L1 <= L;  L2 <= L1;  L3 <= L2;  L4 <= L3; L5 <= L4;  
 
-			// Stage 8 : pow(-1.0, l) * (x - 2 * l * epsilon) (5 clk)
-			S7: begin
-				mul_a_op 	<= (is_ood(L)) ? 32'hbf800000 : 32'h3f800000;
-				mul_b_op 	<= add_out;
-			end
-			
-			DONE: begin
-				result 		<= mul_out;
-			end
+		//
+		x18 <= x17; x19 <= x18; x20 <= x19;
+		add_a_op_2 	<= x20;
+		add_b_op_2 	<= mul_out_1;
+		L6 <= L5;  L7 <= L6;  L8 <= L7;  L9 <= L8; L10 <= L9; 
+		L10 <= L9;  L11 <= L10;  L12 <= L11;  L13 <= L12; L14 <= L13; 
+		L15 <= L14;  L16 <= L15;  L17 <= L16; L18 <= L17; L19 <= L18;
 
-			STOP: begin
-				result <= result;
-			end
-		endcase
+		//
+		mul_a_op_2 	<= (is_ood(L19)) ? 32'hbf800000 : 32'h3f800000;
+		mul_b_op_2 	<= add_out_2;
+
+		//
+		result 		<= mul_out_2;
 
 	end
 end
