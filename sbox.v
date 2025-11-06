@@ -34,7 +34,7 @@ always @(posedge clk or posedge rst) begin
     end
 end
 
-assign done_sbox = (index == 8'hFF) ? 1'b1 : 1'b0;
+assign done_sbox = (index == 8'hA1) ? 1'b1 : 1'b0;
 
 always @(posedge clk) begin
     if (done_sbox) 

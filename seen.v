@@ -22,6 +22,7 @@ module seen (
         end
     end
 
+    // ====== Cập nhật giá trị index =====
     always @(*) begin
         if (!unvalid) 
             next_index = index + 1;
@@ -29,17 +30,23 @@ module seen (
             next_index = index;
     end
 
+    // ====== Cập nhật giá trị next_index =====
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            index <= 1'b0;
+        end
+        else begin
+            index <= next_index;
+        end
+    end
+
     // ====== Ghi dữ liệu mới nếu chưa trùng ======
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            index <= 8'b0;
-            tmp <= 8'b0;
             for (i = 0; i < 256; i = i + 1)
                 seen_mem[i] <= 8'b0;
         end else if (~unvalid) begin
             seen_mem[next_index] <= data_in;
-            tmp <= seen_mem[0];
-            index <= next_index;
         end 
     end
 
