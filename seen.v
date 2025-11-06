@@ -5,7 +5,8 @@ module seen (
     output reg   seen_flag
 );
 
-    // ====== Khai báo ======    // Thanh ghi lưu giá trị của data_in
+    // ====== Khai báo ======  
+    reg [7:0] data_reg ;            // Thanh ghi lưu giá trị của data_in
     reg [7:0] index;               // Con trỏ ghi trong bộ nhớ
     reg [8:0] seen_mem [0:255];    // Bộ nhớ lưu các giá trị đã thấy (bit 8: valid flag)
     reg       unvalid;             // Cờ báo trùng dữ liệu
