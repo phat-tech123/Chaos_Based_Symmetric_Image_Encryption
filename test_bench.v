@@ -24,7 +24,7 @@ initial begin
     clk = 1;
     #20;
     rst = 0;
-    #3000_000;
+    #11000;
     $finish;
 end
 

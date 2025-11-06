@@ -5,6 +5,7 @@
 `include "seen.v"
 `include "checker.v"
 `include "sbox.v"
+`include "FF.v"
 
 module top(
     input clk,
@@ -17,6 +18,7 @@ wire [22:0] EX1, EX2, EX3;
 wire [31:0] val1, val2, val3;
 wire [22:0] v_reg ;
 wire [7:0] count;
+wire [7:0] V ;
 
 read read_inst (
     .clk(clk),
@@ -51,10 +53,17 @@ mixer mixer_inst (
     .v_reg(v_reg)
 );  
 
+FF FF_inst(
+    .clk(clk),
+    .rst(rst),
+    .mix_data(v_reg[7:0]),
+    .V(V)
+);
+
 seen seen_inst (
     .clk(clk),
     .rst(rst),
-    .data_in(v_reg[7:0]),
+    .data_in(V),
     .seen_flag(seen_flag)
 );
 
@@ -77,7 +86,7 @@ sbox sbox_inst (
     .clk(clk),
     .rst(rst),
     .enable_write(data_valid),
-    .data_in(v_reg[7:0]),
+    .data_in(V),
     .done_sbox(done_sbox)
 );
 
