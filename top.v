@@ -63,7 +63,7 @@ FF FF_inst(
 seen seen_inst (
     .clk(clk),
     .rst(rst),
-    .data_in(V),
+    .data_in(v_reg[7:0]),
     .seen_flag(seen_flag)
 );
 
@@ -75,8 +75,8 @@ counter counter_inst (
 );
 
 checker checker_inst (
-    .clk(clk),
     .rst(rst),
+    .clk(clk),
     .seen_single(seen_flag),
     .count(count),
     .data_valid(data_valid)

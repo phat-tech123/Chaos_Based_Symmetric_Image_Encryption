@@ -7,11 +7,13 @@ module FF(
 
 reg [7:0] data_ff;
 
+
 always @(posedge clk or posedge rst) begin
     if (rst) begin
         data_ff <= 8'b0;
         V <= 8'b0;
-    end else begin
+    end
+    else begin
         data_ff <= mix_data;
         V <= data_ff;
     end

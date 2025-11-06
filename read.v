@@ -7,7 +7,7 @@ module read(
     output reg [31:0] val3
 );
 
-reg [31:0] mem [0:899];
+reg [31:0] mem [0:2699];
 reg [7:0] index;
 
 initial begin
