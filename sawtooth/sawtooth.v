@@ -1,18 +1,15 @@
-`include "./../FP_adder/FP_adder.v"
-`include "./../FP_div/FP_div.v"
-`include "./../FP_mul/FP_mul.v"
-
 module sawtooth#(
 	parameter PRECISION = 32
 )(
 	input clk,
 	input reset_n,
+	input sawtooth_tvalid,
 	input [PRECISION-1:0] x,
 	input [PRECISION-1:0] epsilon,
+	output reg sawtooth_valid,
 	output reg [PRECISION-1:0] result
 );
 
-reg [PRECISION-1:0] L, L_t;
 reg [PRECISION-1:0] div_a_op, div_b_op;
 reg [PRECISION-1:0] mul_a_op_1, mul_b_op_1;
 reg [PRECISION-1:0] mul_a_op_2, mul_b_op_2;
@@ -25,44 +22,42 @@ wire [PRECISION-1:0] add_out_1;
 wire [PRECISION-1:0] mul_out_2;
 wire [PRECISION-1:0] add_out_2;
 
-FP_div #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) div(
-	.clk(clk), .reset_n(reset_n),
-	.a_operand(div_a_op), .b_operand(div_b_op), 
-	.result(div_out)
+wire div_out_valid; reg div_tvalid;
+floating_point_div div (
+  .aclk(clk),
+  .s_axis_a_tvalid(div_tvalid), .s_axis_a_tdata(div_a_op), 
+  .s_axis_b_tvalid(div_tvalid), .s_axis_b_tdata(div_b_op), 
+  .m_axis_result_tvalid(div_out_valid), .m_axis_result_tdata(div_out)
+);
+wire add_out_valid_1; reg add_tvalid_1;
+floating_point_add add_1 (
+  .aclk(clk),                       
+  .s_axis_a_tvalid(add_tvalid_1), .s_axis_a_tdata(add_a_op_1), 
+  .s_axis_b_tvalid(add_tvalid_1), .s_axis_b_tdata(add_b_op_1),
+  .m_axis_result_tvalid(add_out_valid_1), .m_axis_result_tdata(add_out_1) 
+);
+wire mul_out_valid_1; reg mul_tvalid_1;
+floating_point_mul mul_1 (
+  .aclk(clk), 
+  .s_axis_a_tvalid(mul_tvalid_1), .s_axis_a_tdata(mul_a_op_1),
+  .s_axis_b_tvalid(mul_tvalid_1), .s_axis_b_tdata(mul_b_op_1),  
+  .m_axis_result_tvalid(mul_out_valid_1), .m_axis_result_tdata(mul_out_1) 
+);
+wire add_out_valid_2; reg add_tvalid_2;
+floating_point_add add_2 (
+  .aclk(clk),                       
+  .s_axis_a_tvalid(add_tvalid_2), .s_axis_a_tdata(add_a_op_2), 
+  .s_axis_b_tvalid(add_tvalid_2), .s_axis_b_tdata(add_b_op_2),
+  .m_axis_result_tvalid(add_out_valid_2), .m_axis_result_tdata(add_out_2) 
 );
 
-FP_adder #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) add_1(
-	.clk(clk), .reset_n(reset_n),
-	.a_operand(add_a_op_1),  .b_operand(add_b_op_1), 
-	.result(add_out_1)
-);
+reg [PRECISION-1:0] x_r[0:47];
+reg [PRECISION-1:0] epsilon_r[0:40];
+reg [PRECISION-1:0] L_r[0:18];
 
-FP_mul #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) mul_1(
-	.clk(clk), .reset_n(reset_n),
-	.a_operand(mul_a_op_1), .b_operand(mul_b_op_1), 
-	.result(mul_out_1)
-);
-
-FP_adder #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) add_2(
-	.clk(clk), .reset_n(reset_n),
-	.a_operand(add_a_op_2),  .b_operand(add_b_op_2), 
-	.result(add_out_2)
-);
-
-FP_mul #(.PRECISION(32), .EXPONENT(8), .FRACTION(23), .BIAS(127)) mul_2(
-	.clk(clk), .reset_n(reset_n),
-	.a_operand(mul_a_op_2), .b_operand(mul_b_op_2), 
-	.result(mul_out_2)
-);
-
-reg [PRECISION-1:0] x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20;
-reg [PRECISION-1:0] epsilon0, epsilon1, epsilon2, epsilon3, epsilon4, epsilon5, epsilon6, epsilon7, epsilon8, epsilon9, epsilon10, epsilon11, epsilon12, epsilon13, epsilon14; 
-reg [PRECISION-1:0] L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11, L12, L13, L14, L15, L16, L17, L18, L19;
-
+integer i;
 always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
-		L_t 		<= 0;
-		L           	<= 0;
 		div_a_op 	<= 0;
 		div_b_op 	<= 0;
 		add_a_op_1 	<= 0;
@@ -73,65 +68,68 @@ always@(posedge clk or negedge reset_n) begin
 		add_b_op_2 	<= 0;
 		mul_a_op_2	<= 0;
 		mul_b_op_2 	<= 0;
+		div_tvalid 	<= 0;
+		add_tvalid_1 	<= 0;
+		mul_tvalid_1 	<= 0;
+		add_tvalid_2 	<= 0;
 		result      	<= 0;
-
-		x0<=0; x1<=0; x2<=0; x3<=0; x4<=0; x5<=0; x6<=0; x7<=0; x8<=0; x9<=0; 
-		x10<=0; x11<=0; x12<=0; x13<=0; x14<=0; x15<=0; x16<=0; x17<=0; x18<=0; x19<=0; x20<=0;
-		
-		epsilon0<=0; epsilon1<=0; epsilon2<=0; epsilon3<=0; epsilon4<=0; epsilon5<=0; epsilon6<=0; epsilon7<=0; 
-		epsilon8<=0; epsilon9<=0; epsilon10<=0; epsilon11<=0; epsilon12<=0; epsilon13<=0; epsilon14<=0;
-
-		L1<=0; L2<=0; L3<=0; L4<=0; L5<=0; L6<=0; L7<=0; L8<=0; L9<=0; L10<=0;
-		L11<=0; L12<=0; L13<=0; L14<=0; L15<=0; L16<=0; L17<=0; L18<=0; L19<=0;
+		for(i = 0; i < 47; i = i+1) x_r[i] <= 0;
+		for(i = 0; i < 40; i = i+1) epsilon_r[i] <= 0;
+		for(i = 0; i < 18; i = i+1) L_r[i] <= 0;
+        
 	end else begin
-		x0 		<= x;
-		epsilon0 	<= epsilon;
+		//-------------- pass down reg ------------//
+		for(i = 0; i < 47; i = i+1) x_r[i+1] <= x_r[i];
+		for(i = 0; i < 40; i = i+1) epsilon_r[i+1] <= epsilon_r[i];
+		for(i = 0; i < 18; i = i+1) L_r[i+1] <= L_r[i];
 
-		// 
-		div_a_op 	<= x0;
-		div_b_op 	<= epsilon0;
-		x1 <= x0;  x2 <= x1;  x3 <= x2;  x4 <= x3;  x5 <= x4;
-		epsilon1 <= epsilon0; epsilon2 <= epsilon1; epsilon3 <= epsilon2; epsilon4 <= epsilon3; epsilon5 <= epsilon4; 
+		//------------------ div ------------------//
+		if(sawtooth_tvalid) begin
+			div_a_op 	<= x;
+			div_b_op 	<= epsilon;
+			div_tvalid 	<= 1;
+		end else begin
+			div_tvalid 	<= 0;
+		end
 
-		//
-		add_a_op_1 	<= 32'h3f800000; //1.0
-		add_b_op_1 	<= div_out;
-		x6 <= x5;  x7 <= x6;  x8 <= x7;  x9 <= x8;  x10 <= x9;
-		epsilon6 <= epsilon5; epsilon7 <= epsilon6; epsilon8 <= epsilon7; epsilon9 <= epsilon8; epsilon10 <= epsilon9; 
+		x_r[0] 		<= x;
+		epsilon_r[0] 	<= epsilon;
 
-		//
-		L_t 		<= mul_half(add_out_1);
-		x11 <= x10; 
-		epsilon11 <= epsilon10; 
+		//------------------ add ------------------//
+		if(div_out_valid) begin
+			add_a_op_1 	<= 32'h3f800000;
+			add_b_op_1 	<= div_out;
+			add_tvalid_1 	<= 1;
+		end else begin
+			add_tvalid_1 	<= 0;
+		end
 
-		//
-		L 		<= floor(L_t);
-		x12 <= x11; 
-		epsilon12 <= epsilon11;
-		epsilon13 <= epsilon12;
-		epsilon14 <= epsilon13;
+		//------------------ mul ------------------//
+		if(add_out_valid_1) begin
+			L_r[0] 		<= floor(mul_half(add_out_1));
+			mul_a_op_1 	<= floor(mul_half(add_out_1));
+			mul_b_op_1 	<= mul_neg2(epsilon_r[40]);
+			mul_tvalid_1 	<= 1;
+		end else begin
+			mul_tvalid_1 	<= 0;
+		end
 
-		//
-		mul_a_op_1 	<= L;
-		mul_b_op_1 	<= mul_neg2(epsilon14);
-		x13 <= x12; x14 <= x13; x15 <= x14; x16 <= x15; x17 <= x16;
-		L1 <= L;  L2 <= L1;  L3 <= L2;  L4 <= L3; L5 <= L4;  
+		//------------------ add ------------------//
+		if(mul_out_valid_1) begin
+			add_a_op_2 	<= x_r[47];
+			add_b_op_2 	<= (mul_out_valid_1) ? mul_out_1 : 0;
+			add_tvalid_2 	<= 1;
+		end else begin
+			add_tvalid_2 	<= 0;
+		end
 
-		//
-		x18 <= x17; x19 <= x18; x20 <= x19;
-		add_a_op_2 	<= x20;
-		add_b_op_2 	<= mul_out_1;
-		L6 <= L5;  L7 <= L6;  L8 <= L7;  L9 <= L8; L10 <= L9; 
-		L10 <= L9;  L11 <= L10;  L12 <= L11;  L13 <= L12; L14 <= L13; 
-		L15 <= L14;  L16 <= L15;  L17 <= L16; L18 <= L17; L19 <= L18;
-
-		//
-		mul_a_op_2 	<= (is_ood(L19)) ? 32'hbf800000 : 32'h3f800000;
-		mul_b_op_2 	<= add_out_2;
-
-		//
-		result 		<= mul_out_2;
-
+		//------------------ mul ------------------//
+		if(add_out_valid_2) begin
+			result 	<= (is_ood(L_r[18])) ? {~add_out_2[31], add_out_2[30:0]} : add_out_2;
+			sawtooth_valid <= 1;
+		end else begin
+			sawtooth_valid <= 0;
+		end
 	end
 end
 

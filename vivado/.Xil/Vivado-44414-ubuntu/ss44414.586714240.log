@@ -1,0 +1,22 @@
+srcscan starts
+INFO: analyzing module FP_adder (VERI-9002)
+INFO: analyzing module FP_div (VERI-9002)
+INFO: analyzing module FP_mul (VERI-9002)
+INFO: analyzing module PRNG (VERI-9002)
+INFO: analyzing module sawtooth (VERI-9002)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v(43): ERROR: 'div' is already declared (VERI-1116)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v(26): INFO: previous declaration of 'div' is from here (VERI-1967)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v(49): ERROR: 'add_1' is already declared (VERI-1116)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v(33): INFO: previous declaration of 'add_1' is from here (VERI-1967)
+INFO: analyzing module sigma (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:PRNG
+VeriTop library:xil_defaultlib mod:sawtooth
+END of tops
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/PRNG/PRNG.v(1): INFO: compiling module 'PRNG_default' (VERI-1018)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sigma/sigma.v(18): WARNING: Module <floating_point_add> not found while processing module instance <add_1> (VERI-1063)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sigma/sigma.v(41): WARNING: Module <floating_point_mul> not found while processing module instance <mul_1> (VERI-1063)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sigma/sigma.v(47): WARNING: Module <floating_point_sqrt> not found while processing module instance <sqrt> (VERI-1063)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v(1): INFO: compiling module 'sawtooth_default' (VERI-1018)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v(26): WARNING: Module <floating_point_div> not found while processing module instance <div> (VERI-1063)
+srcscan exits with return value 0

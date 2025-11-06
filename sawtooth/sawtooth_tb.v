@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module FP_sawtooth_tb;
+module sawtooth_tb;
 
 // =========================================
 // Parameters
@@ -12,6 +12,7 @@ parameter PRECISION = 32;
 // =========================================
 reg  clk;
 reg  reset_n;
+reg  valid;
 reg  [PRECISION-1:0] a_operand;
 reg  [PRECISION-1:0] b_operand;
 wire [PRECISION-1:0] result;
@@ -24,6 +25,7 @@ sawtooth #(
 ) uut (
     .clk(clk),
     .reset_n(reset_n),
+    .sawtooth_tvalid(valid),
     .x(a_operand),
     .epsilon(b_operand),
     .result(result)
@@ -54,16 +56,24 @@ initial begin
     @(posedge clk);
     a_operand = 32'h3fe00000; // 1.75
     b_operand = 32'h3d4ccccd; // 0.05
-
+    valid       = 1;
     @(posedge clk);
-    a_operand = 32'h42f63d71; // 123.789 
+    valid       = 0;
+    
+    @(posedge clk);
+    a_operand = 32'h42f63d71; // 123.12  
     b_operand = 32'h3d4ccccd; // 0.05
-
+    valid       = 1;
+    @(posedge clk);
+    valid       = 0;
     @(posedge clk);
     @(posedge clk);
     a_operand = 32'h3fe00000; // 1.75
     b_operand = 32'h3d4ccccd; // 0.05
-    // Wait enough time for pipeline to produce output
+    valid       = 1;
+    @(posedge clk);
+    valid       = 0;
+//    // Wait enough time for pipeline to produce output
     #2000;
 
     $finish;
@@ -72,20 +82,20 @@ end
 // =========================================
 // Dump waveform
 // =========================================
-initial begin
-    $dumpfile("sawtooth.vcd");
-    $dumpvars(0, FP_sawtooth_tb);
-end
+//initial begin
+//    $dumpfile("sawtooth.vcd");
+//    $dumpvars(0, sawtooth_tb);
+//end
 
 // =========================================
 // Monitor pipeline and result
 // =========================================
-initial begin
-    $display("Time\t div_out       \tmul_out_1   \tadd_out_1    \tmul_out_2   \tadd_out_2    \tresult");
-    $monitor("%0t\t%h\t%h\t%h\t%h\t%h\t%h", 
-              $time, uut.div_out, uut.mul_out_1, uut.add_out_1,
-              uut.mul_out_2, uut.add_out_2, result);
-end
+//initial begin
+//    $display("Time\t div_out       \tmul_out_1   \tadd_out_1    \tmul_out_2   \tadd_out_2    \tresult");
+//    $monitor("%0t\t%h\t%h\t%h\t%h\t%h\t%h", 
+//              $time, uut.div_out, uut.mul_out_1, uut.add_out_1,
+//              uut.mul_out_2, uut.add_out_2, result);
+//end
 
 endmodule
 
