@@ -1,0 +1,7 @@
+srcscan starts
+INFO: analyzing module PRNG (VERI-9002)
+INFO: analyzing module sigma (VERI-9002)
+INFO: analyzing module sawtooth (VERI-9002)
+INFO: analyzing module ParamMem (VERI-9002)
+INFO: analyzing module affine_transform (VERI-9002)
+srcscan exits with return value 0

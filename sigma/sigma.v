@@ -4,6 +4,7 @@ module sigma#(
 	input clk,
 	input reset_n,
 	input [PRECISION-1:0] err,
+	input tvalid,
 	input [PRECISION-1:0] A00, A01, A02,
 	input [PRECISION-1:0] A10, A11, A12,
 	input [PRECISION-1:0] A20, A21, A22,
@@ -75,10 +76,12 @@ always @(posedge clk or negedge reset_n) begin
 		case (state)
 			IDLE: begin
 				valid <= 0;
-				state <= S1;
-				add_tvalid_1 <= 1'b1;
-				add_tvalid_2 <= 1'b1;
-				add_tvalid_3 <= 1'b1;
+				if(tvalid) begin
+                    state <= S1;
+                    add_tvalid_1 <= 1'b1;
+                    add_tvalid_2 <= 1'b1;
+                    add_tvalid_3 <= 1'b1;
+                end
 			end
 			S1: begin
 				add_tvalid_1 <= 1'b0;
@@ -131,11 +134,13 @@ always @(posedge clk or negedge reset_n) begin
 				add_tvalid_3 <= 1'b0;
 				if(add_valid_3) begin
 					state <= DONE;
-					valid <= 1'b1;
 				end
 			end
-			DONE: 	state <= DONE;
-
+			DONE: begin 	
+//			     state <= DONE;
+         		 valid <= 1'b1;
+         		 /*if(tvalid) */state <= IDLE;
+			end
 			default: state <= state;
   		endcase
 	end

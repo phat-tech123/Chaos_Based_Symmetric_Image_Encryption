@@ -1,62 +1,49 @@
+`timescale 1ns/1ps
+
 module PRNG_tb;
 
 
 reg clk;
 reg reset_n;
-reg [31:0] A00, A01, A02;
-reg [31:0] A10, A11, A12;
-reg [31:0] A20, A21, A22;
-
-wire [31:0] pseudoRandonNumber1, pseudoRandonNumber2, pseudoRandonNumber3;
+reg tvalid;
+wire valid;
+wire [31:0] pseudoRandomNumber1, pseudoRandomNumber2, pseudoRandomNumber3;
 
 PRNG#(
 	.PRECISION(32)
 ) uut(
 	.clk(clk), .reset_n(reset_n),
-	.A00(A00), .A01(A01), .A02(A02),
-	.A10(A10), .A11(A11), .A12(A12),
-	.A20(A20), .A21(A21), .A22(A22),
-	.pseudoRandonNumber1(pseudoRandonNumber1),
-	.pseudoRandonNumber2(pseudoRandonNumber2),
-	.pseudoRandonNumber3(pseudoRandonNumber3)
+	.tvalid(tvalid),
+	.valid(valid),
+	.pseudoRandomNumber1(pseudoRandomNumber1),
+	.pseudoRandomNumber2(pseudoRandomNumber2),
+	.pseudoRandomNumber3(pseudoRandomNumber3)
 );
 
 initial begin
     	clk = 0;
-    	forever #5 clk = ~clk;
+    	forever #1 clk = ~clk;
 end
 
 initial begin
-    	reset_n   = 0;
+    clk = 0;
+    reset_n = 0;
+    tvalid = 0;
 
-    	#25;
-    	reset_n = 1;
+    #25;
+    reset_n = 1;
 
-    	@(posedge clk);
-	A00 <= 0;
-	A01 <= 32'h3f000000;
-	A02 <= 32'h3d4ccccd;
+    // Phát xung tvalid đúng 1 chu kỳ clock
+    @(posedge clk);
+    tvalid = 1;
+    @(posedge clk);
+    tvalid = 0;
 
-	A10 <= 32'h3eaaaaaa;
-	A11 <= 0;
-	A12 <= 32'h3eaaaaaa;
-
-	A20 <= 32'h3d4ccccd;
-	A21 <= 32'h3f000000;
-	A22 <= 0;
-    	#2000;
-
-    	$finish;
-end
-
-initial begin
-	$dumpfile("PRNG.vcd");
-	$dumpvars(0, PRNG_tb);
+    // Đợi pipeline chạy xong
+    #2000;
+    $finish;
 end
 
 
-initial begin
-	$display("%h", uut.norm_inf_manual);
-end
 
 endmodule

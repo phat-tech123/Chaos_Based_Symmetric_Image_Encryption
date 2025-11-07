@@ -72,6 +72,7 @@ always@(posedge clk or negedge reset_n) begin
 		add_tvalid_1 	<= 0;
 		mul_tvalid_1 	<= 0;
 		add_tvalid_2 	<= 0;
+		sawtooth_valid  <= 0;
 		result      	<= 0;
 		for(i = 0; i < 47; i = i+1) x_r[i] <= 0;
 		for(i = 0; i < 40; i = i+1) epsilon_r[i] <= 0;

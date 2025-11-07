@@ -1,55 +1,3 @@
-//module sigma_tb;
-
-
-//reg clk;
-//reg reset_n;
-//reg [31:0] A00, A01, A02;
-//reg [31:0] A10, A11, A12;
-//reg [31:0] A20, A21, A22;
-//wire [31:0] sigma;
-//wire valid;
-
-//sigma#(
-//	.PRECISION(32)
-//) uut(
-//	.clk(clk), .reset_n(reset_n),
-//	.err(32'h3dcccccd),
-//	.A00(A00), .A01(A01), .A02(A02),
-//	.A10(A10), .A11(A11), .A12(A12),
-//	.A20(A20), .A21(A21), .A22(A22),
-//	.valid(valid),
-//	.sigma(sigma)
-//);
-
-//initial begin
-//    	clk = 0;
-//    	forever #5 clk = ~clk;
-//end
-
-//initial begin
-//    	reset_n   = 0;
-
-//    	#25;
-//    	reset_n = 1;
-
-//    	@(posedge clk);
-//        A00 <= 0;
-//        A01 <= 32'h3f000000;
-//        A02 <= 32'h3d4ccccd;
-    
-//        A10 <= 32'h3eaaaaaa;
-//        A11 <= 0;
-//        A12 <= 32'h3eaaaaaa;
-    
-//        A20 <= 32'h3d4ccccd;
-//        A21 <= 32'h3f000000;
-//        A22 <= 0;
-//        #2000;
-
-//    	$finish;
-//end
-//endmodule
-
 module sigma_tb;
 
 reg clk;
@@ -59,7 +7,7 @@ reg [31:0] A10, A11, A12;
 reg [31:0] A20, A21, A22;
 wire [31:0] sigma;
 wire valid;
-
+reg tvalid;
 integer cycle_count;
 integer start_cycle, end_cycle;
 real clk_period = 10.0; // 10ns = 100MHz
@@ -68,6 +16,7 @@ sigma#(
 	.PRECISION(32)
 ) uut(
 	.clk(clk), .reset_n(reset_n),
+	.tvalid(tvalid),
 	.err(32'h3dcccccd),
 	.A00(A00), .A01(A01), .A02(A02),
 	.A10(A10), .A11(A11), .A12(A12),
@@ -89,6 +38,7 @@ initial begin
     	reset_n = 1;
 
     	@(posedge clk);
+    	tvalid <= 1;
     	A00 <= 0;
     	A01 <= 32'h3f000000;
     	A02 <= 32'h3d4ccccd;
@@ -101,9 +51,11 @@ initial begin
     	A21 <= 32'h3f000000;
     	A22 <= 0;
 
-    	start_cycle = cycle_count; // bắt đầu đếm
+    	@(posedge clk);
+    	tvalid <= 0;
+    	start_cycle = cycle_count;
     	
-    	wait(valid == 1'b1); // chờ đến khi output hợp lệ
+    	wait(valid == 1'b1);
     	end_cycle = cycle_count;
 
     	$display("\n===========================================");
