@@ -36,12 +36,13 @@ EXtractor extractor_inst (
 
     .enable_extract(!done_sbox),
 
-    .val1(val1),
-    .val2(val2),
-    .val3(val3),
-    .EX1(EX1),
-    .EX2(EX2),
-    .EX3(EX3)
+    .val{0}(val1),
+    .val{1}(val2),
+    .val{2}(val3),
+    
+    .extraction_value{0}(EX1),
+    .extraction_value{1}(EX2),
+    .extraction_value{2}(EX3)
 );
 
 mixer mixer_inst (

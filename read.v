@@ -10,9 +10,9 @@ module read(
 reg [31:0] mem [0:2699];
 reg [7:0] index;
 
-initial begin
-    $readmemh("input.hex", mem);
-end
+// initial begin
+//     $readmemh("input.hex", mem);
+// end
 
 always @(posedge clk or posedge rst) begin
     if (rst) begin

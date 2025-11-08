@@ -11,7 +11,6 @@ module seen (
     reg       unvalid;             
     integer   i;
 
-    reg [7:0] tmp;
 
     // ====== Kiểm tra dữ liệu đã thấy chưa ======
     always @(*) begin
