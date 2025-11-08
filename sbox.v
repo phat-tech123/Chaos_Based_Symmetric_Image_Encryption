@@ -34,11 +34,11 @@ always @(posedge clk or posedge rst) begin
     end
 end
 
-assign done_sbox = (index == 8'hA1) ? 1'b1 : 1'b0;
+assign done_sbox = (index == 8'h9E) ? 1'b1 : 1'b0;
 
-// always @(posedge clk) begin
-//     if (done_sbox) 
-//         $writememh("output.hex", sbox_mem);
-// end
+always @(posedge clk) begin
+    if (done_sbox) 
+        $writememh("output.hex", sbox_mem);
+end
 
 endmodule

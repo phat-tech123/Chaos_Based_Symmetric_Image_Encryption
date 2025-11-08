@@ -14,7 +14,7 @@ module top(
 );
 
 wire enable_extract, seen_flag, seen_single, enable_write, enable_counter;
-wire [22:0] EX1, EX2, EX3;
+wire [22:0] ex1, ex2, ex3;
 wire [31:0] val1, val2, val3;
 wire [22:0] v_reg ;
 wire [7:0] count;
@@ -30,27 +30,27 @@ read read_inst (
     .val3(val3)
 );
 
-EXtractor extractor_inst (
+extractor extractor_inst (
     .clk(clk),
     .rst(rst),
 
     .enable_extract(!done_sbox),
 
-    .val{0}(val1),
-    .val{1}(val2),
-    .val{2}(val3),
+    .val1(val1),
+    .val2(val2),
+    .val3(val3),
     
-    .extraction_value{0}(EX1),
-    .extraction_value{1}(EX2),
-    .extraction_value{2}(EX3)
+    .ex1(ex1),
+    .ex2(ex2),
+    .ex3(ex3)
 );
 
 mixer mixer_inst (
     .clk(clk),
     .rst(rst),
-    .EX1(EX1),
-    .EX2(EX2),
-    .EX3(EX3),
+    .ex1(ex1),
+    .ex2(ex2),
+    .ex3(ex3),
     .v_reg(v_reg)
 );  
 

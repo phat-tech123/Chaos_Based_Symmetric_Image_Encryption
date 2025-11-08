@@ -1,9 +1,9 @@
 module mixer(
     input clk,
     input rst,
-    input [22:0] EX1,
-    input [22:0] EX2,
-    input [22:0] EX3,
+    input [22:0] ex1,
+    input [22:0] ex2,
+    input [22:0] ex3,
     output reg [22:0] v_reg
 );
 
@@ -16,9 +16,9 @@ always @(posedge clk or posedge rst) begin
         D3 <= 22'b0;
     end
     else begin
-        D1 <= EX1 & 8'hFF;
-        D2 <= EX2 & 8'hFF;
-        D3 <= EX3 & 8'hFF;
+        D1 <= ex1 & 8'hFF;
+        D2 <= ex2 & 8'hFF;
+        D3 <= ex3 & 8'hFF;
     end
 end
 
