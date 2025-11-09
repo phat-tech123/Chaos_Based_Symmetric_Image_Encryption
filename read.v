@@ -7,8 +7,8 @@ module read(
     output reg [31:0] val3
 );
 
-reg [31:0] mem [0:2699];
-reg [7:0] index;
+reg [31:0] mem [0:3999];
+reg [15:0] index;
 
 initial begin
     $readmemh("input.hex", mem);

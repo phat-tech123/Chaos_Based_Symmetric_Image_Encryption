@@ -8,7 +8,7 @@ module sbox(
 );
 
 reg [7:0] sbox_mem [0:255];
-reg [7:0] index;
+reg [8:0] index;
 
 integer i;
 always @(posedge clk or posedge rst) begin
@@ -16,9 +16,11 @@ always @(posedge clk or posedge rst) begin
         for (i = 0; i < 256; i = i + 1) begin
             sbox_mem[i] <= 8'h00;
         end
+        data_out <= 8'h00;
     end
     else if (enable_write) begin
         sbox_mem[index] <= data_in;
+        data_out <= data_in;
     end
 end
 
@@ -34,7 +36,7 @@ always @(posedge clk or posedge rst) begin
     end
 end
 
-assign done_sbox = (index == 8'h9E) ? 1'b1 : 1'b0;
+assign done_sbox = (index == 9'h100) ? 1'b1 : 1'b0;
 
 always @(posedge clk) begin
     if (done_sbox) 

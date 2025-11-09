@@ -103,7 +103,6 @@ module extractor(
             for (i = 0; i < 3; i = i + 1) begin
                 if (E[i] > 0) begin
                     tmp[i] <= mantissa[i] << E[i];
-                    k5 <= mantissa[0] << E[0];
                 end 
                 else begin
                     tmp[i] <= 0;
@@ -118,12 +117,11 @@ module extractor(
             for (i = 0; i < 3; i = i + 1) begin
                 tmp1[i] <= 0;
             end
-            k6 <= 0;
         end
         else if (enable_extract) begin
-            tmp1[0] <= (tmp[0] * 56'd1000) >> 23;
-            tmp1[1] <= (tmp[1] * 56'd1000) >> 23;
-            tmp1[2] <= (tmp[2] * 56'd1000) >> 23;
+            tmp1[0] <= (tmp[0] * 56'd10000) >> 23;
+            tmp1[1] <= (tmp[1] * 56'd10000) >> 23;
+            tmp1[2] <= (tmp[2] * 56'd10000) >> 23;
         end
     end
 
@@ -133,12 +131,11 @@ module extractor(
             ex1 <= 0;
             ex2 <= 0;
             ex3 <= 0;
-            k7 <= 0;
         end
         else if (enable_extract) begin
-            ex1 <= tmp1[0] % 23'd1000;
-            ex2 <= tmp1[1] % 23'd1000;
-            ex3 <= tmp1[2] % 23'd1000;
+            ex1 <= tmp1[0] & 10'h3E8;
+            ex2 <= tmp1[1] % 10'h3E8;
+            ex3 <= tmp1[2] % 10'h3E8;
         end
     end
 

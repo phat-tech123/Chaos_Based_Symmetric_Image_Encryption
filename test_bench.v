@@ -24,13 +24,11 @@ initial begin
     clk = 1;
     #20;
     rst = 0;
-    #100000;
-    $finish;
 end
 
-// always @(posedge done_sbox) begin
-//     #20;
-//     $finish;    
-// end
+always @(posedge done_sbox) begin
+    #20;
+    $finish;    
+end
 
 endmodule
