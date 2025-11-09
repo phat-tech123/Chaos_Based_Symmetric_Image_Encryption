@@ -1,11 +1,11 @@
-//`include "read.v"
-//`include "extractor.v"
-//`include "mixer.v"
-//`include "counter.v"
-//`include "seen.v"
-//`include "checker.v"
-//`include "sbox.v"
-//`include "FF.v"
+`include "read.v"
+`include "extractor.v"
+`include "mixer.v"
+`include "counter.v"
+`include "seen.v"
+`include "checker.v"
+`include "sbox.v"
+`include "FF.v"
 
 module top(
     input clk,

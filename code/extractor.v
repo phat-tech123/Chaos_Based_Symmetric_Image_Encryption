@@ -18,12 +18,10 @@ module extractor(
     reg [23:0] mantissa [0:2];
     reg [55:0] tmp [0:2]; 
     reg [55:0] tmp1 [0:2];
+    reg [31:0] val [0:2]; // ánh xạ 3 input vào mảng
 
     integer E [0:2];
-    integer int_part [0:2];
-
     integer i;
-    reg [31:0] val [0:2]; // ánh xạ 3 input thành mảng để dễ xử lý
 
     // ====== Gộp 3 input vào mảng ======
     always @(*) begin
@@ -32,110 +30,93 @@ module extractor(
         val[2] = val3; 
     end
 
-    // ====== Tách exponent và fraction từ 3 input ======
+    // ====== Tách exponent và fraction ======
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             for (i = 0; i < 3; i = i + 1) begin
-                exponent[i] <= 0;
-                fraction[i] <= 0;
+                exponent[i] <= 8'd0;
+                fraction[i] <= 23'd0;
             end
-            ex1 <= 0;
-            ex2 <= 0;
-            ex3 <= 0;
         end 
         else if (enable_extract) begin  
             for (i = 0; i < 3; i = i + 1) begin
-                // --- Tách exponent và fraction ---
                 exponent[i] <= val[i][30:23];
                 fraction[i] <= val[i][22:0];
             end
         end
     end
 
-    // ====== Tinh toan gia tri mantissa ======
+    // ====== Tính mantissa ======
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            for (i = 0; i < 3; i = i + 1) begin
-                mantissa[i] <= 0;
-            end
+            for (i = 0; i < 3; i = i + 1)
+                mantissa[i] <= 24'd0;
         end 
         else if (enable_extract) begin
             for (i = 0; i < 3; i = i + 1) begin
-                // --- Tính mantissa ---
-                if (exponent[i] == 8'b0) begin
-                    mantissa[i] <= {1'b0, fraction[i]}; // denormalized number
-                end 
-                else begin
-                    mantissa[i] <= {1'b1, fraction[i]}; // normalized number
-                end
+                if (exponent[i] == 8'd0)
+                    mantissa[i] <= {1'b0, fraction[i]}; // denormalized
+                else
+                    mantissa[i] <= {1'b1, fraction[i]}; // normalized
             end
         end
     end
 
-    // ====== Tinh toan gia tri E ======
+    // ====== Tính E ======
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            for (i = 0; i < 3; i = i + 1) begin
+            for (i = 0; i < 3; i = i + 1)
                 E[i] <= 0;
-            end
         end
         else if (enable_extract) begin
             for (i = 0; i < 3; i = i + 1) begin
-                // --- Tính E ---
-                if (exponent[i] == 8'b0) begin
-                    E[i] <= 0; // denormalized number
-                end 
-                else begin
-                    E[i] <= exponent[i] - 127; // normalized number
-                end
+                if (exponent[i] == 8'd0)
+                    E[i] <= -126; // bias cho số denormalized
+                else
+                    E[i] <= exponent[i] - 127;
             end
         end
     end
 
-    // ======  Dich trai mantissa boi E ======
+    // ====== Dịch trái mantissa theo E ======
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            for (i = 0; i < 3 ; i = i + 1) begin
-                tmp[i] <= 0;
-            end
+            for (i = 0; i < 3 ; i = i + 1)
+                tmp[i] <= 56'd0;
         end
         else if (enable_extract) begin
             for (i = 0; i < 3; i = i + 1) begin
-                if (E[i] > 0) begin
+                if (E[i] >= 0)
                     tmp[i] <= mantissa[i] << E[i];
-                end 
-                else begin
-                    tmp[i] <= 0;
-                end
+                else
+                    tmp[i] <= mantissa[i] >> (-E[i]);
             end 
         end   
     end
 
-    // ====== Nhan ket qua dich trai voi 1000 va dich phai 23 bit ======
+    // ====== Nhân kết quả với 10000 và chia lại (dịch phải 23 bit) ======
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            for (i = 0; i < 3; i = i + 1) begin
-                tmp1[i] <= 0;
-            end
+            for (i = 0; i < 3; i = i + 1)
+                tmp1[i] <= 56'd0;
         end
         else if (enable_extract) begin
-            tmp1[0] <= (tmp[0] * 56'd10000) >> 23;
-            tmp1[1] <= (tmp[1] * 56'd10000) >> 23;
-            tmp1[2] <= (tmp[2] * 56'd10000) >> 23;
+            for (i = 0; i < 3; i = i + 1)
+                tmp1[i] <= (tmp[i] * 56'd1000) >> 23;
         end
     end
 
-    // ====== Gán kết quả cuối cùng cho output ======
+    // ====== Lấy phần thập phân (mod 1000) và gán ra output ======
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            ex1 <= 0;
-            ex2 <= 0;
-            ex3 <= 0;
+            ex1 <= 23'd0;
+            ex2 <= 23'd0;
+            ex3 <= 23'd0;
         end
         else if (enable_extract) begin
-            ex1 <= tmp1[0] & 10'h3E8;
-            ex2 <= tmp1[1] % 10'h3E8;
-            ex3 <= tmp1[2] % 10'h3E8;
+            ex1 <= tmp1[0][22:0] % 1000;
+            ex2 <= tmp1[1][22:0] % 1000;
+            ex3 <= tmp1[2][22:0] % 1000;
         end
     end
 

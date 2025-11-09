@@ -16,9 +16,9 @@ always @(posedge clk or posedge rst) begin
         D3 <= 22'b0;
     end
     else begin
-        D1 <= ex1 & 8'hFF;
-        D2 <= ex2 & 8'hFF;
-        D3 <= ex3 & 8'hFF;
+        D1 <= ex1 - (ex1 ^ 8'hFF ) & ex1;
+        D2 <= ex2 - (ex2 ^ 8'hFF ) & ex2;
+        D3 <= ex3 - (ex3 ^ 8'hFF ) & ex3;
     end
 end
 
