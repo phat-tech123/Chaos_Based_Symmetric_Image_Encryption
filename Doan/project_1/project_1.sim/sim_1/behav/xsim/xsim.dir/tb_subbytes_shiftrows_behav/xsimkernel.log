@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_subbytes_shiftrows_behav/xsimk.exe -simmode gui -wdb tb_subbytes_shiftrows_behav.wdb -simrunnum 0 -socket 63773
+Design successfully loaded
+Design Loading Memory Usage: 28632 KB (Peak: 28632 KB)
+Design Loading CPU Usage: 577 ms
