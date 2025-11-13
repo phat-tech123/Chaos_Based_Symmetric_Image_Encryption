@@ -109,14 +109,14 @@ module extractor(
     // ====== Lấy phần thập phân (mod 1000) và gán ra output ======
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            ex1 <= 23'd0;
+            ex1 <= 23'd0; // 7514DC72 = 2461.77783203125
             ex2 <= 23'd0;
             ex3 <= 23'd0;
         end
         else if (enable_extract) begin
-            ex1 <= tmp1[0][22:0] % 1000;
-            ex2 <= tmp1[1][22:0] % 1000;
-            ex3 <= tmp1[2][22:0] % 1000;
+            ex1 <= tmp1[0] % 1000; // 777 
+            ex2 <= tmp1[1] % 1000;
+            ex3 <= tmp1[2] % 1000;
         end
     end
 
