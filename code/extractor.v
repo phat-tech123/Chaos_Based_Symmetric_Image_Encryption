@@ -102,7 +102,7 @@ module extractor(
         end
         else if (enable_extract) begin
             for (i = 0; i < 3; i = i + 1)
-                tmp1[i] <= (tmp[i] * 56'd1000) >> 23;
+                tmp1[i] <= (tmp[i] * 56'd1000000) >> 23;
         end
     end
 
@@ -114,9 +114,9 @@ module extractor(
             ex3 <= 23'd0;
         end
         else if (enable_extract) begin
-            ex1 <= tmp1[0] % 1000; // 777 
-            ex2 <= tmp1[1] % 1000;
-            ex3 <= tmp1[2] % 1000;
+            ex1 <= (tmp1[0] % 23'd1000); // 777 
+            ex2 <= (tmp1[1] % 23'd1000);
+            ex3 <= (tmp1[2] % 23'd1000);
         end
     end
 
