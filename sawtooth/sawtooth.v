@@ -12,14 +12,12 @@ module sawtooth#(
 
 reg [PRECISION-1:0] div_a_op, div_b_op;
 reg [PRECISION-1:0] mul_a_op_1, mul_b_op_1;
-reg [PRECISION-1:0] mul_a_op_2, mul_b_op_2;
 reg [PRECISION-1:0] add_a_op_1, add_b_op_1;
 reg [PRECISION-1:0] add_a_op_2, add_b_op_2;
 
 wire [PRECISION-1:0] div_out;
 wire [PRECISION-1:0] mul_out_1;
 wire [PRECISION-1:0] add_out_1;
-wire [PRECISION-1:0] mul_out_2;
 wire [PRECISION-1:0] add_out_2;
 
 wire div_out_valid; reg div_tvalid;
@@ -66,17 +64,15 @@ always@(posedge clk or negedge reset_n) begin
 		mul_b_op_1 	<= 0;
 		add_a_op_2 	<= 0;
 		add_b_op_2 	<= 0;
-		mul_a_op_2	<= 0;
-		mul_b_op_2 	<= 0;
 		div_tvalid 	<= 0;
 		add_tvalid_1 	<= 0;
 		mul_tvalid_1 	<= 0;
 		add_tvalid_2 	<= 0;
 		sawtooth_valid  <= 0;
 		result      	<= 0;
-		for(i = 0; i < 47; i = i+1) x_r[i] <= 0;
-		for(i = 0; i < 40; i = i+1) epsilon_r[i] <= 0;
-		for(i = 0; i < 18; i = i+1) L_r[i] <= 0;
+		for(i = 0; i < 48; i = i+1) x_r[i] <= 0;
+		for(i = 0; i < 41; i = i+1) epsilon_r[i] <= 0;
+		for(i = 0; i < 19; i = i+1) L_r[i] <= 0;
         
 	end else begin
 		//-------------- pass down reg ------------//

@@ -73,15 +73,15 @@ generate
 	end
 endgenerate
 
-reg [PRECISION-1:0] affine_transform_x[0:2], affine_transform_U[0:2], A_in[0:8];
+reg [PRECISION-1:0] affine_transform_x[0:2], affine_transform_U[0:2];
 reg affine_transform_tvalid; wire affine_transform_valid;
 wire [PRECISION-1:0] x_next0, x_next1, x_next2;
 affine_transform #(.PRECISION(PRECISION)) affine_transform_u(
 	.clk(clk), .reset_n(reset_n),
 	.tvalid(affine_transform_tvalid),
-	.A00(A_in[0]), .A01(A_in[1]), .A02(A_in[2]),
-	.A10(A_in[3]), .A11(A_in[4]), .A12(A_in[5]),
-	.A20(A_in[6]), .A21(A_in[7]), .A22(A_in[8]),
+	.A00(A[0]), .A01(A[1]), .A02(A[2]),
+	.A10(A[3]), .A11(A[4]), .A12(A[5]),
+	.A20(A[6]), .A21(A[7]), .A22(A[8]),
 	.x0(affine_transform_x[0]), .x1(affine_transform_x[1]), .x2(affine_transform_x[2]),
 	.U0(affine_transform_U[0]), .U1(affine_transform_U[1]), .U2(affine_transform_U[2]),
 	.valid(affine_transform_valid),
@@ -91,6 +91,7 @@ affine_transform #(.PRECISION(PRECISION)) affine_transform_u(
 );
 
 
+integer j;
 //------------- calculate sigma -----------//
 always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
@@ -103,7 +104,6 @@ always@(posedge clk or negedge reset_n) begin
 end
 
 //------------- sigma * x -----------------//
-integer j;
 always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
 		for(j = 0; j < 3; j = j+1) begin
@@ -127,6 +127,7 @@ end
 //------------- sawtooth -----------------//
 always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
+		epsilon <= 0;
 		for(j = 0; j < 3; j = j+1) begin
 			sawtooth_tvalid[j] <= 0;
 			sawtooth_x[j] <= 0;
@@ -151,7 +152,6 @@ always@(posedge clk or negedge reset_n) begin
 			affine_transform_U[j] 	<= 0;
 		end
 	end else if(&sawtooth_valid) begin
-	    	for(j = 0; j < 9; j = j+1) A_in[j] <= A[j];
 		affine_transform_tvalid <= 1'b1;
 		affine_transform_x[0] 	<= pseudoRandomNumber1;
 		affine_transform_x[1] 	<= pseudoRandomNumber2;
