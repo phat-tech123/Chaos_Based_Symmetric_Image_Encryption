@@ -30,6 +30,6 @@ always@(posedge clk or negedge reset_n) begin
 	end
 end
 
-assign done_sbox = (index == SIZE) ? 1 : 0;
+assign done_sbox = (index == 8'd255) ? 1 : 0;
 
 endmodule

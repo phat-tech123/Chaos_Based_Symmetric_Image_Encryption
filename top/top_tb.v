@@ -11,8 +11,6 @@ module top_tb;
     reg reset_n;
     reg tvalid;
 
-    wire done_sbox;
-
     // Instantiate DUT
     top #(
         .PRECISION(PRECISION),

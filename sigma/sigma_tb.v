@@ -28,13 +28,13 @@ sigma#(
 // Clock
 initial begin
     	clk = 0;
-    	forever #5 clk = ~clk; // 100MHz
+    	forever #1 clk = ~clk; // 100MHz
 end
 
 // Stimulus
 initial begin
     	reset_n = 0;
-    	#25;
+    	#5;
     	reset_n = 1;
 
     	@(posedge clk);
@@ -53,18 +53,24 @@ initial begin
 
     	@(posedge clk);
     	tvalid <= 0;
-    	start_cycle = cycle_count;
-    	
-    	wait(valid == 1'b1);
-    	end_cycle = cycle_count;
+        
+        @(posedge clk);
+        tvalid <= 1;
+    	A00 <= 0;
+    	A01 <= 32'h3f000000;
+    	A02 <= 32'h3d4ccccd;
 
-    	$display("\n===========================================");
-    	$display("Sigma output = %h", sigma);
-    	$display("Latency = %0d cycles", end_cycle - start_cycle);
-    	$display("Latency = %.1f ns", (end_cycle - start_cycle) * clk_period);
-    	$display("===========================================\n");
+    	A10 <= 32'h3eaaaaaa;
+    	A11 <= 0;
+    	A12 <= 32'h3f000000;
 
-    	#50;
+    	A20 <= 32'h3d4ccccd;
+    	A21 <= 32'h3f000000;
+    	A22 <= 0;
+        
+    	@(posedge clk);
+    	tvalid <= 0;
+    	#5000;
     	$finish;
 end
 
