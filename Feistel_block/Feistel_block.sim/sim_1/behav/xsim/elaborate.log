@@ -1,7 +1,7 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_feistel_encrypt_behav xil_defaultlib.tb_feistel_encrypt xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_feistel_cbc_encrypt_behav xil_defaultlib.tb_feistel_cbc_encrypt xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -17,6 +17,7 @@ Compiling module xil_defaultlib.mixcolumns
 Compiling module xil_defaultlib.addroundkey
 Compiling module xil_defaultlib.f_round
 Compiling module xil_defaultlib.feistel_encrypt_default
-Compiling module xil_defaultlib.tb_feistel_encrypt
+Compiling module xil_defaultlib.feistel_cbc_encrypt
+Compiling module xil_defaultlib.tb_feistel_cbc_encrypt
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_feistel_encrypt_behav
+Built simulation snapshot tb_feistel_cbc_encrypt_behav

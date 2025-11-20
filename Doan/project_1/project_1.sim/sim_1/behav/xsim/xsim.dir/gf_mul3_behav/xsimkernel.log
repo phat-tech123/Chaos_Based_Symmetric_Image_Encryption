@@ -1,7 +1,0 @@
-Running: xsim.dir/gf_mul3_behav/xsimk.exe -simmode gui -wdb gf_mul3_behav.wdb -simrunnum 0 -socket 49691
-Design successfully loaded
-Design Loading Memory Usage: 29552 KB (Peak: 29552 KB)
-Design Loading CPU Usage: 562 ms
-Simulation completed
-Simulation Memory Usage: 30396 KB (Peak: 30396 KB)
-Simulation CPU Usage: 593 ms
