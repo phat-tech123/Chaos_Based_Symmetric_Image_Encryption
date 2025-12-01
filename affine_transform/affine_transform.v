@@ -54,6 +54,11 @@ generate
 	end
 endgenerate
 
+localparam MUL_LATENCY = 6;
+reg [PRECISION-1:0] U0_temp[0:MUL_LATENCY - 1];
+reg [PRECISION-1:0] U1_temp[0:MUL_LATENCY - 1];
+reg [PRECISION-1:0] U2_temp[0:MUL_LATENCY - 1];
+
 integer k; 
 always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
@@ -61,6 +66,11 @@ always@(posedge clk or negedge reset_n) begin
 			mul_a_op[k] 	<= 0;
 			mul_b_op[k] 	<= 0;
 			mul_tvalid[k]  	<= 0;	
+		end
+		for(k = 0; k < MUL_LATENCY; k = k + 1) begin
+		  U0_temp[k] <= 0;
+		  U1_temp[k] <= 0;
+		  U2_temp[k] <= 0;
 		end
 	end else if(tvalid) begin
 		mul_a_op[0] <= A00; mul_b_op[0] <= x0;
@@ -74,11 +84,20 @@ always@(posedge clk or negedge reset_n) begin
 		mul_a_op[6] <= A20; mul_b_op[6] <= x0;
 		mul_a_op[7] <= A21; mul_b_op[7] <= x1;
 		mul_a_op[8] <= A22; mul_b_op[8] <= x2;
+		
+		U0_temp[0] <= U0;
+		U1_temp[0] <= U1;
+		U2_temp[0] <= U2;
 
 		for(k = 0; k < 9; k = k + 1) mul_tvalid[k] <= 1'b1;
 		
 	end else begin
 		for(k = 0; k < 9; k = k + 1) mul_tvalid[k] <= 1'b0;
+		for(k = 1; k < MUL_LATENCY; k = k + 1) begin
+		  U0_temp[k] <= U0_temp[k-1];
+		  U1_temp[k] <= U1_temp[k-1];
+		  U2_temp[k] <= U2_temp[k-1];
+		end
 	end
 end
 
@@ -94,17 +113,17 @@ always@(posedge clk or negedge reset_n) begin
 		add_a_op[0] 	<= mul_out[0];
 		add_b_op[0] 	<= mul_out[1];
 		add_a_op[1] 	<= mul_out[2];
-		add_b_op[1] 	<= U0;
+		add_b_op[1] 	<= U0_temp[MUL_LATENCY-1];
 
 		add_a_op[2] 	<= mul_out[3];
 		add_b_op[2] 	<= mul_out[4];
 		add_a_op[3] 	<= mul_out[5];
-		add_b_op[3] 	<= U1;
+		add_b_op[3] 	<= U1_temp[MUL_LATENCY-1];
 
 		add_a_op[4] 	<= mul_out[6];
 		add_b_op[4] 	<= mul_out[7];
 		add_a_op[5] 	<= mul_out[8];
-		add_b_op[5] 	<= U2;
+		add_b_op[5] 	<= U2_temp[MUL_LATENCY-1];
 
 		for(k = 0; k < 6; k = k + 1) add_tvalid[k] <= 1'b1;
 	end else begin

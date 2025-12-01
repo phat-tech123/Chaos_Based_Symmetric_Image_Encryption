@@ -11,15 +11,23 @@ module PRNG#(
 );
 
 // --------------- INIT ------------------//
-wire [PRECISION-1:0] A[0:8], x[0:2];
-ParamMem #(.PRECISION(PRECISION)) mem_inst (
-    .clk(clk),
-//    .reset_n(reset_n),
-    .A00(A[0]), .A01(A[1]), .A02(A[2]),
-    .A10(A[3]), .A11(A[4]), .A12(A[5]),
-    .A20(A[6]), .A21(A[7]), .A22(A[8]),
-    .x0(x[0]), .x1(x[1]), .x2(x[2])
-);
+reg [PRECISION-1:0] A[0:8], x[0:2];
+initial begin
+	//hardcode test
+	A[0] <= 0;            // 0
+	A[1] <= 32'h3f000000; // 1/2
+	A[2] <= 32'h3d4ccccd; // 1/20
+	A[3] <= 32'h3eaaaaab; // 1/3
+	A[4] <= 0;            // 0
+	A[5] <= 32'h3eaaaaab; // 1/3
+	A[6] <= 32'h3d4ccccd; // 1/20
+	A[7] <= 32'h3f000000; // 1/2
+	A[8] <= 0;            // 0
+
+	x[0] <= 32'h3dcccccd; // 0.1
+	x[1] <= 32'h3c23d70a; // 0.01
+	x[2] <= 0;            // 0
+end
 
 // ------------------ instantiate ----------------//
 wire sigma_out_valid;
