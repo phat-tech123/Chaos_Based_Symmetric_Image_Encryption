@@ -22,47 +22,117 @@
 
 module tb_feistel_encrypt();
 
+    // ===============================
+    // Clock / Reset
+    // ===============================
     reg clk = 0;
-    always #5 clk = ~clk;
+    always #5 clk = ~clk;   // 100 MHz
 
-    reg rstn = 0;
-    initial begin
-        #20 rstn = 1;
-    end
+    reg reset_n = 0;
 
-    reg valid_in = 0;
+    // ===============================
+    // DUT signals
+    // ===============================
+    reg         start_enc;
     reg [255:0] data_in;
-    // example round keys (fill with some values or load from file)
-    reg [127:0] main_key;
-    wire valid_out;
-    wire [255:0] data_out;
-    integer i;
-    // prepare dummy keys
-    initial begin
-        main_key = 128'h00112233445566778899AABBCCDDEEFF;
-        // prepare plaintext
-        data_in = 256'h000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F;
-        #50;
-        valid_in = 1;
-        #10;
-        data_in = 256'hF101112131415161718191A1B1C1D1E1F000102030405060708090A0B0C0D0E0;
-        #10;
-        valid_in = 0;
-    end
 
-    feistel_encrypt #(.ROUNDS(5)) U (
+    reg         key_valid;
+    reg [127:0] key_in;
+
+    reg  [7:0] sbox_out;
+    reg        sbox_valid;
+
+    wire        ready_in;
+    wire        valid_out;
+    wire [255:0] data_out;
+
+    // ===============================
+    // DUT INSTANCE
+    // ===============================
+    feistel_encrypt #(
+        .ROUNDS(5),
+        .ROUND_LAT(2),
+        .KEY_SIZE(128)
+    ) dut (
         .clk(clk),
-        .rstn(rstn),
-        .valid_in(valid_in),
+        .reset_n(reset_n),
+        .start_enc(start_enc),
         .data_in(data_in),
-        .main_key(main_key),
-        .ready_in(),
+
+        .key_valid(key_valid),
+        .key_in(key_in),
+
+        .sbox_out(sbox_out),
+        .sbox_valid(sbox_valid),
+
+        .ready_in(ready_in),
         .valid_out(valid_out),
         .data_out(data_out)
     );
 
+    // ===============================
+    // SIMPLE STUB S-BOX DRIVER
+    // mỗi chu kỳ trả về byte tăng dần
+    // ===============================
+    reg [7:0] s_val = 8'h10;
+
+    always @(posedge clk) begin
+        sbox_out   <= s_val;
+        sbox_valid <= 1'b1;
+        s_val      <= s_val + 1;
+    end
+
+    // ===============================
+    // TEST SEQUENCE
+    // ===============================
     initial begin
-        #5000;
+        $display("=== TB FEISTEL ENCRYPT START ===");
+
+        start_enc  = 0;
+        key_valid  = 0;
+        key_in     = 128'h0;
+        sbox_out   = 0;
+        sbox_valid = 0;
+        data_in    = 0;
+
+        // RESET
+        #20 reset_n = 1;
+
+        // --------------------------------------
+        // Load 5 KEYS vào key_schedule
+        // --------------------------------------
+        repeat(5) begin
+            @(posedge clk);
+            key_in    <= {$random, $random};
+            key_valid <= 1'b1;
+            @(posedge clk);
+            key_valid <= 0;
+        end
+
+        // --------------------------------------
+        // Chờ key_schedule xong
+        // --------------------------------------
+        #50;
+
+        // --------------------------------------
+        // Gửi block cần encrypt
+        // --------------------------------------
+        @(posedge clk);
+        data_in   <= 256'h112233445566778899AABBCCDDEEFF00_FF00EE11DD22CC33BB44AA55996677;
+        start_enc <= 1'b1;
+
+        @(posedge clk);
+        start_enc <= 0;
+
+        // --------------------------------------
+        // Chờ kết quả
+        // --------------------------------------
+        wait(valid_out == 1);
+
+        $display("=> Ciphertext = %h", data_out);
+
+        #20;
         $finish;
     end
+
 endmodule

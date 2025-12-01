@@ -3,130 +3,128 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/16/2025 02:15:31 AM
-// Design Name: 
+// Create Date: 11/02/2025 00:00:00
 // Module Name: tb_feistel_cbc_encrypt
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Description: Testbench cho feistel_cbc_encrypt
 //////////////////////////////////////////////////////////////////////////////////
 
-module tb_feistel_cbc_encrypt;
+module tb_feistel_cbc_encrypt();
 
-    //-------------------------------------------------------------
-    // Params
-    //-------------------------------------------------------------
-    localparam ROUNDS    = 5;
-    localparam ROUND_LAT = 2;
-    localparam KEY_SIZE  = 16;
-    localparam TOTAL_LAT = ROUNDS * ROUND_LAT;
-
-    //-------------------------------------------------------------
-    // Signals
-    //-------------------------------------------------------------
+    // ===============================
+    // Clock / Reset
+    // ===============================
     reg clk = 0;
-    reg rstn = 0;
+    always #5 clk = ~clk;   // 100 MHz
 
-    reg valid_in;
+    reg reset_n = 0;
+
+    // ===============================
+    // DUT signals
+    // ===============================
+    reg         start_enc;
     reg [255:0] data_in;
     reg [255:0] iv;
-    reg [KEY_SIZE*8-1:0] main_key;
 
-    wire valid_out;
+    reg         key_valid;
+    reg [127:0] key_in;
+
+    reg  [7:0] sbox_out;
+    reg        sbox_valid;
+
+    wire        valid_out;
     wire [255:0] data_out;
 
-    //-------------------------------------------------------------
-    // DUT
-    //-------------------------------------------------------------
+    // ===============================
+    // DUT INSTANCE
+    // ===============================
     feistel_cbc_encrypt #(
-        .ROUNDS(ROUNDS),
-        .ROUND_LAT(ROUND_LAT),
-        .KEY_SIZE(KEY_SIZE)
+        .ROUNDS(5),
+        .ROUND_LAT(2),
+        .KEY_SIZE(128)
     ) dut (
         .clk(clk),
-        .rstn(rstn),
-        .valid_in(valid_in),
+        .reset_n(reset_n),
+        .start_enc(start_enc),
         .data_in(data_in),
         .iv(iv),
-        .main_key(main_key),
+        .key_valid(key_valid),
+        .key_in(key_in),
+        .sbox_out(sbox_out),
+        .sbox_valid(sbox_valid),
         .valid_out(valid_out),
         .data_out(data_out)
     );
 
-    //-------------------------------------------------------------
-    // Clock
-    //-------------------------------------------------------------
-    always #5 clk = ~clk;   // 100 MHz
-
-    //-------------------------------------------------------------
-    // Task send block
-    //-------------------------------------------------------------
-    task send_block(input [255:0] block);
-    begin
-        @(posedge clk);
-        data_in  <= block;
-        valid_in <= 1;
-        $display("[%0t]  SEND BLOCK: %h", $time, block);
-    end
-    endtask
-
-    //-------------------------------------------------------------
-    // Release valid
-    //-------------------------------------------------------------
-    task no_block();
-    begin
-        @(posedge clk);
-        valid_in <= 0;
-    end
-    endtask
-
-    //-------------------------------------------------------------
-    // Monitor output
-    //-------------------------------------------------------------
+    // ===============================
+    // SIMPLE STUB S-BOX DRIVER
+    // ===============================
+    reg [7:0] s_val = 8'h10;
     always @(posedge clk) begin
-        if (valid_out)
-            $display("[%0t]  OUT BLOCK = %h", $time, data_out);
+        sbox_out   <= s_val;
+        sbox_valid <= 1'b1;
+        s_val      <= s_val + 1;
     end
 
-    //-------------------------------------------------------------
-    // Main stimulus
-    //-------------------------------------------------------------
+    // ===============================
+    // TEST SEQUENCE
+    // ===============================
     initial begin
-        $dumpfile("cbc_encrypt.vcd");
-        $dumpvars(0, tb_feistel_cbc_encrypt);
+        $display("=== TB FEISTEL CBC ENCRYPT START ===");
 
-        valid_in = 0;
-        data_in  = 0;
+        start_enc  = 0;
+        key_valid  = 0;
+        key_in     = 128'h0;
+        sbox_out   = 0;
+        sbox_valid = 0;
+        data_in    = 0;
+        iv         = 256'h00112233445566778899AABBCCDDEEFF_112233445566778899AABBCCDDEEFF00;
 
-        main_key = 128'h00112233445566778899AABBCCDDEEFF;
-        iv       = 256'h1111111122222222333333334444444455555555666666667777777788888888;
+        // RESET
+        #20 reset_n = 1;
+
+        // --------------------------------------
+        // Load 5 KEYS vào key_schedule
+        // --------------------------------------
+        repeat(5) begin
+            @(posedge clk);
+            key_in    <= {$random, $random};
+            key_valid <= 1'b1;
+            @(posedge clk);
+            key_valid <= 0;
+        end
+
+        // --------------------------------------
+        // Chờ key_schedule xong
+        // --------------------------------------
+        #50;
+
+        // --------------------------------------
+        // Gửi 2 block cần encrypt (CBC demo)
+        // --------------------------------------
+        // Block 1
+        @(posedge clk);
+        data_in   <= 256'h112233445566778899AABBCCDDEEFF00_FF00EE11DD22CC33BB44AA55996677;
+        start_enc <= 1'b1;
+        @(posedge clk);
+        start_enc <= 0;
+
+        wait(valid_out == 1);
+        $display("=> Ciphertext Block 1 = %h", data_out);
+
+        // Block 2
+        @(posedge clk);
+        data_in   <= 256'hA1B2C3D4E5F60718293A4B5C6D7E8F90_0123456789ABCDEF0011223344556677;
+        start_enc <= 1'b1;
+        @(posedge clk);
+        start_enc <= 0;
+
+        wait(valid_out == 1);
+        $display("=> Ciphertext Block 2 = %h", data_out);
 
         #20;
-        rstn = 1;
-
-        //---------------------------------------------------------
-        // Gửi 3 block liên tục → pipeline đầy
-        //---------------------------------------------------------
-        send_block(256'hAAAABBBBCCCCDDDDEEEEFFFF0000111122223333444455556666777788889999);
-        send_block(256'h111122223333444455556666777788889999AAAABBBBCCCCDDDDEEEEFFFF0000);
-        send_block(256'hDEADBEEFCAFEBABE1234567890ABCDEF112233445566778899AABBCCDDEEFF00);
-
-        no_block();   // Ngừng bơm block
-
-        //---------------------------------------------------------
-        // Chờ pipeline xử lý xong
-        //---------------------------------------------------------
-        repeat (TOTAL_LAT + 10) @(posedge clk);
-
-        $display("---- Simulation Finished ----");
         $finish;
     end
 

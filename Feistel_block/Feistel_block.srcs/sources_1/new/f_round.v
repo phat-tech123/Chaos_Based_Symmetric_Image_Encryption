@@ -17,6 +17,10 @@
 
 module f_round(
     input  wire         clk,
+    input  wire        reset_n,
+    input  wire        start_enc,
+    input  wire [7:0]  sbox_out,   
+    input  wire        sbox_valid,
     input  wire [127:0] state_in,
     input  wire [127:0] round_key,
     output wire [127:0] state_out
@@ -30,6 +34,10 @@ module f_round(
     // --- SubBytes ---
     subbytes u_sub (
         .clk(clk),
+        .reset_n(reset_n),
+        .sbox_out(sbox_out),
+        .sbox_valid(sbox_valid),
+        .start_enc(start_enc),
         .in(state_in),
         .out(sb_out)
     );

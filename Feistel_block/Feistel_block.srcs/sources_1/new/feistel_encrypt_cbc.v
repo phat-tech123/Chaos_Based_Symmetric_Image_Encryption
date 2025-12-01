@@ -19,19 +19,21 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module feistel_cbc_encrypt #(
     parameter ROUNDS     = 5,
     parameter ROUND_LAT  = 2,        // latency của 1 f_round
     parameter KEY_SIZE   = 16
 )(
     input  wire         clk,
-    input  wire         rstn,
-    input  wire         valid_in,
+    input  wire         reset_n,
+    input  wire         start_enc,
     input  wire [255:0] data_in,      // plaintext block
-    input  wire [255:0] iv,           // initialization vector
-    input  wire [KEY_SIZE*8-1:0] main_key,
+    input  wire [255:0] iv,           // initialization
+    input  wire         key_valid, 
+    input  wire [KEY_SIZE*8-1:0] key_in,
 
+    input  wire [7:0]   sbox_out,
+    input  wire         sbox_valid,
     output reg          valid_out,
     output reg [255:0]  data_out
 );
@@ -57,20 +59,22 @@ module feistel_cbc_encrypt #(
         .KEY_SIZE(KEY_SIZE)
     ) core (
         .clk(clk),
-        .rstn(rstn),
-        .valid_in(valid_in),
+        .reset_n(reset_n),
+        .start_enc(start_enc),
         .data_in(xor_in),
-        .main_key(main_key),
+        .key_valid(key_valid),
+        .key_in(key_in),
+        .sbox_out(sbox_out),
+        .sbox_valid(sbox_valid),
         .ready_in(core_ready),
         .valid_out(core_valid_out),
         .data_out(core_data_out)
     );
-
     //----------------------------------------------------------
     // Cập nhật CBC state và xuất ciphertext
     //----------------------------------------------------------
-    always @(posedge clk or negedge rstn) begin
-        if (!rstn) begin
+    always @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
             valid_out   <= 1'b0;
             data_out    <= 256'b0;
             prev_cipher <= iv;        // block đầu dùng IV

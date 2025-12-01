@@ -20,81 +20,115 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 10/26/2025 03:49:44 PM
+// Design Name: 
+// Module Name: tb_subbytes
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 module tb_subbytes();
 
-    // Clock và Reset
     reg clk;
-    reg [127:0]round_key;
+    reg reset;
 
-    // Input / Output
-    reg  [127:0] in;
-    wire [127:0] sb;
-    wire [127:0] sh;
-    wire [127:0] mi;
+    // Build S-box
+    reg [7:0]  sbox_out;
+    reg        sbox_valid;
+
+    // Lookup
+    reg        start_enc;
+    reg [127:0] in;
     wire [127:0] out;
 
-    // Khởi tạo DUT
+    // Instantiate DUT
     subbytes uut (
         .clk(clk),
+        .reset(reset),
+
+        // Build S-box
+        .sbox_out(sbox_out),
+        .sbox_valid(sbox_valid),
+
+        // Lookup
+        .start_enc(start_enc),
         .in(in),
-        .out(sb)
-    );
-    shiftrows u (
-        .clk(clk),
-        .sb(sb),
-        .out(sh)
-    );
-    mixcolumns ut (
-        .clk(clk),
-        .state_in(sh),
-        .state_out(mi)
-    );
-    addroundkey uf(
-        .state_in(mi),
-        .round_key(round_key),
-        .state_out(out)
+        .out(out)
     );
 
-    // Clock 10ns
-    always #5 clk = ~clk;
-
-    // Mô phỏng chính
+    // Clock generator
     initial begin
-        // Dump waveform nếu dùng GTKWave
-        $dumpfile("tb_subbytes.vcd");
-        $dumpvars(0, tb_subbytes);
-
-        // Khởi tạo tín hiệu
         clk = 0;
-        in  = 128'd0;
-        round_key = 128'h2b7e151628aed2a6abf7158809cf4f3c;
-
-        // Reset trong 2 chu kỳ
-
-        // Test vector 1: dữ liệu đơn giản
-        in = 128'h000102030405060708090a0b0c0d0e0f;
-        #10;
-
-        // Test vector 2: dữ liệu ngẫu nhiên
-        in = 128'h0f0e0d0c0b0a09080706050403020100;
-        #10;
-
-        // Test vector 3: toàn 1
-        in = 128'hffffffffffffffffffffffffffffffff;
-        #10;
-
-        // Chờ vài chu kỳ để xem pipeline ra
-        #100;
-
-        $display("Simulation finished.");
-        $finish;
+        forever #5 clk = ~clk;
     end
 
-    // Theo dõi kết quả từng chu kỳ
-    always @(posedge clk) begin
-        $display("[%0t] in = %h |sb = %h|sh = %h |mi = %h| out = %h", $time, in,sb,sh,mi, out);
+    // -----------------------------
+    // STORE expected S-box reference
+    // -----------------------------
+    integer i, j;
+
+    initial begin
+        reset = 1;
+        sbox_out = 0;
+        sbox_valid = 0;
+        start_enc = 0;
+        in = 0;
+
+        #20;
+        reset = 0;
+
+        // --------------------------------------
+        // BUILDING S-BOX (256 bytes)
+        // --------------------------------------
+        $display("=== BUILDING S-BOX ===");
+        for (i = 0; i < 256; i = i + 1) begin
+            @(posedge clk);
+            sbox_out = i + 8'h55;      // dummy S-box
+            sbox_valid = 1;
+        end
+        @(posedge clk);
+        sbox_valid = 0;
+        @(posedge clk);
+
+        // --------------------------------------
+        // TEST 128-bit LOOKUP
+        // --------------------------------------
+        $display("=== TESTING 128-BIT LOOKUP ===");
+
+        // Example: random 128-bit input
+        for (i = 0; i < 5; i = i + 1) begin
+            // Generate random 128-bit value byte by byte
+            for (j = 0; j < 16; j = j + 1) begin
+                in[j*8 +: 8] = $random % 256;
+            end
+
+            start_enc = 1;
+            @(posedge clk);
+            start_enc = 0;
+            // Check each byte
+            for (j = 0; j < 16; j = j + 1) begin
+                $display(" Byte %0d: input=%02h, output=%02h",
+                    j, in[j*8 +: 8], out[j*8 +: 8]);
+            end
+            $display("----");
+        end
+
+        $display("===== ALL TESTS FINISHED =====");
+        #50;
+        $stop;
     end
 
 endmodule
-
-
