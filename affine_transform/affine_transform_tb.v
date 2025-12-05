@@ -77,6 +77,15 @@ initial begin
 	U1 <= 32'h3e4ccccd; // 0.2
 	U2 <= 32'h3e99999a; // 0.3
 
+//	@(posedge clk);
+//	tvalid <= 0;
+
+	@(posedge clk);
+	tvalid <= 1;
+
+	x0  <= 32'h3dcccccd; // 1.0
+	x1  <= 32'h3e4ccccd; // 2.0
+	x2  <= 32'h3e99999a; // 3.0
 	@(posedge clk);
 	tvalid <= 0;
 

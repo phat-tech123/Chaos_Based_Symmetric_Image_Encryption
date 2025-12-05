@@ -35,17 +35,6 @@ sbox_generator #(.PRECISION(32), .EXTRACT_WIDTH(23), .MIX_WIDTH(8)) sbox_generat
 	.V_out(V_out)
 );
 
-reg sbox_tvalid;
-reg [BIT_WIDTH-1:0] V_in;
-wire done_sbox;
-sbox #(.SIZE(256), .BIT_WIDTH(8)) sbox_inst(
-	.clk(clk),
-	.reset_n(reset_n),
-	.tvalid(sbox_tvalid),
-	.V(V_in),
-	.done_sbox(done_sbox)
-);
-
 integer i;
 
 always@(posedge clk or negedge reset_n) begin

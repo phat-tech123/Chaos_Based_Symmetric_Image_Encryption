@@ -12,10 +12,11 @@ parameter PRECISION = 32;
 // =========================================
 reg  clk;
 reg  reset_n;
-reg  valid;
+reg  tvalid;
 reg  [PRECISION-1:0] a_operand;
 reg  [PRECISION-1:0] b_operand;
 wire [PRECISION-1:0] result;
+wire valid;
 
 // =========================================
 // Instantiate DUT
@@ -25,9 +26,10 @@ sawtooth #(
 ) uut (
     .clk(clk),
     .reset_n(reset_n),
-    .sawtooth_tvalid(valid),
+    .sawtooth_tvalid(tvalid),
     .x(a_operand),
     .epsilon(b_operand),
+    .sawtooth_valid(valid),
     .result(result)
 );
 
@@ -56,23 +58,23 @@ initial begin
     @(posedge clk);
     a_operand = 32'h3fe00000; // 1.75
     b_operand = 32'h3d4ccccd; // 0.05
-    valid       = 1;
+    tvalid       = 1;
     @(posedge clk);
-    valid       = 0;
+    tvalid       = 0;
     
     @(posedge clk);
     a_operand = 32'h42f63d71; // 123.12  
     b_operand = 32'h3d4ccccd; // 0.05
-    valid       = 1;
+    tvalid       = 1;
     @(posedge clk);
-    valid       = 0;
+    tvalid       = 0;
     @(posedge clk);
     @(posedge clk);
     a_operand = 32'h3fe00000; // 1.75
     b_operand = 32'h3d4ccccd; // 0.05
-    valid       = 1;
+    tvalid       = 1;
     @(posedge clk);
-    valid       = 0;
+    tvalid       = 0;
 //    // Wait enough time for pipeline to produce output
     #2000;
 

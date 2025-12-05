@@ -55,9 +55,9 @@ localparam SQRT_LATENCY = 28;
 integer iter;
 
 // flip flop for add pipeline
-reg [PRECISION-1:0] A02_temp [0:ADD_LATENCY-1];
-reg [PRECISION-1:0] A12_temp [0:ADD_LATENCY-1];
-reg [PRECISION-1:0] A22_temp [0:ADD_LATENCY-1];
+reg [PRECISION-1:0] A02_temp [0:ADD_LATENCY];
+reg [PRECISION-1:0] A12_temp [0:ADD_LATENCY];
+reg [PRECISION-1:0] A22_temp [0:ADD_LATENCY];
 always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
 		for(iter = 0; iter < 3; iter = iter+1) begin
@@ -65,23 +65,25 @@ always@(posedge clk or negedge reset_n) begin
 			add_a_op[iter] 	 <= 0;
 			add_b_op[iter] 	 <= 0;
 		end
-		for(iter = 0; iter < ADD_LATENCY; iter = iter+1) begin
+		for(iter = 0; iter < ADD_LATENCY+1; iter = iter+1) begin
 			A02_temp[iter] <= 0;
 			A12_temp[iter] <= 0;
 			A22_temp[iter] <= 0;
 		end
-	end else if (tvalid) begin
-		for(iter = 0; iter < 3; iter = iter+1) add_tvalid[iter] <= 1;
-		add_a_op[0] <= A00; add_b_op[0] <= A01;
-		add_a_op[1] <= A10; add_b_op[1] <= A11;
-		add_a_op[2] <= A20; add_b_op[2] <= A21;
-		A02_temp[0] <= A02;
-		A12_temp[0] <= A12;
-		A22_temp[0] <= A22;
 	end else begin
-		for(iter = 0; iter < 3; iter = iter+1) add_tvalid[iter] <= 0;
-
-		for(iter = 1; iter < ADD_LATENCY; iter = iter+1) begin
+		 if (tvalid) begin
+            for(iter = 0; iter < 3; iter = iter+1) add_tvalid[iter] <= 1;
+            add_a_op[0] <= A00; add_b_op[0] <= A01;
+            add_a_op[1] <= A10; add_b_op[1] <= A11;
+            add_a_op[2] <= A20; add_b_op[2] <= A21;
+            A02_temp[0] <= A02;
+            A12_temp[0] <= A12;
+            A22_temp[0] <= A22;
+        end else begin
+		  for(iter = 0; iter < 3; iter = iter+1) add_tvalid[iter] <= 0;
+        end
+        
+		for(iter = 1; iter < ADD_LATENCY+1; iter = iter+1) begin
 			A02_temp[iter] <= A02_temp[iter-1];
 			A12_temp[iter] <= A12_temp[iter-1];
 			A22_temp[iter] <= A22_temp[iter-1];
@@ -100,9 +102,9 @@ always@(posedge clk or negedge reset_n) begin
 		for(iter = 3; iter < 6; iter = iter+1) begin
 			add_tvalid[iter] <= 1;
 		end
-		add_a_op[3] <= A02_temp[ADD_LATENCY-1]; add_b_op[3] <= add_out[0];
-		add_a_op[4] <= A12_temp[ADD_LATENCY-1]; add_b_op[4] <= add_out[1];
-		add_a_op[5] <= A22_temp[ADD_LATENCY-1]; add_b_op[5] <= add_out[2];
+		add_a_op[3] <= A02_temp[ADD_LATENCY]; add_b_op[3] <= add_out[0];
+		add_a_op[4] <= A12_temp[ADD_LATENCY]; add_b_op[4] <= add_out[1];
+		add_a_op[5] <= A22_temp[ADD_LATENCY]; add_b_op[5] <= add_out[2];
 	end else begin
 		for(iter = 3; iter < 6; iter = iter+1) add_tvalid[iter] <= 0;
 	end
@@ -143,17 +145,18 @@ always@(posedge clk or negedge reset_n) begin
 	end
 end
 
+localparam ADD_DEPTH = 2*ADD_LATENCY - MUL_LATENCY + SQRT_LATENCY+1;
 //flip flop for add pipeline
-reg [PRECISION-1:0] mul_temp[0:2*ADD_LATENCY - MUL_LATENCY + SQRT_LATENCY];
+reg [PRECISION-1:0] mul_temp[0:ADD_DEPTH];
 always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
-		for(iter = 0; iter < 2*ADD_LATENCY - MUL_LATENCY + SQRT_LATENCY + 1; iter = iter + 1) begin
+		for(iter = 0; iter < ADD_DEPTH + 1; iter = iter + 1) begin
 			mul_temp[iter] <= 0;
 		end
 	end else if(mul_valid) begin
 		mul_temp[0] <= mul_out;
 	end else begin
-		for(iter = 1; iter < 2*ADD_LATENCY - MUL_LATENCY + SQRT_LATENCY + 1; iter = iter + 1) begin
+		for(iter = 1; iter < ADD_DEPTH + 1; iter = iter + 1) begin
 			mul_temp[iter] <= mul_temp[iter-1];
 		end
 	end
@@ -192,7 +195,7 @@ always@(posedge clk or negedge reset_n) begin
 		add_b_op[8] <= 0;
 	end else if(add_valid[7]) begin
 		add_tvalid[8] 	<= 1;
-		add_a_op[8] 	<= fp_gt(mul_temp[2*ADD_LATENCY - MUL_LATENCY + SQRT_LATENCY], add_out[7]) ? mul_temp[2*ADD_LATENCY - MUL_LATENCY + SQRT_LATENCY] : add_out[7];
+		add_a_op[8] 	<= fp_gt(mul_temp[ADD_DEPTH], add_out[7]) ? mul_temp[ADD_DEPTH] : add_out[7];
 		add_b_op[8] 	<= err;
 	end else begin
 		add_tvalid[8] 	<= 0;

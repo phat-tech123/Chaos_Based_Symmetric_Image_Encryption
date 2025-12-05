@@ -1,0 +1,30 @@
+srcscan starts
+INFO: analyzing module F (VERI-9002)
+INFO: analyzing module PRNG (VERI-9002)
+INFO: analyzing module addroundkey (VERI-9002)
+INFO: analyzing module affine_transform (VERI-9002)
+INFO: analyzing module extractor (VERI-9002)
+INFO: analyzing module feistel_encrypt (VERI-9002)
+INFO: analyzing module key_schedule_5r (VERI-9002)
+INFO: analyzing module mixcolumns (VERI-9002)
+INFO: analyzing module mixer (VERI-9002)
+INFO: analyzing module sawtooth (VERI-9002)
+INFO: analyzing module sbox (VERI-9002)
+INFO: analyzing module sbox_generator (VERI-9002)
+INFO: analyzing module shiftrows (VERI-9002)
+INFO: analyzing module sigma (VERI-9002)
+INFO: analyzing module subbytes (VERI-9002)
+INFO: analyzing module top (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:feistel_encrypt
+VeriTop library:xil_defaultlib mod:key_schedule_5r
+VeriTop library:xil_defaultlib mod:top
+END of tops
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v(1): INFO: compiling module 'feistel_encrypt_default' (VERI-1018)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/key_schedule_5r/key_schedule_5r.v(1): INFO: compiling module 'key_schedule_5r_default' (VERI-1018)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/top/top.v(1): INFO: compiling module 'top_default' (VERI-1018)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sigma/sigma.v(38): WARNING: Module <floating_point_mul> not found while processing module instance <mul> (VERI-1063)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sigma/sigma.v(44): WARNING: Module <floating_point_sqrt> not found while processing module instance <sqrt> (VERI-1063)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v(24): WARNING: Module <floating_point_div> not found while processing module instance <div> (VERI-1063)
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v(31): WARNING: Module <floating_point_add> not found while processing module instance <add_1> (VERI-1063)
+srcscan exits with return value 0

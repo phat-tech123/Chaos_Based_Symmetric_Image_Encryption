@@ -5,8 +5,13 @@ module cbc_feistel_encrypt#(
 )(
 	input clk,
 	input reset_n,
+
+	input sbox_valid,
+	input [7:0] sbox_out,
+
 	input key_tvalid,
 	input [KEY_SIZE-1:0] key,
+
 	input encr_tvalid,
 	input [BLOCK_SIZE-1:0] plaintext,
 	input [BLOCK_SIZE-1:0] iv,

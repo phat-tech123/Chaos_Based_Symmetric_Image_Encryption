@@ -51,8 +51,8 @@ initial begin
     	A21 <= 32'h3f000000;
     	A22 <= 0;
 
-    	@(posedge clk);
-    	tvalid <= 0;
+//    	@(posedge clk);
+//    	tvalid <= 0;
         
         @(posedge clk);
         tvalid <= 1;
