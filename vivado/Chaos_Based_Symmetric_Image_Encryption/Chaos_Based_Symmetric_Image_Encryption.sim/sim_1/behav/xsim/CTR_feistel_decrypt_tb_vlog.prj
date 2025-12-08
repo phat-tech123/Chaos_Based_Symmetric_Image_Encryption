@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_decrypt.v" \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v" \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/F/F.v" \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/AES/addroundkey.v" \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v" \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/key_schedule_5r/key_schedule_5r.v" \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/AES/mixcolumns.v" \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/AES/shiftrows.v" \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/AES/subbytes.v" \
+"../../../../../../../Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_decrypt_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

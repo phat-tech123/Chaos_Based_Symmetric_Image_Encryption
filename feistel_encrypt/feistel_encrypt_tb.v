@@ -117,7 +117,7 @@ module feistel_encrypt_tb;
         // Apply plaintext
         $display("=== Apply block 1 ===");
         apply_block(256'h11223344556677889900AABBCCDDEEFF_00112233445566778899AABBCCDDEEFF);
-        apply_block(256'hFFEEDDCCBBAA99887766554433221100_0123456789ABCDEF0011223344556677);
+//        apply_block(256'hFFEEDDCCBBAA99887766554433221100_0123456789ABCDEF0011223344556677);
 
         @(posedge clk);
         tvalid <= 0;

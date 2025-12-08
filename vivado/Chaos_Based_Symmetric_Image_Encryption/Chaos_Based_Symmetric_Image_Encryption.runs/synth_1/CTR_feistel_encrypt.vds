@@ -1,0 +1,493 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Dec  8 14:09:54 2025
+# Process ID: 16214
+# Current directory: /home/vinhphat-josh/Documents/Vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1
+# Command line: vivado -log CTR_feistel_encrypt.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CTR_feistel_encrypt.tcl
+# Log file: /home/vinhphat-josh/Documents/Vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/CTR_feistel_encrypt.vds
+# Journal file: /home/vinhphat-josh/Documents/Vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 799.188 MHz, CPU Physical cores: 6, Host memory: 7941 MB
+#-----------------------------------------------------------
+source CTR_feistel_encrypt.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1314.473 ; gain = 0.027 ; free physical = 196 ; free virtual = 5769
+Command: read_checkpoint -auto_incremental -incremental /home/vinhphat-josh/Documents/Vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/utils_1/imports/synth_1/FP_div.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/vinhphat-josh/Documents/Vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/utils_1/imports/synth_1/FP_div.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top CTR_feistel_encrypt -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Vivado_Tcl 4-1810] synth_design options have changed between reference and incremental; A full resynthesis will be run
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16426
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2524.375 ; gain = 294.777 ; free physical = 158 ; free virtual = 4022
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'CTR_feistel_encrypt' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:1]
+INFO: [Synth 8-6157] synthesizing module 'key_schedule_5r' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/key_schedule_5r/key_schedule_5r.v:1]
+	Parameter ROUND bound to: 5 - type: integer 
+	Parameter KEY_SIZE bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'key_schedule_5r' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/key_schedule_5r/key_schedule_5r.v:1]
+INFO: [Synth 8-6157] synthesizing module 'feistel_encrypt' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:1]
+	Parameter ROUND bound to: 5 - type: integer 
+	Parameter F_LAT bound to: 6 - type: integer 
+	Parameter SBOX_WIDTH bound to: 8 - type: integer 
+	Parameter KEY_SIZE bound to: 128 - type: integer 
+	Parameter DATA_WIDTH bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'F' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/F/F.v:1]
+INFO: [Synth 8-6157] synthesizing module 'subbytes' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/subbytes.v:1]
+	Parameter SBOX_WIDTH bound to: 8 - type: integer 
+	Parameter SBOX_DEPTH bound to: 256 - type: integer 
+	Parameter DATA_WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'subbytes' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/subbytes.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shiftrows' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/shiftrows.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shiftrows' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/shiftrows.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mixcolumns' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/mixcolumns.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mixcolumns' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/mixcolumns.v:1]
+INFO: [Synth 8-6157] synthesizing module 'addroundkey' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/addroundkey.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'addroundkey' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/addroundkey.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'F' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/F/F.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'feistel_encrypt' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CTR_feistel_encrypt' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:1]
+WARNING: [Synth 8-11357] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  L_reg_reg with 19968 registers
+WARNING: [Synth 8-11357] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  R_reg_reg with 19968 registers
+WARNING: [Synth 8-6014] Unused sequential element RND[0].L_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[0].L_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[0].L_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[0].L_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[0].L_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[0].R_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[0].R_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[0].R_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[0].R_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[0].R_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].L_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].L_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].L_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].L_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].L_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].R_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].R_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].R_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].R_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[1].R_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].L_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].L_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].L_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].L_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].L_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].R_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].R_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].R_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].R_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[2].R_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].L_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].L_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].L_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].L_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].L_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].R_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].R_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].R_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].R_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[3].R_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].L_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].L_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].L_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].L_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].L_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:91]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].R_reg_reg[5][1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].R_reg_reg[5][2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].R_reg_reg[5][3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].R_reg_reg[5][4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element RND[4].R_reg_reg[5][5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[0] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[3] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[4] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[5] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[6] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[7] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[8] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[9] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[10] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[11] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[12] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[13] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[14] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[15] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[16] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[17] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[18] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[19] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[20] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[21] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[22] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[23] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[24] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[25] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[26] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[27] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[28] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-6014] Unused sequential element plaintext_t_reg[29] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:78]
+WARNING: [Synth 8-7137] Register ciphertext_reg in module CTR_feistel_encrypt has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v:102]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2700.344 ; gain = 470.746 ; free physical = 188 ; free virtual = 3819
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2700.344 ; gain = 470.746 ; free physical = 190 ; free virtual = 3822
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2700.344 ; gain = 470.746 ; free physical = 190 ; free virtual = 3822
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.38 . Memory (MB): peak = 2700.344 ; gain = 0.000 ; free physical = 170 ; free virtual = 3799
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/vinhphat-josh/Documents/Vivado/Arty-Z7-20-Master.xdc]
+Finished Parsing XDC File [/home/vinhphat-josh/Documents/Vivado/Arty-Z7-20-Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2841.188 ; gain = 0.000 ; free physical = 194 ; free virtual = 3812
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.37 . Memory (MB): peak = 2841.223 ; gain = 0.000 ; free physical = 187 ; free virtual = 3809
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 2841.223 ; gain = 611.625 ; free physical = 174 ; free virtual = 3800
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 2841.223 ; gain = 611.625 ; free physical = 173 ; free virtual = 3800
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 2841.223 ; gain = 611.625 ; free physical = 173 ; free virtual = 3801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2841.223 ; gain = 611.625 ; free physical = 181 ; free virtual = 3809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2841.223 ; gain = 611.625 ; free physical = 181 ; free virtual = 3809
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'K[4]' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'K[3]' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'K[2]' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'K[1]' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:51]
+WARNING: [Synth 8-327] inferring latch for variable 'K[0]' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:50]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2841.223 ; gain = 611.625 ; free physical = 184 ; free virtual = 3818
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : synth_design options have changed between reference and incremental
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 5     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input    256 Bit         XORs := 1     
+	   2 Input    128 Bit         XORs := 10    
+	   2 Input      8 Bit         XORs := 110   
+	   4 Input      8 Bit         XORs := 60    
+	   5 Input      8 Bit         XORs := 20    
++---Registers : 
+	              256 Bit    Registers := 2     
+	              128 Bit    Registers := 47    
+	                8 Bit    Registers := 1285  
+	                1 Bit    Registers := 41    
++---Muxes : 
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1289  
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:44 . Memory (MB): peak = 3028.891 ; gain = 799.293 ; free physical = 202 ; free virtual = 3541
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 3251.281 ; gain = 1021.684 ; free physical = 184 ; free virtual = 3390
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 3312.312 ; gain = 1082.715 ; free physical = 190 ; free virtual = 3353
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][127] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][127] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][127] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][127] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][127] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][127] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][127] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][127] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][126] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][126] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][126] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][126] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][126] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][126] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][126] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][126] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][125] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][125] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][125] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][125] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][125] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][125] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][125] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][125] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][124] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][124] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][124] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][124] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][124] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][124] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][124] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][124] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][123] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][123] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][123] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][123] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][123] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][123] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][123] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][123] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][122] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][122] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][122] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][122] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][122] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][122] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][122] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][122] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][121] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][121] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][121] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][121] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][121] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][121] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][121] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][121] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][120] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][120] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][120] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][120] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][120] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][120] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][120] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][120] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][119] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][119] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][119] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][119] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][119] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][119] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][119] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][119] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][118] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][118] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][118] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][118] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][118] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][118] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][118] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][118] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][117] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][117] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][117] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][117] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][117] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][117] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][117] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][117] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][116] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][116] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][116] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][116] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][116] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][116] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][116] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][116] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][115] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][115] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][115] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][115] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][115] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][115] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][115] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][115] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][114] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][114] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][114] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][114] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][114] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][114] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][114] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][114] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][113] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][113] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][113] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][113] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][113] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][113] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][113] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][113] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][112] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][112] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][112] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][112] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][112] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][112] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][112] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][112] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][111] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][111] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][111] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][111] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][111] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][111] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][111] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][111] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][110] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][110] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][110] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][110] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][110] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][110] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][110] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][110] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][109] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][109] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][109] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][109] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][109] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][109] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][109] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][109] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][108] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][108] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][108] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][108] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][108] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][108] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][108] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][108] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][107] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][107] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][107] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][107] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][107] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][107] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][107] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][107] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][106] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][106] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][106] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][106] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][106] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][106] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][106] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][106] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][105] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][105] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][105] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][105] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][105] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][105] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][105] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][105] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][104] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][104] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][104] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][104] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][104] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][104] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][104] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][104] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[0].R_reg_reg[4][5][103] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][103] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[1].R_reg_reg[4][5][103] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][103] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[2].R_reg_reg[4][5][103] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][103] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Synth 8-4765] Removing register instance (\RND[3].R_reg_reg[4][5][103] ) from module (feistel_encrypt__GCB0) as it is equivalent to (\RND[4].R_reg_reg[4][5][103] ) and driving same net [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v:84]
+INFO: [Common 17-14] Message 'Synth 8-4765' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:07 ; elapsed = 00:01:06 . Memory (MB): peak = 3364.484 ; gain = 1134.887 ; free physical = 198 ; free virtual = 3306
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:14 ; elapsed = 00:01:13 . Memory (MB): peak = 3395.938 ; gain = 1166.340 ; free physical = 159 ; free virtual = 3272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:14 ; elapsed = 00:01:14 . Memory (MB): peak = 3395.938 ; gain = 1166.340 ; free physical = 159 ; free virtual = 3272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 3395.938 ; gain = 1166.340 ; free physical = 154 ; free virtual = 3266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 3395.938 ; gain = 1166.340 ; free physical = 154 ; free virtual = 3266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:20 . Memory (MB): peak = 3395.938 ; gain = 1166.340 ; free physical = 153 ; free virtual = 3266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:20 . Memory (MB): peak = 3395.938 ; gain = 1166.340 ; free physical = 154 ; free virtual = 3267
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name         | RTL Name                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|CTR_feistel_encrypt | feistel_encrypt_u/RND[4].R_reg_reg[4][5][127] | 5      | 640   | NO           | NO                 | NO                | 640    | 0       | 
+|CTR_feistel_encrypt | feistel_encrypt_u/RND[4].L_reg_reg[4][5][127] | 5      | 640   | NO           | NO                 | YES               | 640    | 0       | 
++--------------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY8 |    32|
+|3     |LUT1   |     6|
+|4     |LUT2   |  1659|
+|5     |LUT3   |    12|
+|6     |LUT4   |   294|
+|7     |LUT5   |  1380|
+|8     |LUT6   | 44180|
+|9     |MUXF7  | 21760|
+|10    |MUXF8  | 10880|
+|11    |SRL16E |  1280|
+|12    |FDCE   | 18076|
+|13    |FDPE   |     1|
+|14    |FDRE   |   896|
+|15    |LD     |   640|
+|16    |IBUF   |   653|
+|17    |OBUF   |   257|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:20 . Memory (MB): peak = 3395.938 ; gain = 1166.340 ; free physical = 154 ; free virtual = 3267
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 3395.938 ; gain = 1025.461 ; free physical = 148 ; free virtual = 3263
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:20 . Memory (MB): peak = 3395.945 ; gain = 1166.340 ; free physical = 148 ; free virtual = 3264
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.46 . Memory (MB): peak = 3395.945 ; gain = 0.000 ; free physical = 463 ; free virtual = 3549
+INFO: [Netlist 29-17] Analyzing 33967 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3497.328 ; gain = 0.000 ; free physical = 398 ; free virtual = 3503
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1295 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 653 instances
+  LD => LDCE: 640 instances
+
+Synth Design complete | Checksum: cf51912b
+INFO: [Common 17-83] Releasing license: Synthesis
+136 Infos, 89 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:46 ; elapsed = 00:01:42 . Memory (MB): peak = 3497.363 ; gain = 2182.891 ; free physical = 394 ; free virtual = 3499
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2410.905; main = 2165.292; forked = 399.858
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4394.871; main = 3497.332; forked = 998.930
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.22 . Memory (MB): peak = 3521.340 ; gain = 0.000 ; free physical = 364 ; free virtual = 3491
+INFO: [Common 17-1381] The checkpoint '/home/vinhphat-josh/Documents/Vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/CTR_feistel_encrypt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file CTR_feistel_encrypt_utilization_synth.rpt -pb CTR_feistel_encrypt_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  8 14:11:51 2025...

@@ -1,0 +1,20 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_decrypt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CTR_feistel_decrypt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CTR_feistel_encrypt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/F/F.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module F
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/addroundkey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addroundkey
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module feistel_encrypt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/key_schedule_5r/key_schedule_5r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module key_schedule_5r
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/mixcolumns.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mixcolumns
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/shiftrows.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shiftrows
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/subbytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subbytes
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_decrypt_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CTR_feistel_decrypt_tb
