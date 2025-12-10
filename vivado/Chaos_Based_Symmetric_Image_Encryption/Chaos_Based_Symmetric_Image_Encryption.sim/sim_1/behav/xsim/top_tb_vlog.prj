@@ -1,0 +1,32 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/sim/floating_point_add.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/sim/floating_point_mul.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/sim/floating_point_div.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_sqrt/sim/floating_point_sqrt.v" \
+"../../../../../../CTR_mode_feistel_encrypt/CTR_mode_feistel_decrypt.v" \
+"../../../../../../CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v" \
+"../../../../../../F/F.v" \
+"../../../../../../PRNG/PRNG.v" \
+"../../../../../../AES/addroundkey.v" \
+"../../../../../../affine_transform/affine_transform.v" \
+"../../../../../../extractor/extractor.v" \
+"../../../../../../feistel_encrypt/feistel_encrypt.v" \
+"../../../../../../key_gen/key_generator.v" \
+"../../../../../../key_schedule_5r/key_schedule_5r.v" \
+"../../../../../../AES/mixcolumns.v" \
+"../../../../../../mixer/mixer.v" \
+"../../../../../../sawtooth/sawtooth.v" \
+"../../../../../../sbox/sbox.v" \
+"../../../../../../sbox_generator/sbox_generator.v" \
+"../../../../../../AES/shiftrows.v" \
+"../../../../../../sigma/sigma.v" \
+"../../../../../../AES/subbytes.v" \
+"../../../../../../top/top.v" \
+"../../../../../../top/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

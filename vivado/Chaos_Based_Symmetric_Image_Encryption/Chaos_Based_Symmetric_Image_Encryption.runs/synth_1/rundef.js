@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log CTR_feistel_encrypt.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CTR_feistel_encrypt.tcl" );
+         "-log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl" );
 
 
 

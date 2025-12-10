@@ -21,23 +21,23 @@ module top_tb;
         .tvalid(tvalid)
     );
 
-    // Clock generation: 100 MHz
     initial begin
         clk = 0;
-        forever #1 clk = ~clk;
+        forever #1.75 clk = ~clk;
     end
 
     // Reset sequence
     initial begin
         reset_n = 0;
         tvalid  = 0;
-        #5;             
+        @(posedge clk);             
         reset_n = 1;
-        #5;
+        @(posedge clk);     
 
         // Kick the PRNG
         tvalid = 1;
-        #2;
+        @(posedge clk);     
+        @(posedge clk);     
         tvalid = 0;
 
 	#2000000;

@@ -3,69 +3,105 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="CTR_feistel_decrypt_tb_behav.wdb" id="1">
+      <db_ref path="top_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="CTR_feistel_decrypt_tb" />
             <top_module name="glbl" />
+            <top_module name="top_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="560.790 ns"></ZoomStartTime>
-      <ZoomEndTime time="706.891 ns"></ZoomEndTime>
-      <Cursor1Time time="677.000 ns"></Cursor1Time>
+      <ZoomStartTime time="246,593.800 ns"></ZoomStartTime>
+      <ZoomEndTime time="246,774.401 ns"></ZoomEndTime>
+      <Cursor1Time time="246,633.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="73"></NameColumnWidth>
+      <NameColumnWidth column_width="62"></NameColumnWidth>
       <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject type="logic" fp_name="/CTR_feistel_decrypt_tb/clk">
+   <WVObjectSize size="21" />
+   <wvobject type="logic" fp_name="/top_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/CTR_feistel_decrypt_tb/reset_n">
+   <wvobject type="logic" fp_name="/top_tb/reset_n">
       <obj_property name="ElementShortName">reset_n</obj_property>
       <obj_property name="ObjectShortName">reset_n</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/CTR_feistel_decrypt_tb/tvalid">
+   <wvobject type="logic" fp_name="/top_tb/tvalid">
       <obj_property name="ElementShortName">tvalid</obj_property>
       <obj_property name="ObjectShortName">tvalid</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/CTR_feistel_decrypt_tb/plaintext">
-      <obj_property name="ElementShortName">plaintext[255:0]</obj_property>
-      <obj_property name="ObjectShortName">plaintext[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/CTR_feistel_decrypt_tb/en_valid">
-      <obj_property name="ElementShortName">en_valid</obj_property>
-      <obj_property name="ObjectShortName">en_valid</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/CTR_feistel_decrypt_tb/de_dut/tvalid">
+   <wvobject type="logic" fp_name="/top_tb/dut/PRNG_u/tvalid">
       <obj_property name="ElementShortName">tvalid</obj_property>
       <obj_property name="ObjectShortName">tvalid</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/CTR_feistel_decrypt_tb/ciphertext">
-      <obj_property name="ElementShortName">ciphertext[255:0]</obj_property>
-      <obj_property name="ObjectShortName">ciphertext[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/CTR_feistel_decrypt_tb/de_dut/ciphertext">
-      <obj_property name="ElementShortName">ciphertext[255:0]</obj_property>
-      <obj_property name="ObjectShortName">ciphertext[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/CTR_feistel_decrypt_tb/de_dut/valid">
+   <wvobject type="logic" fp_name="/top_tb/dut/PRNG_u/valid">
       <obj_property name="ElementShortName">valid</obj_property>
       <obj_property name="ObjectShortName">valid</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/CTR_feistel_decrypt_tb/de_dut/plaintext">
+   <wvobject type="array" fp_name="/top_tb/dut/PRNG_u/pseudoRandomNumber1">
+      <obj_property name="ElementShortName">pseudoRandomNumber1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pseudoRandomNumber1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/dut/PRNG_u/pseudoRandomNumber2">
+      <obj_property name="ElementShortName">pseudoRandomNumber2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pseudoRandomNumber2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/dut/PRNG_u/pseudoRandomNumber3">
+      <obj_property name="ElementShortName">pseudoRandomNumber3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pseudoRandomNumber3[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/dut/sbox_gen_valid">
+      <obj_property name="ElementShortName">sbox_gen_valid</obj_property>
+      <obj_property name="ObjectShortName">sbox_gen_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/dut/V">
+      <obj_property name="ElementShortName">V[7:0]</obj_property>
+      <obj_property name="ObjectShortName">V[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/dut/sbox_valid">
+      <obj_property name="ElementShortName">sbox_valid</obj_property>
+      <obj_property name="ObjectShortName">sbox_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/dut/V_out">
+      <obj_property name="ElementShortName">V_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">V_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/dut/done_sbox">
+      <obj_property name="ElementShortName">done_sbox</obj_property>
+      <obj_property name="ObjectShortName">done_sbox</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/dut/key_valid">
+      <obj_property name="ElementShortName">key_valid</obj_property>
+      <obj_property name="ObjectShortName">key_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/dut/key">
+      <obj_property name="ElementShortName">key[127:0]</obj_property>
+      <obj_property name="ObjectShortName">key[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/dut/done_key">
+      <obj_property name="ElementShortName">done_key</obj_property>
+      <obj_property name="ObjectShortName">done_key</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/dut/plaintext">
       <obj_property name="ElementShortName">plaintext[255:0]</obj_property>
       <obj_property name="ObjectShortName">plaintext[255:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/CTR_feistel_decrypt_tb/de_valid">
+   <wvobject type="logic" fp_name="/top_tb/dut/en_valid">
+      <obj_property name="ElementShortName">en_valid</obj_property>
+      <obj_property name="ObjectShortName">en_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/dut/ciphertext_out">
+      <obj_property name="ElementShortName">ciphertext_out</obj_property>
+      <obj_property name="ObjectShortName">ciphertext_out</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/dut/de_valid">
       <obj_property name="ElementShortName">de_valid</obj_property>
       <obj_property name="ObjectShortName">de_valid</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/CTR_feistel_decrypt_tb/plaintext_out">
-      <obj_property name="ElementShortName">plaintext_out[255:0]</obj_property>
-      <obj_property name="ObjectShortName">plaintext_out[255:0]</obj_property>
+   <wvobject type="logic" fp_name="/top_tb/dut/plaintext_out">
+      <obj_property name="ElementShortName">plaintext_out</obj_property>
+      <obj_property name="ObjectShortName">plaintext_out</obj_property>
    </wvobject>
 </wave_config>

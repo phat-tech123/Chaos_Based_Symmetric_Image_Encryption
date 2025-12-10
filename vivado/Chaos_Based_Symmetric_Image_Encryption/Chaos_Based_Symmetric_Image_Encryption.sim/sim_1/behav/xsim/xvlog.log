@@ -1,20 +1,48 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/sim/floating_point_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floating_point_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/sim/floating_point_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floating_point_mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/sim/floating_point_div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floating_point_div
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_sqrt/sim/floating_point_sqrt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floating_point_sqrt
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_decrypt.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CTR_feistel_decrypt
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_encrypt.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CTR_feistel_encrypt
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/F/F.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module F
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/PRNG/PRNG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PRNG
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/addroundkey.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module addroundkey
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/affine_transform/affine_transform.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module affine_transform
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/extractor/extractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module extractor
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/feistel_encrypt/feistel_encrypt.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module feistel_encrypt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/key_gen/key_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module key_generator
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/key_schedule_5r/key_schedule_5r.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module key_schedule_5r
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/mixcolumns.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mixcolumns
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/mixer/mixer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mixer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sawtooth
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sbox/sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sbox
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sbox_generator/sbox_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sbox_generator
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/shiftrows.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module shiftrows
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sigma/sigma.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigma
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/AES/subbytes.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module subbytes
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/CTR_mode_feistel_encrypt/CTR_mode_feistel_decrypt_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module CTR_feistel_decrypt_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/top/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/top/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
