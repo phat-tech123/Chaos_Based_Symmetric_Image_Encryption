@@ -16,6 +16,7 @@ module feistel_encrypt_tb;
     reg  [SBOX_WIDTH-1:0] sbox_out;
     reg sbox_valid;
 
+    reg key_valid;
     reg [KEY_SIZE-1:0] K0;
     reg [KEY_SIZE-1:0] K1;
     reg [KEY_SIZE-1:0] K2;
@@ -45,6 +46,7 @@ module feistel_encrypt_tb;
         .sbox_out(sbox_out),
         .sbox_valid(sbox_valid),
 
+        .key_valid(key_valid),
         .K0(K0), .K1(K1), .K2(K2), .K3(K3), .K4(K4),
 
         .tvalid(tvalid),
@@ -90,6 +92,7 @@ module feistel_encrypt_tb;
         sbox_valid <= 0;
         tvalid <= 0;
         plaintext <= 0;
+        key_valid <= 0;
 
         // Keys
         K0 <= 128'h000102030405060708090A0B0C0D0E0F;
@@ -99,6 +102,7 @@ module feistel_encrypt_tb;
         K4 <= 128'h404142434445464748494A4B4C4D4E4F;
 
         #15 reset_n = 1;
+        
         
         for (k = 255; k > 0; k = k - 1) begin
             @(posedge clk);
@@ -111,7 +115,12 @@ module feistel_encrypt_tb;
 
         @(posedge clk);
         sbox_valid <= 0;
-
+        
+        key_valid <= 1;
+        @(posedge clk);
+        key_valid <= 1;
+        @(posedge clk);
+        key_valid <= 0;
         // give time for DUT to set sbox_ready
         #2;
         // Apply plaintext

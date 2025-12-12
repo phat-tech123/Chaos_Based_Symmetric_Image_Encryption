@@ -2,7 +2,7 @@ module CTR_feistel_decrypt#(
 	parameter ROUND 	= 5,
 	parameter KEY_SIZE 	= 128,
 	parameter F_LAT 	= 6,
-	parameter ENCR_LAT 	= 5*F_LAT+2,
+	parameter ENCR_LAT  = 5*F_LAT+1,
 	parameter SBOX_WIDTH 	= 8,
 	parameter DATA_WIDTH 	= 256
 )(
@@ -43,29 +43,6 @@ reg [DATA_WIDTH-1:0] counter;
 reg decr_tvalid;
 wire decr_valid;
 wire [DATA_WIDTH-1:0] decr_out;
-
-//feistel_decrypt #(
-//    .ROUND(ROUND),
-//    .F_LAT(F_LAT),
-//    .SBOX_WIDTH(SBOX_WIDTH),
-//    .KEY_SIZE(KEY_SIZE),
-//    .DATA_WIDTH(DATA_WIDTH)
-//) feistel_decrypt_u (
-//    .clk(clk),
-//    .reset_n(reset_n),
-
-//    .sbox_out(sbox_out),
-//    .sbox_valid(sbox_valid),
-
-//    .key_valid(key_valid),
-//    .K0(K[0]), .K1(K[1]), .K2(K[2]), .K3(K[3]), .K4(K[4]),
-
-//    .tvalid(decr_tvalid),
-//    .ciphertext(counter),
-
-//    .valid(decr_valid),
-//    .plaintext(decr_out)
-//);
     
 feistel_encrypt #(
     .ROUND(ROUND),
@@ -101,7 +78,7 @@ always@(posedge clk or negedge reset_n) begin
 	end else begin
 		if(tvalid) begin
 			decr_tvalid <= 1;
-			counter <= (is_first_block) ? iv : counter + 1;
+			counter <= (is_first_block || &counter) ? iv : counter + 1;
 			is_first_block <= 0;
 			ciphertext_t[0] <= ciphertext;
 		end else begin

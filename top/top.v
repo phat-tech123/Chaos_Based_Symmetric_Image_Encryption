@@ -113,10 +113,12 @@ wire [DATA_WIDTH-1:0]ciphertext_out;
 wire de_valid;
 wire [DATA_WIDTH-1:0]plaintext_out;
 
+localparam F_LAT = 6;
 CTR_feistel_encrypt #(
     .ROUND(ROUND),
     .KEY_SIZE(KEY_SIZE),
-    .F_LAT(6),
+    .F_LAT(F_LAT),
+    .ENCR_LAT(5*F_LAT+1),
     .SBOX_WIDTH(SBOX_WIDTH),
     .DATA_WIDTH(DATA_WIDTH)
 ) en_dut (
@@ -139,7 +141,8 @@ CTR_feistel_encrypt #(
 
 CTR_feistel_decrypt #(
     .ROUND(ROUND),
-    .F_LAT(6),
+    .F_LAT(F_LAT),
+    .ENCR_LAT(5*F_LAT+1),
     .SBOX_WIDTH(SBOX_WIDTH),
     .KEY_SIZE(KEY_SIZE),
     .DATA_WIDTH(DATA_WIDTH)

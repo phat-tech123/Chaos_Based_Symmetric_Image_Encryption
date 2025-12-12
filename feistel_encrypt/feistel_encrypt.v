@@ -27,9 +27,9 @@ module feistel_encrypt#(
 
 localparam HALF = DATA_WIDTH/2; //128
 
-reg [HALF-1:0] L_reg[0:ROUND][0:F_LAT-1];
-reg [HALF-1:0] R_reg[0:ROUND][0:F_LAT-1];
-reg F_valid_t[0:ROUND];
+reg [HALF-1:0] L_reg[0:ROUND-1][0:F_LAT-1];
+reg [HALF-1:0] R_reg[0:ROUND-1][0:F_LAT-1];
+reg F_valid_t[0:ROUND-1];
 reg tvalid_temp;
 always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
@@ -95,7 +95,7 @@ generate
             end
         end
 	end
-	 for (i = 0; i < ROUND; i = i+1) begin : R
+	 for (i = 0; i < ROUND-1; i = i+1) begin : R
             always @(posedge clk or negedge reset_n) begin
                 if (!reset_n) begin
                     F_valid_t[i+1] <= 0;
@@ -116,9 +116,9 @@ always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
 		valid <= 0;
 		ciphertext <= 0;
-	end else if(F_valid_t[ROUND]) begin
+	end else if(F_valid[ROUND-1]) begin
 		valid <= 1;
-		ciphertext <= {R_reg[ROUND][0], L_reg[ROUND][0]};
+		ciphertext <= {L_reg[ROUND-1][F_LAT-1] ^ F_state_out[ROUND-1], R_reg[ROUND-1][F_LAT-1]};
 	end else begin
 		valid <= 0;
 	end

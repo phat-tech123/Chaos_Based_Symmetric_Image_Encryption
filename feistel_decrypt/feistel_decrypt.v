@@ -95,7 +95,7 @@ generate
             end
         end
 	end
-	 for (i = 0; i < ROUND; i = i+1) begin : R
+	 for (i = 0; i < ROUND-1; i = i+1) begin : R
             always @(posedge clk or negedge reset_n) begin
                 if (!reset_n) begin
                     F_valid_t[i+1] <= 0;
@@ -116,9 +116,9 @@ always@(posedge clk or negedge reset_n) begin
 	if(!reset_n) begin
 		valid <= 0;
 		plaintext <= 0;
-	end else if(F_valid_t[ROUND]) begin
+	end else if(F_valid[ROUND-1]) begin
 		valid <= 1;
-		plaintext <= {R_reg[ROUND][0], L_reg[ROUND][0]};
+		plaintext <= {L_reg[ROUND-1][F_LAT-1] ^ F_state_out[ROUND-1], R_reg[ROUND-1][F_LAT-1]};
 	end else begin
 		valid <= 0;
 	end

@@ -11,46 +11,34 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="246,593.800 ns"></ZoomStartTime>
-      <ZoomEndTime time="246,774.401 ns"></ZoomEndTime>
-      <Cursor1Time time="246,633.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="147.310 ns"></ZoomEndTime>
+      <Cursor1Time time="595.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="62"></NameColumnWidth>
       <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
-   <wvobject type="logic" fp_name="/top_tb/clk">
+   <WVObjectSize size="18" />
+   <wvobject type="logic" fp_name="/top_tb/dut/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top_tb/reset_n">
+   <wvobject type="logic" fp_name="/top_tb/dut/reset_n">
       <obj_property name="ElementShortName">reset_n</obj_property>
       <obj_property name="ObjectShortName">reset_n</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top_tb/tvalid">
+   <wvobject type="logic" fp_name="/top_tb/dut/tvalid">
       <obj_property name="ElementShortName">tvalid</obj_property>
       <obj_property name="ObjectShortName">tvalid</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top_tb/dut/PRNG_u/tvalid">
-      <obj_property name="ElementShortName">tvalid</obj_property>
-      <obj_property name="ObjectShortName">tvalid</obj_property>
+   <wvobject type="logic" fp_name="/top_tb/dut/PRNG_valid">
+      <obj_property name="ElementShortName">PRNG_valid</obj_property>
+      <obj_property name="ObjectShortName">PRNG_valid</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top_tb/dut/PRNG_u/valid">
-      <obj_property name="ElementShortName">valid</obj_property>
-      <obj_property name="ObjectShortName">valid</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/dut/PRNG_u/pseudoRandomNumber1">
-      <obj_property name="ElementShortName">pseudoRandomNumber1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pseudoRandomNumber1[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/dut/PRNG_u/pseudoRandomNumber2">
-      <obj_property name="ElementShortName">pseudoRandomNumber2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pseudoRandomNumber2[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/dut/PRNG_u/pseudoRandomNumber3">
-      <obj_property name="ElementShortName">pseudoRandomNumber3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pseudoRandomNumber3[31:0]</obj_property>
+   <wvobject type="array" fp_name="/top_tb/dut/pseudoRandomNumber">
+      <obj_property name="ElementShortName">pseudoRandomNumber[0:2][31:0]</obj_property>
+      <obj_property name="ObjectShortName">pseudoRandomNumber[0:2][31:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/top_tb/dut/sbox_gen_valid">
       <obj_property name="ElementShortName">sbox_gen_valid</obj_property>
@@ -92,16 +80,16 @@
       <obj_property name="ElementShortName">en_valid</obj_property>
       <obj_property name="ObjectShortName">en_valid</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top_tb/dut/ciphertext_out">
-      <obj_property name="ElementShortName">ciphertext_out</obj_property>
-      <obj_property name="ObjectShortName">ciphertext_out</obj_property>
+   <wvobject type="array" fp_name="/top_tb/dut/ciphertext_out">
+      <obj_property name="ElementShortName">ciphertext_out[255:0]</obj_property>
+      <obj_property name="ObjectShortName">ciphertext_out[255:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/top_tb/dut/de_valid">
       <obj_property name="ElementShortName">de_valid</obj_property>
       <obj_property name="ObjectShortName">de_valid</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top_tb/dut/plaintext_out">
-      <obj_property name="ElementShortName">plaintext_out</obj_property>
-      <obj_property name="ObjectShortName">plaintext_out</obj_property>
+   <wvobject type="array" fp_name="/top_tb/dut/plaintext_out">
+      <obj_property name="ElementShortName">plaintext_out[255:0]</obj_property>
+      <obj_property name="ObjectShortName">plaintext_out[255:0]</obj_property>
    </wvobject>
 </wave_config>

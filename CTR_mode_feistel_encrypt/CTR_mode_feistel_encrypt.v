@@ -2,7 +2,7 @@ module CTR_feistel_encrypt#(
 	parameter ROUND 	= 5,
 	parameter KEY_SIZE 	= 128,
 	parameter F_LAT 	= 6,
-	parameter ENCR_LAT  = 5*F_LAT+2,
+	parameter ENCR_LAT  = 5*F_LAT+1,
 	parameter SBOX_WIDTH 	= 8,
 	parameter DATA_WIDTH 	= 256
 )(
@@ -79,7 +79,7 @@ always@(posedge clk or negedge reset_n) begin
 	end else begin
 		if(tvalid) begin
 			encr_tvalid <= 1;
-			counter <= (is_first_block) ? iv : counter + 1;
+			counter <= (is_first_block || &counter) ? iv : counter + 1;
 			is_first_block <= 0;
 			plaintext_t[0] <= plaintext;
 		end else begin
