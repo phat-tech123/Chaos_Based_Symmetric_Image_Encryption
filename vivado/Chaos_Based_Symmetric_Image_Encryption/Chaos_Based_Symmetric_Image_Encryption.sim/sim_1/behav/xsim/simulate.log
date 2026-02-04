@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+[557118000] DMA is BUSY initially...
+[557314000] DMA is now READY!
+[557338000] DMA is BUSY initially...
+[557354000] DMA is now READY!
+$finish called at time : 559362 ns : File "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/testbench/Crypto_Engine_tb.v" Line 403
+INFO: xsimkernel Simulation Memory Usage: 148340 KB (Peak: 198560 KB), Simulation CPU Usage: 41070 ms

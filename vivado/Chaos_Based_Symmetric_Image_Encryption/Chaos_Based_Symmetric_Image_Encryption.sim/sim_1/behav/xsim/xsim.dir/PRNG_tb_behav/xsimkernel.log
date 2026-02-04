@@ -1,7 +1,0 @@
-Running: xsim.dir/PRNG_tb_behav/xsimk -simmode gui -wdb PRNG_tb_behav.wdb -simrunnum 0 -socket 52897
-Design successfully loaded
-Design Loading Memory Usage: 69396 KB (Peak: 69848 KB)
-Design Loading CPU Usage: 130 ms
-Simulation completed
-Simulation Memory Usage: 158300 KB (Peak: 208664 KB)
-Simulation CPU Usage: 590 ms

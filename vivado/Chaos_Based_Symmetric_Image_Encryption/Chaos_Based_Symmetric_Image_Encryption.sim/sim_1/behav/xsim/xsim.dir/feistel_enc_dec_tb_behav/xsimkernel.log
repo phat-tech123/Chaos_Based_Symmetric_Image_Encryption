@@ -1,4 +1,0 @@
-Running: xsim.dir/feistel_enc_dec_tb_behav/xsimk -simmode gui -wdb feistel_enc_dec_tb_behav.wdb -simrunnum 0 -socket 60213
-Design successfully loaded
-Design Loading Memory Usage: 23916 KB (Peak: 24140 KB)
-Design Loading CPU Usage: 20 ms

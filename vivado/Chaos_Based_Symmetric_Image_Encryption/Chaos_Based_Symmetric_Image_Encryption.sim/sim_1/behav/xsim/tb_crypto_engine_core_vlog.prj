@@ -1,0 +1,56 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/sim/floating_point_add.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/sim/floating_point_div.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/sim/floating_point_mul.v" \
+"../../../../../../RTL/encryptor/CTR_mode_feistel_encrypt.v" \
+"../../../../../../RTL/PRNG/Clock_gating.v" \
+"../../../../../../RTL/encryptor/F.v" \
+"../../../../../../RTL/PRNG/PRNG.v" \
+"../../../../../../RTL/TRNG/RingOscillator.v" \
+"../../../../../../RTL/TRNG/TRNG.v" \
+"../../../../../../RTL/TRNG/TRNG_core.v" \
+"../../../../../../RTL/TRNG/Von_Neumann_Corrector.v" \
+"../../../../../../RTL/encryptor/addroundkey.v" \
+"../../../../../../RTL/PRNG/affine_transform.v" \
+"../../../../../../RTL/TRNG/control_logic.v" \
+"../../../../../../RTL/Sbox_generator/extractor.v" \
+"../../../../../../RTL/encryptor/feistel_encrypt.v" \
+"../../../../../../RTL/TRNG/fifo.v" \
+"../../../../../../RTL/Key_generator/key_generator.v" \
+"../../../../../../RTL/encryptor/mixcolumns.v" \
+"../../../../../../RTL/Sbox_generator/mixer.v" \
+"../../../../../../RTL/PRNG/sawtooth.v" \
+"../../../../../../RTL/Sbox_generator/sbox_generator.v" \
+"../../../../../../RTL/TRNG/shift_reg_8.v" \
+"../../../../../../RTL/encryptor/shiftrows.v" \
+"../../../../../../RTL/encryptor/subbytes.v" \
+
+sv xil_defaultlib  \
+"../../../../../../RTL/controller/controller.sv" \
+
+verilog xil_defaultlib  \
+"../../../../../../RTL/top/Crypto_Engine.v" \
+"../../../../../../testbench/Crypto_Engine_tb.v" \
+"../../../../../../testbench/CTR_mode_feistel_decrypt_tb.v" \
+"../../../../../../testbench/CTR_mode_feistel_encrypt_tb.v" \
+"../../../../../../testbench/F_tb.v" \
+"../../../../../../testbench/PRNG_tb.v" \
+"../../../../../../testbench/affine_transform_tb.v" \
+"../../../../../../testbench/extractor_tb.v" \
+"../../../../../../testbench/feistel_encrypt_tb.v" \
+"../../../../../../testbench/key_generator_tb.v" \
+"../../../../../../testbench/key_schedule_5r_tb.v" \
+"../../../../../../testbench/mixcolumns_tb.v" \
+"../../../../../../testbench/sawtooth_tb.v" \
+"../../../../../../testbench/sbox_generator_tb.v" \
+"../../../../../../testbench/sbox_tb.v" \
+"../../../../../../testbench/shiftrows_tb.v" \
+"../../../../../../testbench/subbytes_tb.v" \
+"../../../../../../testbench/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

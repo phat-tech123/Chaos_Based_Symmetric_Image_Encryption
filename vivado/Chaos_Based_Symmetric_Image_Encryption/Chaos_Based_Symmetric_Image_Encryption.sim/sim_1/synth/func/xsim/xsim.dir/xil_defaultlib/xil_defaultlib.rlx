@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 13 2023
+20:21:30
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/IPs/PRNG_IP/PRNG_IP_Top.v,1769316573,verilog,,/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/IPs/PRNG_IP/PRNG_IP_Top_tb.v,,PRNG_IP_Top,,,,,,,,
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/IPs/PRNG_IP/PRNG_IP_Top_tb.v,1769317309,verilog,,,,PRNG_IP_tb,,,,,,,,
+/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.sim/sim_1/synth/func/xsim/PRNG_IP_tb_func_synth.v,1769317382,verilog,,/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/IPs/PRNG_IP/PRNG_IP_Top.v,,RingOscillator;RingOscillator__32;RingOscillator__33;RingOscillator__34;RingOscillator__35;RingOscillator__36;RingOscillator__37;RingOscillator__38;RingOscillator__39;RingOscillator__40;RingOscillator__41;RingOscillator__42;RingOscillator__43;RingOscillator__44;RingOscillator__45;RingOscillator__46;RingOscillator__47;RingOscillator__48;RingOscillator__49;RingOscillator__50;RingOscillator__51;RingOscillator__52;RingOscillator__53;RingOscillator__54;RingOscillator__55;RingOscillator__56;RingOscillator__57;RingOscillator__58;RingOscillator__59;RingOscillator__60;RingOscillator__61;RingOscillator__62;TRNG_top;Von_Neumann_Corrector;control_logic;fifo_8bit;glbl;shift_reg_8;trng_core,,,,,,,,

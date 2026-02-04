@@ -1,8 +1,0 @@
-top: top__GCB0, CTR_feistel_decrypt, CTR_feistel_encrypt, key_generator, sbox_generator, 
-CTR_feistel_decrypt: CTR_feistel_decrypt__GC0, feistel_encrypt, 
-CTR_feistel_encrypt: CTR_feistel_encrypt__GC0, feistel_encrypt, 
-feistel_encrypt: feistel_encrypt__GCBM1, feistel_encrypt__GCBM0, F, 
-F: F__GC0, subbytes, 
-key_generator: key_generator__GC0, subbytes, 
-subbytes: subbytes__GBM1, subbytes__GBM0, 
-sbox_generator: sbox_generator, 

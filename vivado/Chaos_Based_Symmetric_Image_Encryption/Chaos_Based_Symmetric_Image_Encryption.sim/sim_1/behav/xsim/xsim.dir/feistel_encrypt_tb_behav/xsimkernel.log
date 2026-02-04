@@ -1,4 +1,0 @@
-Running: xsim.dir/feistel_encrypt_tb_behav/xsimk -simmode gui -wdb feistel_encrypt_tb_behav.wdb -simrunnum 0 -socket 36339
-Design successfully loaded
-Design Loading Memory Usage: 23736 KB (Peak: 24112 KB)
-Design Loading CPU Usage: 20 ms

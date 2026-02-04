@@ -1,0 +1,186 @@
+$date
+	Tue Jan 20 20:26:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module von_neumann_tb $end
+$var wire 1 ! valid $end
+$var wire 1 " processed_bit $end
+$var reg 1 # clk $end
+$var reg 1 $ enable $end
+$var reg 1 % raw_bit $end
+$var reg 12 & raw_stream [11:0] $end
+$var reg 1 ' reset_n $end
+$var integer 32 ( i [31:0] $end
+$scope module dut $end
+$var wire 1 # clk $end
+$var wire 1 $ enable $end
+$var wire 1 % raw_bit $end
+$var wire 1 ' reset_n $end
+$var parameter 1 ) S_WAIT_FIRST $end
+$var parameter 1 * S_WAIT_SECOND $end
+$var reg 1 + current_state $end
+$var reg 1 , first_bit_captured $end
+$var reg 1 - next_state $end
+$var reg 1 " processed_bit $end
+$var reg 1 ! valid $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+1*
+0)
+$end
+#0
+$dumpvars
+1-
+0,
+0+
+bx (
+0'
+b100011010010 &
+0%
+0$
+0#
+0"
+0!
+$end
+#5000
+1#
+#10000
+0#
+#15000
+1#
+#20000
+1-
+1%
+1$
+1'
+0#
+b1011 (
+#25000
+1"
+1!
+0-
+1,
+1+
+0%
+b1010 (
+1#
+#30000
+0#
+#35000
+1-
+0"
+0!
+0+
+b1001 (
+1#
+#40000
+0#
+#45000
+0-
+0,
+1+
+b1000 (
+1#
+#50000
+0#
+#55000
+1-
+0+
+1%
+b111 (
+1#
+#60000
+0#
+#65000
+0-
+1,
+1+
+b110 (
+1#
+#70000
+0#
+#75000
+1-
+0+
+0%
+b101 (
+1#
+#80000
+0#
+#85000
+1!
+0-
+0,
+1+
+1%
+b100 (
+1#
+#90000
+0#
+#95000
+1-
+0!
+0+
+0%
+b11 (
+1#
+#100000
+0#
+#105000
+0-
+1+
+b10 (
+1#
+#110000
+0#
+#115000
+1-
+0+
+1%
+b1 (
+1#
+#120000
+0#
+#125000
+1"
+1!
+0-
+1,
+1+
+0%
+b0 (
+1#
+#130000
+0#
+#135000
+1-
+0"
+0!
+0+
+0$
+b11111111111111111111111111111111 (
+1#
+#140000
+0#
+#145000
+1#
+#150000
+0#
+#155000
+1#
+#160000
+0#
+#165000
+1#
+#170000
+0#
+#175000
+1#

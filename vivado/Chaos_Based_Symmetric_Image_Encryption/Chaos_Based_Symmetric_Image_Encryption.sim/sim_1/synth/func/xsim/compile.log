@@ -1,0 +1,44 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.sim/sim_1/synth/func/xsim/PRNG_IP_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RingOscillator
+INFO: [VRFC 10-311] analyzing module RingOscillator__32
+INFO: [VRFC 10-311] analyzing module RingOscillator__33
+INFO: [VRFC 10-311] analyzing module RingOscillator__34
+INFO: [VRFC 10-311] analyzing module RingOscillator__35
+INFO: [VRFC 10-311] analyzing module RingOscillator__36
+INFO: [VRFC 10-311] analyzing module RingOscillator__37
+INFO: [VRFC 10-311] analyzing module RingOscillator__38
+INFO: [VRFC 10-311] analyzing module RingOscillator__39
+INFO: [VRFC 10-311] analyzing module RingOscillator__40
+INFO: [VRFC 10-311] analyzing module RingOscillator__41
+INFO: [VRFC 10-311] analyzing module RingOscillator__42
+INFO: [VRFC 10-311] analyzing module RingOscillator__43
+INFO: [VRFC 10-311] analyzing module RingOscillator__44
+INFO: [VRFC 10-311] analyzing module RingOscillator__45
+INFO: [VRFC 10-311] analyzing module RingOscillator__46
+INFO: [VRFC 10-311] analyzing module RingOscillator__47
+INFO: [VRFC 10-311] analyzing module RingOscillator__48
+INFO: [VRFC 10-311] analyzing module RingOscillator__49
+INFO: [VRFC 10-311] analyzing module RingOscillator__50
+INFO: [VRFC 10-311] analyzing module RingOscillator__51
+INFO: [VRFC 10-311] analyzing module RingOscillator__52
+INFO: [VRFC 10-311] analyzing module RingOscillator__53
+INFO: [VRFC 10-311] analyzing module RingOscillator__54
+INFO: [VRFC 10-311] analyzing module RingOscillator__55
+INFO: [VRFC 10-311] analyzing module RingOscillator__56
+INFO: [VRFC 10-311] analyzing module RingOscillator__57
+INFO: [VRFC 10-311] analyzing module RingOscillator__58
+INFO: [VRFC 10-311] analyzing module RingOscillator__59
+INFO: [VRFC 10-311] analyzing module RingOscillator__60
+INFO: [VRFC 10-311] analyzing module RingOscillator__61
+INFO: [VRFC 10-311] analyzing module RingOscillator__62
+INFO: [VRFC 10-311] analyzing module TRNG_top
+INFO: [VRFC 10-311] analyzing module Von_Neumann_Corrector
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-311] analyzing module fifo_8bit
+INFO: [VRFC 10-311] analyzing module shift_reg_8
+INFO: [VRFC 10-311] analyzing module trng_core
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/IPs/PRNG_IP/PRNG_IP_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PRNG_IP_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/IPs/PRNG_IP/PRNG_IP_Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PRNG_IP_tb

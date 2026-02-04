@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.27207",
+   "Default View_TopLeft":"652,-285",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -x 580 -y -110 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 2 -x 1360 -y -40 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 3 -x 1860 -y -410 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 2 -x 1360 -y -380 -defaultsOSRD
+preplace inst chaos_crypto_engine_0 -pg 1 -lvl 3 -x 1860 -y -130 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 3 280 -210 1100 -480 1670
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 1 1110 -400n
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 1 2 1130 -220 1680
+preplace netloc chaos_crypto_engine_0_m_axis_tdata 1 1 3 1120 130 NJ 130 2030
+preplace netloc chaos_crypto_engine_0_m_axis_tkeep 1 1 3 1070 150 NJ 150 2020
+preplace netloc chaos_crypto_engine_0_m_axis_tlast 1 1 3 1060 160 NJ 160 2050
+preplace netloc axi_dma_0_s_axis_s2mm_tready 1 1 2 1140 -210 1600
+preplace netloc chaos_crypto_engine_0_m_axis_tvalid 1 1 3 1050 170 NJ 170 2070
+preplace netloc axi_dma_0_m_axis_mm2s_tdata 1 2 1 1580 -180n
+preplace netloc axi_dma_0_m_axis_mm2s_tkeep 1 2 1 1690 -120n
+preplace netloc axi_dma_0_m_axis_mm2s_tlast 1 2 1 1590 -160n
+preplace netloc chaos_crypto_engine_0_s_axis_tready 1 2 2 1580J 0 2040
+preplace netloc axi_dma_0_m_axis_mm2s_tvalid 1 2 1 1700 -140n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 1 2 910 -520 NJ
+preplace netloc ps8_0_axi_periph_M00_AXI 1 1 3 1080 140 NJ 140 2060
+preplace netloc ps8_0_axi_periph_M01_AXI 1 2 2 1700 -580 2020
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 1 2 1090 -500 NJ
+levelinfo -pg 1 0 580 1360 1860 2090
+pagesize -pg 1 -db -bbox -sgen 0 -590 2110 550
+"
+}
+{
+   "da_axi4_cnt":"4",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

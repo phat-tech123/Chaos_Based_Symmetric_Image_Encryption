@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
--- Date        : Wed Nov  5 09:01:29 2025
+-- Date        : Wed Nov  5 09:01:28 2025
 -- Host        : ubuntu running 64-bit Ubuntu 24.04.3 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/vinhphat-josh/Documents/Vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top floating_point_mul -prefix
+--               floating_point_mul_ floating_point_mul_stub.vhdl
 -- Design      : floating_point_mul
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xck26-sfvc784-2LV-c

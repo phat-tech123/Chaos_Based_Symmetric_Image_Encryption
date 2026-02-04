@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/demo_tb/tb_floating_point_add.vhd" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/demo_tb/tb_floating_point_div.vhd" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/demo_tb/tb_floating_point_mul.vhd" \
+
+# Do not sort compile order
+nosort

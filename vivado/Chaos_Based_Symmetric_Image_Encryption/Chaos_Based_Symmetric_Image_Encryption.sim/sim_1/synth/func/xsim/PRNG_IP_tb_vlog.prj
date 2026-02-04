@@ -1,0 +1,8 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"PRNG_IP_tb_func_synth.v" \
+"../../../../../../../IPs/PRNG_IP/PRNG_IP_Top.v" \
+"../../../../../../../IPs/PRNG_IP/PRNG_IP_Top_tb.v" \
+
+# Do not sort compile order
+nosort

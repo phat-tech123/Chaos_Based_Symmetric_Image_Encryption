@@ -1,0 +1,281 @@
+Data_For_RDAFlowver5.0
+	top levelóÅ
+crypto_engine_core€
+LinkDesign_BlackboxesE
+/u_prng/affine_transform_u/add_block[1].add_instfloating_point_addE
+/u_prng/affine_transform_u/mul_block[0].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[0].add_instfloating_point_addB
+,u_prng/sawtooth_block[1].sawtooth_inst/mul_1floating_point_mulE
+/u_prng/affine_transform_u/mul_block[8].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[8].add_instfloating_point_add2
+u_prng/mul_block[2].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/mul_block[7].mul_instfloating_point_mulB
+,u_prng/sawtooth_block[0].sawtooth_inst/mul_1floating_point_mulE
+/u_prng/affine_transform_u/add_block[7].add_instfloating_point_add2
+u_prng/mul_block[1].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/mul_block[6].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[6].add_instfloating_point_addB
+,u_prng/sawtooth_block[2].sawtooth_inst/add_1floating_point_add2
+u_prng/mul_block[0].mul_instfloating_point_mulB
+,u_prng/sawtooth_block[2].sawtooth_inst/add_2floating_point_add@
+*u_prng/sawtooth_block[2].sawtooth_inst/divfloating_point_divE
+/u_prng/affine_transform_u/mul_block[5].mul_instfloating_point_mul@
+*u_prng/sawtooth_block[1].sawtooth_inst/divfloating_point_divE
+/u_prng/affine_transform_u/add_block[5].add_instfloating_point_add@
+*u_prng/sawtooth_block[0].sawtooth_inst/divfloating_point_divB
+,u_prng/sawtooth_block[1].sawtooth_inst/add_1floating_point_addE
+/u_prng/affine_transform_u/mul_block[4].mul_instfloating_point_mulB
+,u_prng/sawtooth_block[1].sawtooth_inst/add_2floating_point_addE
+/u_prng/affine_transform_u/add_block[4].add_instfloating_point_addE
+/u_prng/affine_transform_u/mul_block[3].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[3].add_instfloating_point_addB
+,u_prng/sawtooth_block[0].sawtooth_inst/add_1floating_point_addB
+,u_prng/sawtooth_block[0].sawtooth_inst/add_2floating_point_addE
+/u_prng/affine_transform_u/mul_block[2].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[2].add_instfloating_point_addE
+/u_prng/affine_transform_u/mul_block[1].mul_instfloating_point_mulB
+,u_prng/sawtooth_block[2].sawtooth_inst/mul_1floating_point_mul†:
+synthFileNamesA
+1</tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_VCOMP.vhdR
+27L/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/FIFO_DUALCLOCK_MACRO.vO
+32I/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unisims/retarget/MULT18X18S.vhd@
+2;/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_VPKG.vhdM
+28G/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/FIFO_SYNC_MACRO.vc
+33]/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/controller/controller.sv>
+39/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.vH
+29B/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/MACC_MACRO.vÂ
+34ﬁ/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/.Xil/Vivado-67134-ubuntu/realtime/floating_point_mul_stub.vA
+4</tools/Xilinx/Vivado/2023.2/scripts/rt/data/internal_cells.vÂ
+35ﬁ/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/.Xil/Vivado-67134-ubuntu/realtime/floating_point_add_stub.vV
+40P/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/PRNG.v7
+52/tools/Xilinx/Vivado/2023.2/scripts/rt/data/BUFT.vÂ
+36ﬁ/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/.Xil/Vivado-67134-ubuntu/realtime/floating_point_div_stub.v`
+41Z/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/TRNG/RingOscillator.vJ
+6E/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/unimacro_VCOMP.vhdo
+37i/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/encryptor/CTR_mode_feistel_encrypt.vV
+42P/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/TRNG/TRNG.vI
+7D/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/ADDMACC_MACRO.vhd^
+38X/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/Clock_gating.v[
+43U/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/TRNG/TRNG_core.vH
+8C/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhdX
+39R/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/encryptor/F.vg
+44a/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/TRNG/Von_Neumann_Corrector.vV
+50P/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/TRNG/fifo.vJ
+9E/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/BRAM_SDP_MACRO.vhdb
+45\/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/encryptor/addroundkey.vh
+51b/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/Key_generator/key_generator.vb
+46\/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/affine_transform.va
+52[/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/encryptor/mixcolumns.v_
+47Y/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/TRNG/control_logic.va
+53[/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/Sbox_generator/mixer.ve
+48_/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/Sbox_generator/extractor.vZ
+54T/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/sawtooth.vf
+49`/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/encryptor/feistel_encrypt.vø
+60∏/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/std_1164.vhdj
+55d/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/Sbox_generator/sbox_generator.vø
+61∏/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/standard.vhd]
+56W/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/TRNG/shift_reg_8.v¬
+62ª/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/numeric_std.vhd`
+57Z/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/encryptor/shiftrows.vΩ
+63∂/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/textio.vhd_
+58Y/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/encryptor/subbytes.vø
+64∏/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/timing_p.vhd^
+59X/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/top/Crypto_Engine.vø
+65∏/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/timing_b.vhdø
+66∏/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/prmtvs_p.vhdø
+67∏/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/prmtvs_b.vhdø
+68∏/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/syn_arit.vhdø
+69∏/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.runs/synth_1/1993/src/syn_unsi.vhdN
+10H/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhdK
+11E/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhdO
+12I/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/COUNTER_LOAD_MACRO.vhdM
+13G/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/COUNTER_TC_MACRO.vhdM
+14G/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/EQ_COMPARE_MACRO.vhdJ
+20D/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/ADDSUB_MACRO.vQ
+15K/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhdL
+21F/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.vL
+16F/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhdO
+22I/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.vG
+17A/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/MACC_MACRO.vhdG
+18A/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/MULT_MACRO.vhdL
+23F/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.vK
+19E/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/ADDMACC_MACRO.vP
+24J/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/COUNTER_LOAD_MACRO.vN
+25H/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/COUNTER_TC_MACRO.vH
+30B/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/MULT_MACRO.v
+NumFileNames70N
+26H/tools/Xilinx/Vivado/2023.2/data/verilog/src/unimacro/EQ_COMPARE_MACRO.vN
+31H/tools/Xilinx/Vivado/2023.2/data/vhdl/src/unisims/retarget/MULT18X18.vhd†
+
+synthStatsK
+dspWideMultUnderpipelined
+L115
+Mnullname
+F48
+Op_0_outK
+dspWideMultUnderpipelined
+Mnullname
+F48
+Op_0_out
+L115K
+dspWideMultUnderpipelined
+Mnullname
+F48
+Op_0_out
+L115f
+asyncResetRegAtDSPOutput)
+O$u_sbox_gen/\extractor/tmp_reg[0][0] 
+L96
+Mnullname
+F48g
+asyncResetRegAtDSPOutput
+L96
+Mnullname
+F48*
+O%u_sbox_gen/\extractor/tmp_reg[0][17] f
+asyncResetRegAtDSPOutput
+Mnullname
+F48)
+O$u_sbox_gen/\extractor/tmp_reg[1][0] 
+L96g
+asyncResetRegAtDSPOutput
+L96
+Mnullname
+F48*
+O%u_sbox_gen/\extractor/tmp_reg[1][17] f
+asyncResetRegAtDSPOutput
+L96
+Mnullname
+F48)
+O$u_sbox_gen/\extractor/tmp_reg[2][0] g
+asyncResetRegAtDSPOutput
+L96
+Mnullname
+F48*
+O%u_sbox_gen/\extractor/tmp_reg[2][17] k
+asyncResetRegAtDSPOutput
+Mnullname
+F48-
+O(\u_sbox_gen/extractor/tmp1_reg[0][6]__2 
+L112k
+asyncResetRegAtDSPOutput
+Mnullname
+F48-
+O(\u_sbox_gen/extractor/tmp1_reg[1][6]__2 
+L112k
+asyncResetRegAtDSPOutput-
+O(\u_sbox_gen/extractor/tmp1_reg[2][6]__2 
+L112
+Mnullname
+F48f
+asyncResetRegAtDSPOutput
+L96
+Mnullname
+F48)
+O$\u_sbox_gen/extractor/tmp_reg[0][0] g
+asyncResetRegAtDSPOutput
+L96
+Mnullname
+F48*
+O%\u_sbox_gen/extractor/tmp_reg[0][17] f
+asyncResetRegAtDSPOutput
+Mnullname
+F48)
+O$\u_sbox_gen/extractor/tmp_reg[1][0] 
+L96g
+asyncResetRegAtDSPOutput
+L96
+Mnullname
+F48*
+O%\u_sbox_gen/extractor/tmp_reg[1][17] f
+asyncResetRegAtDSPOutput
+Mnullname
+F48)
+O$\u_sbox_gen/extractor/tmp_reg[2][0] 
+L96g
+asyncResetRegAtDSPOutput
+L96
+Mnullname
+F48*
+O%\u_sbox_gen/extractor/tmp_reg[2][17] ¶ê
+ElaboratedNamesForRQSãê
+DSP_RAMà
+147470~ {u_encryptor/K_reg[0]_i} {u_encryptor/K_reg[1]_i} {u_encryptor/K_reg[2]_i} {u_encryptor/K_reg[3]_i} {u_encryptor/K_reg[4]_i} $
+348174 {u_encryptor/counter0_i} +
+393218! {u_prng/mul_latency_counter0_i} 
+77836 {u_key_gen/key1_i} ¢
+798723ó {u_prng/sawtooth_block[0].sawtooth_inst/floor2_i} {u_prng/sawtooth_block[1].sawtooth_inst/floor2_i} {u_prng/sawtooth_block[2].sawtooth_inst/floor2_i} &
+393225 {u_sbox_gen/done_sbox_d_i} í
+155661á {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/index0_i__0} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/index0_i__0} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/index0_i__0} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/index0_i__0} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/index0_i__0} {u_key_gen/u_sub/index0_i__0} "
+155662 {u_encryptor/cnt_i__0} •
+909315ö {u_prng/sawtooth_block[0].sawtooth_inst/is_ood1_i} {u_prng/sawtooth_block[1].sawtooth_inst/is_ood1_i} {u_prng/sawtooth_block[2].sawtooth_inst/is_ood1_i} $
+389129 {u_sbox_gen/index0_i__0} •
+880643ö {u_prng/sawtooth_block[0].sawtooth_inst/is_ood2_i} {u_prng/sawtooth_block[1].sawtooth_inst/is_ood2_i} {u_prng/sawtooth_block[2].sawtooth_inst/is_ood2_i} .
+843778$ {u_prng/affine_latency_counter0_i} ò
+159757ç {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/sbox_ready_i} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/sbox_ready_i} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/sbox_ready_i} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/sbox_ready_i} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/sbox_ready_i} {u_key_gen/u_sub/sbox_ready_i} $
+311308 {u_key_gen/done_key_d_i} q
+471050g {u_sbox_gen/extractor/RTL_MULT} {u_sbox_gen/extractor/RTL_MULT__0} {u_sbox_gen/extractor/RTL_MULT__1} û9
+376841ì9 {u_sbox_gen/used_reg[0]_i} {u_sbox_gen/used_reg[100]_i} {u_sbox_gen/used_reg[101]_i} {u_sbox_gen/used_reg[102]_i} {u_sbox_gen/used_reg[103]_i} {u_sbox_gen/used_reg[104]_i} {u_sbox_gen/used_reg[105]_i} {u_sbox_gen/used_reg[106]_i} {u_sbox_gen/used_reg[107]_i} {u_sbox_gen/used_reg[108]_i} {u_sbox_gen/used_reg[109]_i} {u_sbox_gen/used_reg[10]_i} {u_sbox_gen/used_reg[110]_i} {u_sbox_gen/used_reg[111]_i} {u_sbox_gen/used_reg[112]_i} {u_sbox_gen/used_reg[113]_i} {u_sbox_gen/used_reg[114]_i} {u_sbox_gen/used_reg[115]_i} {u_sbox_gen/used_reg[116]_i} {u_sbox_gen/used_reg[117]_i} {u_sbox_gen/used_reg[118]_i} {u_sbox_gen/used_reg[119]_i} {u_sbox_gen/used_reg[11]_i} {u_sbox_gen/used_reg[120]_i} {u_sbox_gen/used_reg[121]_i} {u_sbox_gen/used_reg[122]_i} {u_sbox_gen/used_reg[123]_i} {u_sbox_gen/used_reg[124]_i} {u_sbox_gen/used_reg[125]_i} {u_sbox_gen/used_reg[126]_i} {u_sbox_gen/used_reg[127]_i} {u_sbox_gen/used_reg[128]_i} {u_sbox_gen/used_reg[129]_i} {u_sbox_gen/used_reg[12]_i} {u_sbox_gen/used_reg[130]_i} {u_sbox_gen/used_reg[131]_i} {u_sbox_gen/used_reg[132]_i} {u_sbox_gen/used_reg[133]_i} {u_sbox_gen/used_reg[134]_i} {u_sbox_gen/used_reg[135]_i} {u_sbox_gen/used_reg[136]_i} {u_sbox_gen/used_reg[137]_i} {u_sbox_gen/used_reg[138]_i} {u_sbox_gen/used_reg[139]_i} {u_sbox_gen/used_reg[13]_i} {u_sbox_gen/used_reg[140]_i} {u_sbox_gen/used_reg[141]_i} {u_sbox_gen/used_reg[142]_i} {u_sbox_gen/used_reg[143]_i} {u_sbox_gen/used_reg[144]_i} {u_sbox_gen/used_reg[145]_i} {u_sbox_gen/used_reg[146]_i} {u_sbox_gen/used_reg[147]_i} {u_sbox_gen/used_reg[148]_i} {u_sbox_gen/used_reg[149]_i} {u_sbox_gen/used_reg[14]_i} {u_sbox_gen/used_reg[150]_i} {u_sbox_gen/used_reg[151]_i} {u_sbox_gen/used_reg[152]_i} {u_sbox_gen/used_reg[153]_i} {u_sbox_gen/used_reg[154]_i} {u_sbox_gen/used_reg[155]_i} {u_sbox_gen/used_reg[156]_i} {u_sbox_gen/used_reg[157]_i} {u_sbox_gen/used_reg[158]_i} {u_sbox_gen/used_reg[159]_i} {u_sbox_gen/used_reg[15]_i} {u_sbox_gen/used_reg[160]_i} {u_sbox_gen/used_reg[161]_i} {u_sbox_gen/used_reg[162]_i} {u_sbox_gen/used_reg[163]_i} {u_sbox_gen/used_reg[164]_i} {u_sbox_gen/used_reg[165]_i} {u_sbox_gen/used_reg[166]_i} {u_sbox_gen/used_reg[167]_i} {u_sbox_gen/used_reg[168]_i} {u_sbox_gen/used_reg[169]_i} {u_sbox_gen/used_reg[16]_i} {u_sbox_gen/used_reg[170]_i} {u_sbox_gen/used_reg[171]_i} {u_sbox_gen/used_reg[172]_i} {u_sbox_gen/used_reg[173]_i} {u_sbox_gen/used_reg[174]_i} {u_sbox_gen/used_reg[175]_i} {u_sbox_gen/used_reg[176]_i} {u_sbox_gen/used_reg[177]_i} {u_sbox_gen/used_reg[178]_i} {u_sbox_gen/used_reg[179]_i} {u_sbox_gen/used_reg[17]_i} {u_sbox_gen/used_reg[180]_i} {u_sbox_gen/used_reg[181]_i} {u_sbox_gen/used_reg[182]_i} {u_sbox_gen/used_reg[183]_i} {u_sbox_gen/used_reg[184]_i} {u_sbox_gen/used_reg[185]_i} {u_sbox_gen/used_reg[186]_i} {u_sbox_gen/used_reg[187]_i} {u_sbox_gen/used_reg[188]_i} {u_sbox_gen/used_reg[189]_i} {u_sbox_gen/used_reg[18]_i} {u_sbox_gen/used_reg[190]_i} {u_sbox_gen/used_reg[191]_i} {u_sbox_gen/used_reg[192]_i} {u_sbox_gen/used_reg[193]_i} {u_sbox_gen/used_reg[194]_i} {u_sbox_gen/used_reg[195]_i} {u_sbox_gen/used_reg[196]_i} {u_sbox_gen/used_reg[197]_i} {u_sbox_gen/used_reg[198]_i} {u_sbox_gen/used_reg[199]_i} {u_sbox_gen/used_reg[19]_i} {u_sbox_gen/used_reg[1]_i} {u_sbox_gen/used_reg[200]_i} {u_sbox_gen/used_reg[201]_i} {u_sbox_gen/used_reg[202]_i} {u_sbox_gen/used_reg[203]_i} {u_sbox_gen/used_reg[204]_i} {u_sbox_gen/used_reg[205]_i} {u_sbox_gen/used_reg[206]_i} {u_sbox_gen/used_reg[207]_i} {u_sbox_gen/used_reg[208]_i} {u_sbox_gen/used_reg[209]_i} {u_sbox_gen/used_reg[20]_i} {u_sbox_gen/used_reg[210]_i} {u_sbox_gen/used_reg[211]_i} {u_sbox_gen/used_reg[212]_i} {u_sbox_gen/used_reg[213]_i} {u_sbox_gen/used_reg[214]_i} {u_sbox_gen/used_reg[215]_i} {u_sbox_gen/used_reg[216]_i} {u_sbox_gen/used_reg[217]_i} {u_sbox_gen/used_reg[218]_i} {u_sbox_gen/used_reg[219]_i} {u_sbox_gen/used_reg[21]_i} {u_sbox_gen/used_reg[220]_i} {u_sbox_gen/used_reg[221]_i} {u_sbox_gen/used_reg[222]_i} {u_sbox_gen/used_reg[223]_i} {u_sbox_gen/used_reg[224]_i} {u_sbox_gen/used_reg[225]_i} {u_sbox_gen/used_reg[226]_i} {u_sbox_gen/used_reg[227]_i} {u_sbox_gen/used_reg[228]_i} {u_sbox_gen/used_reg[229]_i} {u_sbox_gen/used_reg[22]_i} {u_sbox_gen/used_reg[230]_i} {u_sbox_gen/used_reg[231]_i} {u_sbox_gen/used_reg[232]_i} {u_sbox_gen/used_reg[233]_i} {u_sbox_gen/used_reg[234]_i} {u_sbox_gen/used_reg[235]_i} {u_sbox_gen/used_reg[236]_i} {u_sbox_gen/used_reg[237]_i} {u_sbox_gen/used_reg[238]_i} {u_sbox_gen/used_reg[239]_i} {u_sbox_gen/used_reg[23]_i} {u_sbox_gen/used_reg[240]_i} {u_sbox_gen/used_reg[241]_i} {u_sbox_gen/used_reg[242]_i} {u_sbox_gen/used_reg[243]_i} {u_sbox_gen/used_reg[244]_i} {u_sbox_gen/used_reg[245]_i} {u_sbox_gen/used_reg[246]_i} {u_sbox_gen/used_reg[247]_i} {u_sbox_gen/used_reg[248]_i} {u_sbox_gen/used_reg[249]_i} {u_sbox_gen/used_reg[24]_i} {u_sbox_gen/used_reg[250]_i} {u_sbox_gen/used_reg[251]_i} {u_sbox_gen/used_reg[252]_i} {u_sbox_gen/used_reg[253]_i} {u_sbox_gen/used_reg[254]_i} {u_sbox_gen/used_reg[255]_i} {u_sbox_gen/used_reg[25]_i} {u_sbox_gen/used_reg[26]_i} {u_sbox_gen/used_reg[27]_i} {u_sbox_gen/used_reg[28]_i} {u_sbox_gen/used_reg[29]_i} {u_sbox_gen/used_reg[2]_i} {u_sbox_gen/used_reg[30]_i} {u_sbox_gen/used_reg[31]_i} {u_sbox_gen/used_reg[32]_i} {u_sbox_gen/used_reg[33]_i} {u_sbox_gen/used_reg[34]_i} {u_sbox_gen/used_reg[35]_i} {u_sbox_gen/used_reg[36]_i} {u_sbox_gen/used_reg[37]_i} {u_sbox_gen/used_reg[38]_i} {u_sbox_gen/used_reg[39]_i} {u_sbox_gen/used_reg[3]_i} {u_sbox_gen/used_reg[40]_i} {u_sbox_gen/used_reg[41]_i} {u_sbox_gen/used_reg[42]_i} {u_sbox_gen/used_reg[43]_i} {u_sbox_gen/used_reg[44]_i} {u_sbox_gen/used_reg[45]_i} {u_sbox_gen/used_reg[46]_i} {u_sbox_gen/used_reg[47]_i} {u_sbox_gen/used_reg[48]_i} {u_sbox_gen/used_reg[49]_i} {u_sbox_gen/used_reg[4]_i} {u_sbox_gen/used_reg[50]_i} {u_sbox_gen/used_reg[51]_i} {u_sbox_gen/used_reg[52]_i} {u_sbox_gen/used_reg[53]_i} {u_sbox_gen/used_reg[54]_i} {u_sbox_gen/used_reg[55]_i} {u_sbox_gen/used_reg[56]_i} {u_sbox_gen/used_reg[57]_i} {u_sbox_gen/used_reg[58]_i} {u_sbox_gen/used_reg[59]_i} {u_sbox_gen/used_reg[5]_i} {u_sbox_gen/used_reg[60]_i} {u_sbox_gen/used_reg[61]_i} {u_sbox_gen/used_reg[62]_i} {u_sbox_gen/used_reg[63]_i} {u_sbox_gen/used_reg[64]_i} {u_sbox_gen/used_reg[65]_i} {u_sbox_gen/used_reg[66]_i} {u_sbox_gen/used_reg[67]_i} {u_sbox_gen/used_reg[68]_i} {u_sbox_gen/used_reg[69]_i} {u_sbox_gen/used_reg[6]_i} {u_sbox_gen/used_reg[70]_i} {u_sbox_gen/used_reg[71]_i} {u_sbox_gen/used_reg[72]_i} {u_sbox_gen/used_reg[73]_i} {u_sbox_gen/used_reg[74]_i} {u_sbox_gen/used_reg[75]_i} {u_sbox_gen/used_reg[76]_i} {u_sbox_gen/used_reg[77]_i} {u_sbox_gen/used_reg[78]_i} {u_sbox_gen/used_reg[79]_i} {u_sbox_gen/used_reg[7]_i} {u_sbox_gen/used_reg[80]_i} {u_sbox_gen/used_reg[81]_i} {u_sbox_gen/used_reg[82]_i} {u_sbox_gen/used_reg[83]_i} {u_sbox_gen/used_reg[84]_i} {u_sbox_gen/used_reg[85]_i} {u_sbox_gen/used_reg[86]_i} {u_sbox_gen/used_reg[87]_i} {u_sbox_gen/used_reg[88]_i} {u_sbox_gen/used_reg[89]_i} {u_sbox_gen/used_reg[8]_i} {u_sbox_gen/used_reg[90]_i} {u_sbox_gen/used_reg[91]_i} {u_sbox_gen/used_reg[92]_i} {u_sbox_gen/used_reg[93]_i} {u_sbox_gen/used_reg[94]_i} {u_sbox_gen/used_reg[95]_i} {u_sbox_gen/used_reg[96]_i} {u_sbox_gen/used_reg[97]_i} {u_sbox_gen/used_reg[98]_i} {u_sbox_gen/used_reg[99]_i} {u_sbox_gen/used_reg[9]_i} 
+307212 {u_key_gen/r0_i} µ
+1101827© {u_prng/sawtooth_block[0].sawtooth_inst/mul_neg20_i__1} {u_prng/sawtooth_block[1].sawtooth_inst/mul_neg20_i__1} {u_prng/sawtooth_block[2].sawtooth_inst/mul_neg20_i__1} +
+593922! {u_prng/saw_latency_counter0_i} n
+348170d {u_sbox_gen/extractor/RTL_SUB} {u_sbox_gen/extractor/RTL_SUB__0} {u_sbox_gen/extractor/RTL_SUB__1} µ
+1007619© {u_prng/sawtooth_block[0].sawtooth_inst/mul_half0_i__1} {u_prng/sawtooth_block[1].sawtooth_inst/mul_half0_i__1} {u_prng/sawtooth_block[2].sawtooth_inst/mul_half0_i__1}  
+151566 {u_encryptor/cnt0_i} ¥C
+114701©C {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].f_inst/u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[1].f_inst/u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[2].f_inst/u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[3].f_inst/u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]} {u_encryptor/feistel_encrypt_u/ROUND_LOGIC[4].f_inst/u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]} {u_key_gen/u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]} {u_key_gen/u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]} {u_key_gen/u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]} {u_key_gen/u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]} {u_key_gen/u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]} {u_key_gen/u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]} {u_key_gen/u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]} {u_key_gen/u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]} {u_key_gen/u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]} {u_key_gen/u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]} {u_key_gen/u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]} {u_key_gen/u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]} {u_key_gen/u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]} {u_key_gen/u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]} {u_key_gen/u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]} {u_key_gen/u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]} “
+blackBoxInfoE
+/u_prng/affine_transform_u/mul_block[1].mul_instfloating_point_mulB
+,u_prng/sawtooth_block[2].sawtooth_inst/mul_1floating_point_mulE
+/u_prng/affine_transform_u/add_block[1].add_instfloating_point_addE
+/u_prng/affine_transform_u/mul_block[0].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[0].add_instfloating_point_addB
+,u_prng/sawtooth_block[1].sawtooth_inst/mul_1floating_point_mulE
+/u_prng/affine_transform_u/mul_block[8].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[8].add_instfloating_point_add2
+u_prng/mul_block[2].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/mul_block[7].mul_instfloating_point_mulB
+,u_prng/sawtooth_block[0].sawtooth_inst/mul_1floating_point_mulE
+/u_prng/affine_transform_u/add_block[7].add_instfloating_point_add2
+u_prng/mul_block[1].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/mul_block[6].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[6].add_instfloating_point_addB
+,u_prng/sawtooth_block[2].sawtooth_inst/add_1floating_point_add2
+u_prng/mul_block[0].mul_instfloating_point_mulB
+,u_prng/sawtooth_block[2].sawtooth_inst/add_2floating_point_add@
+*u_prng/sawtooth_block[2].sawtooth_inst/divfloating_point_divE
+/u_prng/affine_transform_u/mul_block[5].mul_instfloating_point_mul@
+*u_prng/sawtooth_block[1].sawtooth_inst/divfloating_point_divE
+/u_prng/affine_transform_u/add_block[5].add_instfloating_point_add@
+*u_prng/sawtooth_block[0].sawtooth_inst/divfloating_point_divB
+,u_prng/sawtooth_block[1].sawtooth_inst/add_1floating_point_addE
+/u_prng/affine_transform_u/mul_block[4].mul_instfloating_point_mulB
+,u_prng/sawtooth_block[1].sawtooth_inst/add_2floating_point_addE
+/u_prng/affine_transform_u/add_block[4].add_instfloating_point_addE
+/u_prng/affine_transform_u/mul_block[3].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[3].add_instfloating_point_addB
+,u_prng/sawtooth_block[0].sawtooth_inst/add_1floating_point_addB
+,u_prng/sawtooth_block[0].sawtooth_inst/add_2floating_point_addE
+/u_prng/affine_transform_u/mul_block[2].mul_instfloating_point_mulE
+/u_prng/affine_transform_u/add_block[2].add_instfloating_point_add›
+synth_design
+resynthPerc0.00
+Cputime1
+blackBoxPercinf
+	directive 
+isIncremental0
+Runtime1
+Threads used4≠
+args§-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  crypto_engine_core -part  xck26-sfvc784-2LV-c †
+synth_design_metrics
+bigRAMs-1
+NetsWithMixedFanouts-1
+DSPsWithKeep0$
+mismatchedAddSubOperatorWidths-1
+lowMaxFanout-1
+NumUnregisteredPorts0
+caseNotFullNoDefault-1
+	smallSrls1280
+srlsWithResetLogic542
+shallowRAMWithAttribute-1
+hierMFO0
+RQS_Results

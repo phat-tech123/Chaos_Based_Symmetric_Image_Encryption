@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Feb  4 10:40:37 2026
+# Process ID: 30945
+# Current directory: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1
+# Command line: vivado -log chaos_crypto_engine_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source chaos_crypto_engine_v1_0.tcl
+# Log file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/chaos_crypto_engine_v1_0.vds
+# Journal file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 1767.591 MHz, CPU Physical cores: 6, Host memory: 7941 MB
+#-----------------------------------------------------------
+source chaos_crypto_engine_v1_0.tcl -notrace

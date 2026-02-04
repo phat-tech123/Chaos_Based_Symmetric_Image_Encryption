@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Jan 27 16:14:31 2026
+# Process ID: 10787
+# Current directory: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG
+# Command line: vivado
+# Log file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/vivado.log
+# Journal file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 1090.374 MHz, CPU Physical cores: 6, Host memory: 7941 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/Clock_gating/Clock_gating.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/PRNG/PRNG.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/affine_transform/affine_transform.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v] -no_script -reset -force -quiet
+remove_files  {/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/Clock_gating/Clock_gating.v /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/PRNG/PRNG.v /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/affine_transform/affine_transform.v /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/sawtooth/sawtooth.v}
+add_files -norecurse {/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/PRNG.v /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/Clock_gating.v /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/affine_transform.v /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/sawtooth.v}
+update_compile_order -fileset sources_1

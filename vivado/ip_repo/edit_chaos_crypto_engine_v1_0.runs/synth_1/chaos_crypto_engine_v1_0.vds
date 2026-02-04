@@ -1,0 +1,1192 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Feb  4 10:40:37 2026
+# Process ID: 30945
+# Current directory: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1
+# Command line: vivado -log chaos_crypto_engine_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source chaos_crypto_engine_v1_0.tcl
+# Log file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/chaos_crypto_engine_v1_0.vds
+# Journal file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 1767.591 MHz, CPU Physical cores: 6, Host memory: 7941 MB
+#-----------------------------------------------------------
+source chaos_crypto_engine_v1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1324.445 ; gain = 0.027 ; free physical = 2486 ; free virtual = 5993
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/ip_repo/chaos_crypto_ip_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.srcs/utils_1/imports/synth_1/chaos_crypto_engine_v1_0.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.srcs/utils_1/imports/synth_1/chaos_crypto_engine_v1_0.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top chaos_crypto_engine_v1_0 -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30986
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2533.316 ; gain = 287.777 ; free physical = 821 ; free virtual = 4510
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'chaos_crypto_engine_v1_0' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/hdl/chaos_crypto_engine_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'chaos_crypto_engine_v1_0_S00_AXI' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/hdl/chaos_crypto_engine_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 256 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 256 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/hdl/chaos_crypto_engine_v1_0_S00_AXI.v:303]
+INFO: [Synth 8-226] default block is never used [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/hdl/chaos_crypto_engine_v1_0_S00_AXI.v:668]
+INFO: [Synth 8-6157] synthesizing module 'crypto_engine_core' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/Crypto_Engine.v:1]
+	Parameter PRECISION bound to: 32 - type: integer 
+	Parameter SBOX_SIZE bound to: 256 - type: integer 
+	Parameter EXTRACT_WIDTH bound to: 23 - type: integer 
+	Parameter MIX_WIDTH bound to: 8 - type: integer 
+	Parameter ROUND bound to: 5 - type: integer 
+	Parameter KEY_SIZE bound to: 128 - type: integer 
+	Parameter DATA_WIDTH bound to: 256 - type: integer 
+	Parameter F_LAT bound to: 6 - type: integer 
+	Parameter ENCR_LAT bound to: 31 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'controller' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/controller.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/controller.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1961]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (0#1) [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1961]
+INFO: [Synth 8-6157] synthesizing module 'PRNG' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/PRNG.v:1]
+	Parameter PRECISION bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'floating_point_mul' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/.Xil/Vivado-30945-ubuntu/realtime/floating_point_mul_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_mul' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/.Xil/Vivado-30945-ubuntu/realtime/floating_point_mul_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sawtooth' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/sawtooth.v:1]
+	Parameter PRECISION bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'floating_point_div' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/.Xil/Vivado-30945-ubuntu/realtime/floating_point_div_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_div' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/.Xil/Vivado-30945-ubuntu/realtime/floating_point_div_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'floating_point_add' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/.Xil/Vivado-30945-ubuntu/realtime/floating_point_add_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_add' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/.Xil/Vivado-30945-ubuntu/realtime/floating_point_add_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sawtooth' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/sawtooth.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clock_gater' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/Clock_gating.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clock_gater' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/Clock_gating.v:1]
+INFO: [Synth 8-6157] synthesizing module 'affine_transform' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/affine_transform.v:1]
+	Parameter PRECISION bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'affine_transform' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/affine_transform.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PRNG' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/PRNG.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sbox_generator' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/sbox_generator.v:1]
+	Parameter SIZE bound to: 256 - type: integer 
+	Parameter PRECISION bound to: 32 - type: integer 
+	Parameter EXTRACT_WIDTH bound to: 23 - type: integer 
+	Parameter MIX_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'extractor' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/extractor.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'extractor' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/extractor.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mixer' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/mixer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mixer' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/mixer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sbox_generator' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/sbox_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'key_generator' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/key_generator.v:1]
+	Parameter V_SIZE bound to: 8 - type: integer 
+	Parameter KEY_SIZE bound to: 128 - type: integer 
+	Parameter ROUND bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'subbytes' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/subbytes.v:1]
+	Parameter SBOX_WIDTH bound to: 8 - type: integer 
+	Parameter SBOX_DEPTH bound to: 256 - type: integer 
+	Parameter DATA_WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'subbytes' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/subbytes.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_generator' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/key_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CTR_feistel_encrypt' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/CTR_mode_feistel_encrypt.v:1]
+	Parameter ROUND bound to: 5 - type: integer 
+	Parameter KEY_SIZE bound to: 128 - type: integer 
+	Parameter F_LAT bound to: 6 - type: integer 
+	Parameter ENCR_LAT bound to: 31 - type: integer 
+	Parameter SBOX_WIDTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'feistel_encrypt' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/feistel_encrypt.v:129]
+	Parameter ROUND bound to: 5 - type: integer 
+	Parameter F_LAT bound to: 6 - type: integer 
+	Parameter SBOX_WIDTH bound to: 8 - type: integer 
+	Parameter KEY_SIZE bound to: 128 - type: integer 
+	Parameter DATA_WIDTH bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'F' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/F.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shiftrows' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/shiftrows.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shiftrows' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/shiftrows.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mixcolumns' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/mixcolumns.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mixcolumns' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/mixcolumns.v:1]
+INFO: [Synth 8-6157] synthesizing module 'addroundkey' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/addroundkey.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'addroundkey' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/addroundkey.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'F' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/F.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'feistel_encrypt' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/feistel_encrypt.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'CTR_feistel_encrypt' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/CTR_mode_feistel_encrypt.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'crypto_engine_core' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/Crypto_Engine.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'chaos_crypto_engine_v1_0_S00_AXI' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/hdl/chaos_crypto_engine_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'chaos_crypto_engine_v1_0' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/hdl/chaos_crypto_engine_v1_0.v:4]
+WARNING: [Synth 8-7129] Port key_valid in module feistel_encrypt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[22] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[21] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[20] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[19] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[18] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[17] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[16] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[15] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[14] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[13] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[12] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[11] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[10] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[9] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex1[8] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[22] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[21] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[20] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[19] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[18] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[17] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[16] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[15] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[14] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[13] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[12] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[11] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[10] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[9] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex2[8] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[22] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[21] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[20] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[19] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[18] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[17] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[16] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[15] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[14] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[13] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[12] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[11] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[10] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[9] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex3[8] in module mixer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module chaos_crypto_engine_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module chaos_crypto_engine_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module chaos_crypto_engine_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module chaos_crypto_engine_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module chaos_crypto_engine_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module chaos_crypto_engine_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2664.285 ; gain = 418.746 ; free physical = 659 ; free virtual = 4352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2664.285 ; gain = 418.746 ; free physical = 659 ; free virtual = 4352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2664.285 ; gain = 418.746 ; free physical = 659 ; free virtual = 4352
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2672.285 ; gain = 0.000 ; free physical = 658 ; free virtual = 4351
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/add_1'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/add_1'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/add_2'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/add_2'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[1].sawtooth_inst/add_1'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[1].sawtooth_inst/add_1'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[1].sawtooth_inst/add_2'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[1].sawtooth_inst/add_2'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[2].sawtooth_inst/add_1'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[2].sawtooth_inst/add_1'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[2].sawtooth_inst/add_2'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[2].sawtooth_inst/add_2'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[0].add_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[0].add_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[1].add_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[1].add_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[2].add_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[2].add_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[3].add_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[3].add_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[4].add_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[4].add_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[5].add_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[5].add_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[6].add_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[6].add_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[7].add_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[7].add_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[8].add_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add/floating_point_add_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/add_block[8].add_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/mul_1'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/mul_1'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[1].sawtooth_inst/mul_1'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[1].sawtooth_inst/mul_1'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[2].sawtooth_inst/mul_1'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[2].sawtooth_inst/mul_1'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[0].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[0].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[1].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[1].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[2].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[2].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[3].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[3].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[4].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[4].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[5].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[5].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[6].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[6].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[7].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[7].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[8].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/mul_block[8].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/mul_block[0].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/mul_block[0].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/mul_block[1].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/mul_block[1].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/mul_block[2].mul_inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul/floating_point_mul_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/mul_block[2].mul_inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/floating_point_div/floating_point_div_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/div'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/floating_point_div/floating_point_div_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/div'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/floating_point_div/floating_point_div_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[1].sawtooth_inst/div'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/floating_point_div/floating_point_div_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[1].sawtooth_inst/div'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/floating_point_div/floating_point_div_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[2].sawtooth_inst/div'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/floating_point_div/floating_point_div_in_context.xdc] for cell 'chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[2].sawtooth_inst/div'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2783.316 ; gain = 0.000 ; free physical = 638 ; free virtual = 4339
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2783.352 ; gain = 0.000 ; free physical = 637 ; free virtual = 4338
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2783.352 ; gain = 537.812 ; free physical = 622 ; free virtual = 4323
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2783.352 ; gain = 537.812 ; free physical = 622 ; free virtual = 4323
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[0].sawtooth_inst /add_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[1].sawtooth_inst /add_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[2].sawtooth_inst /add_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[0].sawtooth_inst /add_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[1].sawtooth_inst /add_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[2].sawtooth_inst /add_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\add_block[0].add_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\add_block[1].add_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\add_block[2].add_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\add_block[3].add_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\add_block[4].add_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\add_block[5].add_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\add_block[6].add_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\add_block[7].add_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\add_block[8].add_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[0].sawtooth_inst /mul_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[1].sawtooth_inst /mul_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[2].sawtooth_inst /mul_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\mul_block[0].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\mul_block[0].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\mul_block[1].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\mul_block[1].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\mul_block[2].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\mul_block[2].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\mul_block[3].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\mul_block[4].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\mul_block[5].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\mul_block[6].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\mul_block[7].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/\mul_block[8].mul_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[0].sawtooth_inst /div. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[1].sawtooth_inst /div. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/\sawtooth_block[2].sawtooth_inst /div. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2783.352 ; gain = 537.812 ; free physical = 622 ; free virtual = 4323
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                           000001 |                              000
+             S_WAIT_DATA |                           000100 |                              100
+             S_WAIT_TRNG |                           001000 |                              001
+              S_GEN_SBOX |                           100000 |                              010
+               S_GEN_KEY |                           010000 |                              011
+             S_DO_CRYPTO |                           000010 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'controller'
+WARNING: [Synth 8-327] inferring latch for variable 'enable_r_reg' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/Clock_gating.v:10]
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[0].sbox_slice_reg[0][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[1].sbox_slice_reg[1][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[2].sbox_slice_reg[2][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[3].sbox_slice_reg[3][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[4].sbox_slice_reg[4][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[5].sbox_slice_reg[5][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[6].sbox_slice_reg[6][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[7].sbox_slice_reg[7][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[8].sbox_slice_reg[8][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[9].sbox_slice_reg[9][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[10].sbox_slice_reg[10][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[11].sbox_slice_reg[11][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[12].sbox_slice_reg[12][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[13].sbox_slice_reg[13][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[14].sbox_slice_reg[14][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "subbytes:/MEM_WRITE[15].sbox_slice_reg[15][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2783.352 ; gain = 537.812 ; free physical = 627 ; free virtual = 4330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 12    
+	   2 Input    8 Bit       Adders := 13    
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input    256 Bit         XORs := 1     
+	   2 Input    128 Bit         XORs := 11    
+	   2 Input      8 Bit         XORs := 110   
+	   4 Input      8 Bit         XORs := 60    
+	   5 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 1     
++---Registers : 
+	              256 Bit    Registers := 35    
+	              128 Bit    Registers := 87    
+	               56 Bit    Registers := 6     
+	               32 Bit    Registers := 353   
+	               24 Bit    Registers := 3     
+	               23 Bit    Registers := 12    
+	                8 Bit    Registers := 108   
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 393   
++---Multipliers : 
+	              20x56  Multipliers := 3     
++---RAMs : 
+	               2K Bit	(256 X 8 bit)          RAMs := 96    
++---Muxes : 
+	   6 Input  128 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 1     
+	   2 Input   56 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 50    
+	   3 Input   32 Bit        Muxes := 6     
+	  32 Input   32 Bit        Muxes := 32    
+	   2 Input   24 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 8     
+	   6 Input    6 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 14    
+	   5 Input    3 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 282   
+	   3 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst /u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst /u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst /u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst /u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst /u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+WARNING: [Synth 8-6014] Unused sequential element tmp1_reg[0] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/extractor.v:112]
+WARNING: [Synth 8-6014] Unused sequential element tmp1_reg[1] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/extractor.v:112]
+WARNING: [Synth 8-6014] Unused sequential element tmp1_reg[2] was removed.  [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/extractor.v:112]
+DSP Report: Generating DSP p_0_out, operation Mode is: (A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+(A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+(A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+(A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+(A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+(A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+(A:0xf4240)*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+INFO: [Synth 8-6904] The RAM "chaos_crypto_engine_v1_0/u_key_gen/u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "chaos_crypto_engine_v1_0/u_key_gen/u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "chaos_crypto_engine_v1_0/u_key_gen/u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "chaos_crypto_engine_v1_0/u_key_gen/u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Common 17-14] Message 'Synth 8-6904' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module chaos_crypto_engine_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module chaos_crypto_engine_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module chaos_crypto_engine_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module chaos_crypto_engine_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module chaos_crypto_engine_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module chaos_crypto_engine_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][47]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][46]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][45]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][44]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][43]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][42]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][41]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][40]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][39]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][38]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][37]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][36]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][35]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][34]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][33]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][32]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][31]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][30]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][29]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][28]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][27]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][26]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][25]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][24]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][23]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][22]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][21]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][20]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][19]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][18]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][17]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][16]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][15]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][14]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][13]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][12]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][11]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][10]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][9]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][8]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][7]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][6]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][5]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][4]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][3]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][2]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][1]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][0]) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][47]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][46]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][45]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][44]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][43]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][42]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][41]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][40]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][39]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][38]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][37]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][36]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][35]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][34]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][33]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][32]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][31]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][30]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][29]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][28]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][27]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][26]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][25]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][24]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][23]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][22]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][21]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][20]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][19]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][18]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][17]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][16]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][15]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][14]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][13]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][12]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][11]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][10]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][9]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][8]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][7]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][6]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][5]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][4]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][3]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][2]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][1]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][0]__0) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][47]__1) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][46]__1) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][45]__1) is unused and will be removed from module extractor.
+WARNING: [Synth 8-3332] Sequential element (tmp1_reg[0][44]__1) is unused and will be removed from module extractor.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 2783.352 ; gain = 537.812 ; free physical = 629 ; free virtual = 4346
+---------------------------------------------------------------------------------
+ Sort Area is crypto_engine_core__GB1 p_0_out_0 : 0 0 : 1750 3519 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_0 : 0 1 : 1769 3519 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_5 : 0 0 : 1750 3519 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_5 : 0 1 : 1769 3519 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_7 : 0 0 : 1750 3519 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_7 : 0 1 : 1769 3519 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_3 : 0 0 : 1750 2228 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_3 : 0 1 : 478 2228 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_6 : 0 0 : 1750 2228 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_6 : 0 1 : 478 2228 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_8 : 0 0 : 1750 2228 : Used 1 time 0
+ Sort Area is crypto_engine_core__GB1 p_0_out_8 : 0 1 : 478 2228 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------------------------------------------------------------------------+-------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name                                                                        | RTL Object                                            | Inference | Size (Depth x Width) | Primitives   | 
++-----------------------------------------------------------------------------------+-------------------------------------------------------+-----------+----------------------+--------------+
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[12].sbox_slice_reg[12][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[13].sbox_slice_reg[13][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[14].sbox_slice_reg[14][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[15].sbox_slice_reg[15][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[10].sbox_slice_reg[10][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[11].sbox_slice_reg[11][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
++-----------------------------------------------------------------------------------+-------------------------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping              | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|extractor   | (A:0xf4240)*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (PCIN>>17)+(A:0xf4240)*B | 21     | 6      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (A:0xf4240)*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (PCIN>>17)+(A:0xf4240)*B | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (A:0xf4240)*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (PCIN>>17)+(A:0xf4240)*B | 21     | 6      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (A:0xf4240)*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (PCIN>>17)+(A:0xf4240)*B | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (A:0xf4240)*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (PCIN>>17)+(A:0xf4240)*B | 21     | 6      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (A:0xf4240)*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (PCIN>>17)+(A:0xf4240)*B | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 3272.965 ; gain = 1027.426 ; free physical = 219 ; free virtual = 3929
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 3272.965 ; gain = 1027.426 ; free physical = 219 ; free virtual = 3929
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-----------------------------------------------------------------------------------+-------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name                                                                        | RTL Object                                            | Inference | Size (Depth x Width) | Primitives   | 
++-----------------------------------------------------------------------------------+-------------------------------------------------------+-----------+----------------------+--------------+
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[0].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[1].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[2].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[3].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[14].sbox_slice_reg[14][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[13].sbox_slice_reg[13][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[12].sbox_slice_reg[12][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[11].sbox_slice_reg[11][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]             | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[10].sbox_slice_reg[10][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|crypto_engine_core_insti_0/\u_encryptor/feistel_encrypt_u /\ROUND_LOGIC[4].f_inst  | u_sub/MEM_WRITE[15].sbox_slice_reg[15][197]           | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[12].sbox_slice_reg[12][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[13].sbox_slice_reg[13][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[14].sbox_slice_reg[14][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[15].sbox_slice_reg[15][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[0].sbox_slice_reg[0][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[1].sbox_slice_reg[1][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[2].sbox_slice_reg[2][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[3].sbox_slice_reg[3][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[4].sbox_slice_reg[4][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[5].sbox_slice_reg[5][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[6].sbox_slice_reg[6][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[7].sbox_slice_reg[7][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[8].sbox_slice_reg[8][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[9].sbox_slice_reg[9][197]   | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[10].sbox_slice_reg[10][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
+|chaos_crypto_engine_v1_0                                                           | u_key_gen/u_sub/MEM_WRITE[11].sbox_slice_reg[11][197] | Implied   | 256 x 8              | RAM64M8 x 8  | 
++-----------------------------------------------------------------------------------+-------------------------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][127] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][126] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][125] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][124] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][123] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][122] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][121] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][120] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][119] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][118] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][117] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][116] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][115] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][114] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][113] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][112] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][111] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][110] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][109] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][108] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][107] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][106] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][105] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][104] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][103] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][102] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][101] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][100] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][99] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][98] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][97] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][96] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][95] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][94] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][93] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][92] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][91] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][90] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][89] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][88] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][87] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][86] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][85] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][84] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][83] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][82] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][81] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][80] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][79] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][78] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][77] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][76] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][75] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][74] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][73] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][72] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][71] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][70] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][69] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][68] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][67] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][66] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][65] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][64] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][63] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][62] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][61] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][60] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][59] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][58] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][57] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][56] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][55] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][54] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][53] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][52] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][51] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][50] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][49] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][48] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][47] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][46] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][45] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][44] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][43] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][42] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][41] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][40] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][39] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][38] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][37] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][36] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][35] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][34] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][33] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][32] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][31] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][30] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][29] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+WARNING: [Synth 8-5591] srl_style attribute value reg_srl_reg on crypto_engine_core_insti_0/u_encryptor/feistel_encrypt_u/L_reg_reg[0][0][28] cannot be supported because of smaller than expected depth of fanout-free flop chain.
+INFO: [Common 17-14] Message 'Synth 8-5591' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 3336.098 ; gain = 1090.559 ; free physical = 157 ; free virtual = 3861
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5410] Found another clock driver \chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_bufgce :O [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0/src/Crypto_Engine.v:127]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 3336.098 ; gain = 1090.559 ; free physical = 294 ; free virtual = 3962
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 3336.098 ; gain = 1090.559 ; free physical = 294 ; free virtual = 3962
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3336.098 ; gain = 1090.559 ; free physical = 293 ; free virtual = 3961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3336.098 ; gain = 1090.559 ; free physical = 293 ; free virtual = 3961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3336.098 ; gain = 1090.559 ; free physical = 293 ; free virtual = 3961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3336.098 ; gain = 1090.559 ; free physical = 293 ; free virtual = 3961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------------------+----------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name              | RTL Name                                                                                                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------------+----------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|crypto_engine_core__GB0  | u_encryptor/feistel_encrypt_u/ROUND_LOGIC[0].L_reg_reg[0][5][127]                                                    | 5      | 1280  | NO           | YES                | YES               | 1280   | 0       | 
+|chaos_crypto_engine_v1_0 | chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_encryptor/plaintext_t_reg[31][255]                   | 31     | 256   | YES          | NO                 | YES               | 0      | 256     | 
+|chaos_crypto_engine_v1_0 | chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/is_last_block_out_reg[33]                              | 34     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|chaos_crypto_engine_v1_0 | chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/L_r_reg[18][30] | 18     | 93    | YES          | NO                 | YES               | 93     | 0       | 
+|chaos_crypto_engine_v1_0 | chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/sawtooth_block[0].sawtooth_inst/x_r_reg[47][31] | 48     | 96    | YES          | NO                 | YES               | 0      | 192     | 
+|chaos_crypto_engine_v1_0 | chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/U0_temp_reg[5][31]           | 5      | 32    | YES          | NO                 | YES               | 32     | 0       | 
+|chaos_crypto_engine_v1_0 | chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/U1_temp_reg[5][31]           | 5      | 32    | YES          | NO                 | YES               | 32     | 0       | 
+|chaos_crypto_engine_v1_0 | chaos_crypto_engine_v1_0_S00_AXI_inst/crypto_engine_core_inst/u_prng/affine_transform_u/U2_temp_reg[5][31]           | 5      | 32    | YES          | NO                 | YES               | 32     | 0       | 
++-------------------------+----------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|extractor   | A*B             | 20     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (PCIN>>17+A*B)' | 0      | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|extractor   | A*B             | 20     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (PCIN>>17+A*B)' | 0      | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|extractor   | A*B             | 20     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|extractor   | (PCIN>>17+A*B)' | 0      | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+-------------------+----------+
+|      |BlackBox name      |Instances |
++------+-------------------+----------+
+|1     |floating_point_mul |        15|
+|2     |floating_point_add |        15|
+|3     |floating_point_div |         3|
++------+-------------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |floating_point_add |    15|
+|16    |floating_point_div |     3|
+|19    |floating_point_mul |    15|
+|34    |BUFG               |     3|
+|35    |BUFGCE             |     1|
+|36    |CARRY8             |    62|
+|37    |DSP_ALU            |     6|
+|38    |DSP_A_B_DATA       |     6|
+|39    |DSP_C_DATA         |     6|
+|40    |DSP_MULTIPLIER     |     6|
+|41    |DSP_M_DATA         |     6|
+|42    |DSP_OUTPUT         |     6|
+|44    |DSP_PREADD         |     6|
+|45    |DSP_PREADD_DATA    |     6|
+|46    |LUT1               |   102|
+|47    |LUT2               |  2364|
+|48    |LUT3               |   714|
+|49    |LUT4               |   267|
+|50    |LUT5               |   755|
+|51    |LUT6               |  2283|
+|52    |MUXF7              |   161|
+|53    |MUXF8              |    16|
+|54    |RAM64M8            |   384|
+|55    |RAM64X1D           |   384|
+|56    |SRL16E             |  1469|
+|57    |SRLC32E            |   449|
+|58    |FDCE               |  9364|
+|59    |FDPE               |     4|
+|60    |FDRE               |  6098|
+|61    |FDSE               |     1|
+|62    |LD                 |     3|
+|63    |IBUF               |   344|
+|64    |OBUF               |   332|
++------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 3336.098 ; gain = 1090.559 ; free physical = 235 ; free virtual = 3959
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3124 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 3336.098 ; gain = 971.492 ; free physical = 237 ; free virtual = 3957
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:45 . Memory (MB): peak = 3336.105 ; gain = 1090.559 ; free physical = 237 ; free virtual = 3957
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3336.105 ; gain = 0.000 ; free physical = 539 ; free virtual = 4243
+INFO: [Netlist 29-17] Analyzing 1363 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3380.988 ; gain = 0.000 ; free physical = 530 ; free virtual = 4236
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1124 instances were transformed.
+  BUFG => BUFGCE: 3 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 6 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 344 instances
+  LD => LDCE (inverted pins: G): 3 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 384 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 384 instances
+
+Synth Design complete | Checksum: 27d985d3
+INFO: [Common 17-83] Releasing license: Synthesis
+177 Infos, 265 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:54 . Memory (MB): peak = 3381.023 ; gain = 2056.578 ; free physical = 530 ; free virtual = 4235
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2924.053; main = 2591.938; forked = 388.032
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4367.117; main = 3380.992; forked = 1031.016
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3405.000 ; gain = 0.000 ; free physical = 523 ; free virtual = 4235
+INFO: [Common 17-1381] The checkpoint '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/edit_chaos_crypto_engine_v1_0.runs/synth_1/chaos_crypto_engine_v1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file chaos_crypto_engine_v1_0_utilization_synth.rpt -pb chaos_crypto_engine_v1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  4 10:41:41 2026...
