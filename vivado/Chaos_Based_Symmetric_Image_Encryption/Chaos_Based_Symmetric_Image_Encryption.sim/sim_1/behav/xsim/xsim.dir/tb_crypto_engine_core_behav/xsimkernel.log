@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_crypto_engine_core_behav/xsimk -simmode gui -wdb tb_crypto_engine_core_behav.wdb -simrunnum 0 -socket 42841
-Design successfully loaded
-Design Loading Memory Usage: 59292 KB (Peak: 59740 KB)
-Design Loading CPU Usage: 120 ms
-Simulation completed
-Simulation Memory Usage: 148340 KB (Peak: 198560 KB)
-Simulation CPU Usage: 41070 ms

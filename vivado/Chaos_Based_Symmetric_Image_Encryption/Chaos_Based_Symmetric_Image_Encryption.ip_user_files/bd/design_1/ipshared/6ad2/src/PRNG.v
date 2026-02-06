@@ -244,9 +244,9 @@ module PRNG#(
                 valid <= 0;
             end else if (loop_done) begin
                 // Case 2: Cập nhật kết quả tính toán mới
-                pseudoRandomNumber1 <= next_state_0;
-                pseudoRandomNumber2 <= next_state_1;
-                pseudoRandomNumber3 <= next_state_2;
+                pseudoRandomNumber1 <= next_state_0 ^ pseudoRandomNumber1;
+                pseudoRandomNumber2 <= next_state_1 ^ pseudoRandomNumber2;
+                pseudoRandomNumber3 <= next_state_2 ^ pseudoRandomNumber3;
                 valid <= 1; // Báo ra ngoài là có số mới
             end else begin
                 valid <= 0; // Chỉ bật valid trong 1 chu kỳ

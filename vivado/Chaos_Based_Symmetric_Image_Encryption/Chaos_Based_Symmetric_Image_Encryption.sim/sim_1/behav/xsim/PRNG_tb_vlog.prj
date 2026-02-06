@@ -1,0 +1,91 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/2fcd/hdl" --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/sim/floating_point_add.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/sim/floating_point_div.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/sim/floating_point_mul.v" \
+"../../../../../../RTL/encryptor/CTR_mode_feistel_encrypt.v" \
+"../../../../../../RTL/PRNG/Clock_gating.v" \
+"../../../../../../RTL/encryptor/F.v" \
+"../../../../../../RTL/PRNG/PRNG.v" \
+"../../../../../../RTL/TRNG/RingOscillator.v" \
+"../../../../../../RTL/TRNG/TRNG.v" \
+"../../../../../../RTL/TRNG/TRNG_core.v" \
+"../../../../../../RTL/TRNG/Von_Neumann_Corrector.v" \
+"../../../../../../RTL/encryptor/addroundkey.v" \
+"../../../../../../RTL/PRNG/affine_transform.v" \
+"../../../../../../RTL/TRNG/control_logic.v" \
+"../../../../../../RTL/Sbox_generator/extractor.v" \
+"../../../../../../RTL/encryptor/feistel_encrypt.v" \
+"../../../../../../RTL/TRNG/fifo.v" \
+"../../../../../../RTL/Key_generator/key_generator.v" \
+"../../../../../../RTL/encryptor/mixcolumns.v" \
+"../../../../../../RTL/Sbox_generator/mixer.v" \
+"../../../../../../RTL/PRNG/sawtooth.v" \
+"../../../../../../RTL/Sbox_generator/sbox_generator.v" \
+"../../../../../../RTL/TRNG/shift_reg_8.v" \
+"../../../../../../RTL/encryptor/shiftrows.v" \
+"../../../../../../RTL/encryptor/subbytes.v" \
+
+sv xil_defaultlib  --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/2fcd/hdl" --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" \
+"../../../../../../RTL/controller/controller.sv" \
+
+verilog xil_defaultlib  --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/2fcd/hdl" --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" \
+"../../../../../../RTL/top/Crypto_Engine.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim/design_1_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ip/design_1_auto_ds_1/sim/design_1_auto_ds_1.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/sources_1/ip/floating_point_add/sim/floating_point_add.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/sources_1/ip/floating_point_mul/sim/floating_point_mul.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/sources_1/ip/floating_point_div/sim/floating_point_div.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/hdl/chaos_crypto_engine_v1_0_S00_AXI.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/CTR_mode_feistel_encrypt.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/Clock_gating.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/Crypto_Engine.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/F.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/PRNG.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/addroundkey.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/affine_transform.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/extractor.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/feistel_encrypt.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/key_generator.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/mixcolumns.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/mixer.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/sawtooth.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/sbox_generator.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/shiftrows.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/subbytes.v" \
+
+sv xil_defaultlib  --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/2fcd/hdl" --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/src/controller.sv" \
+
+verilog xil_defaultlib  --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ipshared/2fcd/hdl" --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ipshared/6ad2/hdl/chaos_crypto_engine_v1_0.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/ip/design_1_chaos_crypto_engine_0_1/sim/design_1_chaos_crypto_engine_0_1.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+"../../../../../../testbench/Crypto_Engine_tb.v" \
+"../../../../../../testbench/CTR_mode_feistel_decrypt_tb.v" \
+"../../../../../../testbench/CTR_mode_feistel_encrypt_tb.v" \
+"../../../../../../testbench/F_tb.v" \
+"../../../../../../testbench/PRNG_tb.v" \
+"../../../../../../testbench/affine_transform_tb.v" \
+"../../../../../../testbench/extractor_tb.v" \
+"../../../../../../testbench/feistel_encrypt_tb.v" \
+"../../../../../../testbench/key_generator_tb.v" \
+"../../../../../../testbench/key_schedule_5r_tb.v" \
+"../../../../../../testbench/mixcolumns_tb.v" \
+"../../../../../../testbench/sawtooth_tb.v" \
+"../../../../../../testbench/sbox_generator_tb.v" \
+"../../../../../../testbench/sbox_tb.v" \
+"../../../../../../testbench/shiftrows_tb.v" \
+"../../../../../../testbench/subbytes_tb.v" \
+"../../../../../../testbench/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
