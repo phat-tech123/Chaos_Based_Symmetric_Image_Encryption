@@ -1,12 +1,16 @@
 Vivado Simulator v2023.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xbip_utils_v3_0_11 -L axi_utils_v2_0_7 -L xbip_pipe_v3_0_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_dsp48_addsub_v3_0_7 -L xbip_dsp48_multadd_v3_0_7 -L xbip_bram18k_v3_0_7 -L mult_gen_v12_0_19 -L floating_point_v7_1_16 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_15 -L zynq_ultra_ps_e_vip_v1_0_15 -L lib_pkg_v1_0_3 -L fifo_generator_v13_2_9 -L lib_fifo_v1_0_18 -L lib_srl_fifo_v1_0_3 -L lib_cdc_v1_0_2 -L axi_datamover_v5_1_31 -L axi_sg_v4_1_17 -L axi_dma_v7_1_30 -L generic_baseblocks_v2_1_1 -L axi_register_slice_v2_1_29 -L axi_data_fifo_v2_1_28 -L axi_crossbar_v2_1_30 -L axi_protocol_converter_v2_1_29 -L axi_clock_converter_v2_1_28 -L blk_mem_gen_v8_4_7 -L axi_dwidth_converter_v2_1_29 -L proc_sys_reset_v5_0_14 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot PRNG_tb_behav xil_defaultlib.PRNG_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xbip_utils_v3_0_11 -L axi_utils_v2_0_7 -L xbip_pipe_v3_0_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_dsp48_addsub_v3_0_7 -L xbip_dsp48_multadd_v3_0_7 -L xbip_bram18k_v3_0_7 -L mult_gen_v12_0_19 -L floating_point_v7_1_16 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_crypto_axi_behav xil_defaultlib.tb_crypto_axi xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/top/Crypto_Engine.v" Line 1. Module crypto_engine_core doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/controller/controller.sv" Line 1. Module controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/top/Crypto_Engine.v" Line 1. Module crypto_engine_core doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/controller/controller.sv" Line 1. Module controller doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
@@ -29,7 +33,7 @@ Compiling package xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv_comp
 Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
-Compiling module xil_defaultlib.clock_gater
+Compiling module xil_defaultlib.controller
 Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,ca...]
 Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_16.delay [\delay(width=7,length=0)\]
@@ -242,6 +246,21 @@ Compiling module xil_defaultlib.floating_point_add
 Compiling module xil_defaultlib.sawtooth
 Compiling module xil_defaultlib.affine_transform_default
 Compiling module xil_defaultlib.PRNG_default
-Compiling module xil_defaultlib.PRNG_tb
+Compiling module xil_defaultlib.extractor
+Compiling module xil_defaultlib.mixer
+Compiling module xil_defaultlib.sbox_generator
+Compiling module xil_defaultlib.subbytes_default
+Compiling module xil_defaultlib.key_generator
+Compiling module xil_defaultlib.shiftrows
+Compiling module xil_defaultlib.mixcolumns
+Compiling module xil_defaultlib.addroundkey
+Compiling module xil_defaultlib.F
+Compiling module xil_defaultlib.feistel_encrypt_default
+Compiling module xil_defaultlib.CTR_feistel_encrypt(ENCR_LAT=31)
+Compiling module xil_defaultlib.crypto_engine_core
+Compiling module xil_defaultlib.crypto_engine_v1_0_S00_AXI_defau...
+Compiling module xil_defaultlib.crypto_engine_v1_0
+Compiling module xil_defaultlib.chaos_cryptor_0
+Compiling module xil_defaultlib.tb_crypto_axi
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot PRNG_tb_behav
+Built simulation snapshot tb_crypto_axi_behav

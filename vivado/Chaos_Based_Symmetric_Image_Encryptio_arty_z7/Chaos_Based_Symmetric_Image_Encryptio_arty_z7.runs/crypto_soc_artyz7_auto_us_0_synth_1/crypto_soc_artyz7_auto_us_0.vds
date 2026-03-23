@@ -1,0 +1,359 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Mar 18 16:05:10 2026
+# Process ID: 11291
+# Current directory: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1
+# Command line: vivado -log crypto_soc_artyz7_auto_us_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source crypto_soc_artyz7_auto_us_0.tcl
+# Log file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1/crypto_soc_artyz7_auto_us_0.vds
+# Journal file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 1388.677 MHz, CPU Physical cores: 6, Host memory: 7939 MB
+#-----------------------------------------------------------
+source crypto_soc_artyz7_auto_us_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1268.742 ; gain = 10.934 ; free physical = 146 ; free virtual = 5678
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/crypto_engine_arty_z7'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: crypto_soc_artyz7_auto_us_0
+Command: synth_design -top crypto_soc_artyz7_auto_us_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11480
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:59 . Memory (MB): peak = 2043.684 ; gain = 403.629 ; free physical = 244 ; free virtual = 1307
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'crypto_soc_artyz7_auto_us_0' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_us_0/synth/crypto_soc_artyz7_auto_us_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_29_top' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14446]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_29_axi_upsizer' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7025]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_29_w_upsizer' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5552]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_29_w_upsizer' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5552]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_29_a_upsizer' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3594]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_1_command_fifo' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/10ab/hdl/generic_baseblocks_v2_1_vl_rfs.v:648]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_1_command_fifo' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/10ab/hdl/generic_baseblocks_v2_1_vl_rfs.v:648]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_29_a_upsizer' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3594]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_29_r_upsizer' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4643]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_29_r_upsizer' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4643]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axi_register_slice' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized0' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized0' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized1' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized1' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized2' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized2' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axi_register_slice' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_29_axi_register_slice' is unconnected for instance 'mi_register_slice_inst' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8463]
+WARNING: [Synth 8-7023] instance 'mi_register_slice_inst' of module 'axi_register_slice_v2_1_29_axi_register_slice' has 93 connections declared, but only 92 given [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8463]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_29_a_upsizer__parameterized0' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3594]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_29_a_upsizer__parameterized0' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3594]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axi_register_slice__parameterized0' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized3' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized3' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized4' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_register_slice__parameterized4' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axi_register_slice__parameterized0' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_29_axi_register_slice' is unconnected for instance 'si_register_slice_inst' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7367]
+WARNING: [Synth 8-7023] instance 'si_register_slice_inst' of module 'axi_register_slice_v2_1_29_axi_register_slice' has 93 connections declared, but only 92 given [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7367]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_29_axi_upsizer' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7025]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_29_top' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14446]
+INFO: [Synth 8-6155] done synthesizing module 'crypto_soc_artyz7_auto_us_0' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_us_0/synth/crypto_soc_artyz7_auto_us_0.v:53]
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_29_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_id_ready in module axi_dwidth_converter_v2_1_29_a_upsizer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AID[0] in module axi_dwidth_converter_v2_1_29_a_upsizer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_id_ready in module axi_dwidth_converter_v2_1_29_a_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AID[0] in module axi_dwidth_converter_v2_1_29_a_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlock[1] in module axi_dwidth_converter_v2_1_29_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlock[1] in module axi_dwidth_converter_v2_1_29_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aresetn in module axi_dwidth_converter_v2_1_29_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aclk in module axi_dwidth_converter_v2_1_29_axi_upsizer is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:01:05 . Memory (MB): peak = 2262.652 ; gain = 622.598 ; free physical = 154 ; free virtual = 582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:01:05 . Memory (MB): peak = 2262.652 ; gain = 622.598 ; free physical = 138 ; free virtual = 583
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:01:05 . Memory (MB): peak = 2262.652 ; gain = 622.598 ; free physical = 138 ; free virtual = 583
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2262.652 ; gain = 0.000 ; free physical = 162 ; free virtual = 592
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_us_0/crypto_soc_artyz7_auto_us_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_us_0/crypto_soc_artyz7_auto_us_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2354.496 ; gain = 0.000 ; free physical = 140 ; free virtual = 579
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2354.531 ; gain = 0.000 ; free physical = 157 ; free virtual = 591
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 159 ; free virtual = 573
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 158 ; free virtual = 573
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 158 ; free virtual = 574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:01:15 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 131 ; free virtual = 520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 6     
++---Registers : 
+	              289 Bit    Registers := 2     
+	              260 Bit    Registers := 2     
+	              256 Bit    Registers := 1     
+	               62 Bit    Registers := 4     
+	               40 Bit    Registers := 2     
+	               37 Bit    Registers := 2     
+	               36 Bit    Registers := 2     
+	                8 Bit    Registers := 66    
+	                5 Bit    Registers := 6     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 101   
++---Muxes : 
+	   2 Input  289 Bit        Muxes := 2     
+	   2 Input  260 Bit        Muxes := 2     
+	   2 Input   37 Bit        Muxes := 2     
+	   2 Input   36 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 7     
+	   2 Input    8 Bit        Muxes := 70    
+	   8 Input    8 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 9     
+	   8 Input    5 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 179   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_29_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_register_slice_v2_1_29_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_register_slice_v2_1_29_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_register_slice_v2_1_29_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_register_slice_v2_1_29_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_register_slice_v2_1_29_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_register_slice_v2_1_29_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_id_ready in module axi_dwidth_converter_v2_1_29_a_upsizer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AID[0] in module axi_dwidth_converter_v2_1_29_a_upsizer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_id_ready in module axi_dwidth_converter_v2_1_29_a_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AID[0] in module axi_dwidth_converter_v2_1_29_a_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlock[1] in module axi_dwidth_converter_v2_1_29_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlock[1] in module axi_dwidth_converter_v2_1_29_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aresetn in module axi_dwidth_converter_v2_1_29_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aclk in module axi_dwidth_converter_v2_1_29_axi_upsizer is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:01:23 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 282 ; free virtual = 952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:01:27 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 584 ; free virtual = 1553
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:01:28 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 543 ; free virtual = 1534
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:29 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 544 ; free virtual = 1538
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:32 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 570 ; free virtual = 1946
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:32 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 670 ; free virtual = 2048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:32 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 1312 ; free virtual = 2766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:32 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 1312 ; free virtual = 2767
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:32 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 1305 ; free virtual = 2769
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:32 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 1305 ; free virtual = 2770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                      | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | USE_RTL_FIFO.data_srl_reg[31] | 40     | 40         | 0      | 40      | 0      | 0      | 0      | 
+|dsrl__2     | USE_RTL_FIFO.data_srl_reg[31] | 40     | 40         | 0      | 40      | 0      | 0      | 0      | 
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     2|
+|2     |LUT1    |     5|
+|3     |LUT2    |    45|
+|4     |LUT3    |   334|
+|5     |LUT4    |    55|
+|6     |LUT5    |   402|
+|7     |LUT6    |   332|
+|8     |MUXF7   |    64|
+|9     |MUXF8   |    32|
+|10    |SRLC32E |    76|
+|11    |FDRE    |  1617|
+|12    |FDSE    |     4|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:32 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 1297 ; free virtual = 2763
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:29 . Memory (MB): peak = 2354.531 ; gain = 622.598 ; free physical = 1268 ; free virtual = 2761
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:33 . Memory (MB): peak = 2354.531 ; gain = 714.477 ; free physical = 1268 ; free virtual = 2761
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2354.531 ; gain = 0.000 ; free physical = 1444 ; free virtual = 3033
+INFO: [Netlist 29-17] Analyzing 98 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2354.531 ; gain = 0.000 ; free physical = 2623 ; free virtual = 4406
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 190bfec6
+INFO: [Common 17-83] Releasing license: Synthesis
+59 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:38 . Memory (MB): peak = 2354.531 ; gain = 1066.977 ; free physical = 2622 ; free virtual = 4410
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1222.428; main = 1075.300; forked = 269.246
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3309.531; main = 2354.500; forked = 987.047
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2378.508 ; gain = 0.000 ; free physical = 2622 ; free virtual = 4411
+INFO: [Common 17-1381] The checkpoint '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1/crypto_soc_artyz7_auto_us_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP crypto_soc_artyz7_auto_us_0, cache-ID = 734ae271be234af5
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2378.508 ; gain = 0.000 ; free physical = 2572 ; free virtual = 4398
+INFO: [Common 17-1381] The checkpoint '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1/crypto_soc_artyz7_auto_us_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file crypto_soc_artyz7_auto_us_0_utilization_synth.rpt -pb crypto_soc_artyz7_auto_us_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 16:07:01 2026...

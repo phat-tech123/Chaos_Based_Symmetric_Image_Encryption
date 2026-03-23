@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="crypto_soc_artyz7_auto_pc_0_synth_1" LaunchDir="/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="crypto_soc_artyz7_auto_us_0_synth_1" LaunchDir="/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="crypto_soc_artyz7_processing_system7_0_0_synth_1" LaunchDir="/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="crypto_soc_artyz7_rst_ps7_0_100M_0_synth_1" LaunchDir="/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="crypto_soc_artyz7_xbar_0_synth_1" LaunchDir="/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

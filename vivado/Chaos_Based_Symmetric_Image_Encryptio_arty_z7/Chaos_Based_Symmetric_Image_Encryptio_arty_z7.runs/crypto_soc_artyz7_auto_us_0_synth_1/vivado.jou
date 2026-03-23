@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Mar 18 16:05:10 2026
+# Process ID: 11291
+# Current directory: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1
+# Command line: vivado -log crypto_soc_artyz7_auto_us_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source crypto_soc_artyz7_auto_us_0.tcl
+# Log file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1/crypto_soc_artyz7_auto_us_0.vds
+# Journal file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.runs/crypto_soc_artyz7_auto_us_0_synth_1/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 1388.677 MHz, CPU Physical cores: 6, Host memory: 7939 MB
+#-----------------------------------------------------------
+source crypto_soc_artyz7_auto_us_0.tcl -notrace

@@ -1,0 +1,206 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Sun Feb  8 11:31:05 2026
+| Host         : ubuntu running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_methodology -file TRNG_Module_methodology_drc_routed.rpt -pb TRNG_Module_methodology_drc_routed.pb -rpx TRNG_Module_methodology_drc_routed.rpx
+| Design       : TRNG_Module
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 34
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 2          |
+| TIMING-23 | Warning  | Combinational loop found      | 32         |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on clr relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on randomness relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-23#1 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_0/LUT4_3/I0 and pdl_0/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#2 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_1/LUT4_3/I0 and pdl_1/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#3 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_10/LUT4_3/I0 and pdl_10/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#4 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_11/LUT4_3/I0 and pdl_11/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#5 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_12/LUT4_3/I0 and pdl_12/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#6 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_13/LUT4_3/I0 and pdl_13/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#7 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_14/LUT4_3/I0 and pdl_14/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#8 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_15/LUT4_3/I0 and pdl_15/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#9 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_16/LUT4_3/I0 and pdl_16/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#10 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_17/LUT4_3/I0 and pdl_17/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#11 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_18/LUT4_3/I0 and pdl_18/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#12 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_19/LUT4_3/I0 and pdl_19/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#13 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_2/LUT4_3/I0 and pdl_2/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#14 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_20/LUT4_3/I0 and pdl_20/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#15 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_21/LUT4_3/I0 and pdl_21/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#16 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_22/LUT4_3/I0 and pdl_22/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#17 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_23/LUT4_3/I0 and pdl_23/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#18 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_24/LUT4_3/I0 and pdl_24/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#19 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_25/LUT4_3/I0 and pdl_25/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#20 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_26/LUT4_3/I0 and pdl_26/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#21 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_27/LUT4_3/I0 and pdl_27/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#22 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_28/LUT4_3/I0 and pdl_28/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#23 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_29/LUT4_3/I0 and pdl_29/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#24 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_3/LUT4_3/I0 and pdl_3/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#25 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_30/LUT4_3/I0 and pdl_30/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#26 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_31/LUT4_3/I0 and pdl_31/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#27 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_4/LUT4_3/I0 and pdl_4/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#28 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_5/LUT4_3/I0 and pdl_5/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#29 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_6/LUT4_3/I0 and pdl_6/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#30 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_7/LUT4_3/I0 and pdl_7/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#31 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_8/LUT4_3/I0 and pdl_8/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#32 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between pdl_9/LUT4_3/I0 and pdl_9/LUT4_3/O to disable the timing loop
+Related violations: <none>
+
+

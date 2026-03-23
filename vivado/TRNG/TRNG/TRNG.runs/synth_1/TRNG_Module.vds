@@ -1,0 +1,258 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Feb  8 11:29:59 2026
+# Process ID: 110962
+# Current directory: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/TRNG/TRNG.runs/synth_1
+# Command line: vivado -log TRNG_Module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TRNG_Module.tcl
+# Log file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/TRNG/TRNG.runs/synth_1/TRNG_Module.vds
+# Journal file: /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/TRNG/TRNG.runs/synth_1/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 800.000 MHz, CPU Physical cores: 6, Host memory: 7941 MB
+#-----------------------------------------------------------
+source TRNG_Module.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/TRNG/TRNG.srcs/utils_1/imports/synth_1/TRNG_Module.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/TRNG/TRNG.srcs/utils_1/imports/synth_1/TRNG_Module.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top TRNG_Module -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 111010
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2035.121 ; gain = 404.801 ; free physical = 567 ; free virtual = 4603
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TRNG_Module' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/TRNG_Module.v:5]
+INFO: [Synth 8-6157] synthesizing module 'PDL' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/PDL.v:3]
+INFO: [Synth 8-6157] synthesizing module 'LUT4' [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81407]
+	Parameter INIT bound to: 16'b0101010101010101 
+INFO: [Synth 8-6155] done synthesizing module 'LUT4' (0#1) [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81407]
+INFO: [Synth 8-6157] synthesizing module 'DFF' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/DFF.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'DFF' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/DFF.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'PDL' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/PDL.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Delay_Control' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+	Parameter count_init bound to: 3'b000 
+INFO: [Synth 8-6155] done synthesizing module 'Delay_Control' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Delay_Control__parameterized0' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+	Parameter count_init bound to: 3'b001 
+INFO: [Synth 8-6155] done synthesizing module 'Delay_Control__parameterized0' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Delay_Control__parameterized1' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+	Parameter count_init bound to: 3'b010 
+INFO: [Synth 8-6155] done synthesizing module 'Delay_Control__parameterized1' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Delay_Control__parameterized2' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+	Parameter count_init bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'Delay_Control__parameterized2' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Delay_Control__parameterized3' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+	Parameter count_init bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'Delay_Control__parameterized3' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Delay_Control__parameterized4' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+	Parameter count_init bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'Delay_Control__parameterized4' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Delay_Control__parameterized5' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+	Parameter count_init bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'Delay_Control__parameterized5' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Delay_Control__parameterized6' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+	Parameter count_init bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'Delay_Control__parameterized6' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/Delay_Control.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'TRNG_Module' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/Source/TRNG_Module.v:5]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2110.090 ; gain = 479.770 ; free physical = 444 ; free virtual = 4497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2127.902 ; gain = 497.582 ; free physical = 438 ; free virtual = 4487
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2127.902 ; gain = 497.582 ; free physical = 438 ; free virtual = 4487
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2133.840 ; gain = 0.000 ; free physical = 437 ; free virtual = 4478
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Arty-Z7-20-Master.xdc]
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Arty-Z7-20-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Arty-Z7-20-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TRNG_Module_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TRNG_Module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2273.652 ; gain = 0.000 ; free physical = 428 ; free virtual = 4484
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2273.688 ; gain = 0.000 ; free physical = 428 ; free virtual = 4484
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 403 ; free virtual = 4467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 403 ; free virtual = 4467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 403 ; free virtual = 4467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 405 ; free virtual = 4474
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    3 Bit       Adders := 8     
++---XORs : 
+	               32 Bit    Wide XORs := 1     
++---Registers : 
+	                3 Bit    Registers := 8     
+	                1 Bit    Registers := 33    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 406 ; free virtual = 4479
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 413 ; free virtual = 4482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 413 ; free virtual = 4482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 414 ; free virtual = 4482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 429 ; free virtual = 4497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 429 ; free virtual = 4497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 429 ; free virtual = 4497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 429 ; free virtual = 4497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 429 ; free virtual = 4497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 429 ; free virtual = 4497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     8|
+|3     |LUT2 |     9|
+|4     |LUT3 |     8|
+|5     |LUT4 |    96|
+|6     |LUT6 |     6|
+|7     |FDCE |    45|
+|8     |FDPE |    12|
+|9     |IBUF |     2|
+|10    |OBUF |     2|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 429 ; free virtual = 4497
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2273.688 ; gain = 497.582 ; free physical = 429 ; free virtual = 4497
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2273.688 ; gain = 643.367 ; free physical = 429 ; free virtual = 4497
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2273.688 ; gain = 0.000 ; free physical = 429 ; free virtual = 4497
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2273.688 ; gain = 0.000 ; free physical = 709 ; free virtual = 4778
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1c1c3aa6
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2273.688 ; gain = 947.656 ; free physical = 709 ; free virtual = 4777
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1815.110; main = 1489.159; forked = 374.021
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3240.539; main = 2273.656; forked = 998.898
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2297.664 ; gain = 0.000 ; free physical = 709 ; free virtual = 4777
+INFO: [Common 17-1381] The checkpoint '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/TRNG/TRNG/TRNG.runs/synth_1/TRNG_Module.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TRNG_Module_utilization_synth.rpt -pb TRNG_Module_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  8 11:30:23 2026...

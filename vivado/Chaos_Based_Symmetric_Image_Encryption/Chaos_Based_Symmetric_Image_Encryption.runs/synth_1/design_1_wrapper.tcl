@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
 
@@ -83,7 +84,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kv260_som:part0:1.4 [current_project]
-set_property ip_repo_paths /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/chaos_crypto_engine_1_0 [current_project]
+set_property ip_repo_paths /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/crypto_engine_1_0 [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -92,7 +93,6 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/controller/controller.sv
 read_verilog -library xil_defaultlib {
   /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/encryptor/CTR_mode_feistel_encrypt.v
-  /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/Clock_gating.v
   /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/encryptor/F.v
   /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/PRNG/PRNG.v
   /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/RTL/TRNG/RingOscillator.v
@@ -119,9 +119,17 @@ read_verilog -library xil_defaultlib {
 read_ip -quiet /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/sources_1/ip/floating_point_mul/floating_point_mul.xci
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_mul/floating_point_mul_ooc.xdc]
 
+read_ip -quiet /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/sources_1/ip/floating_point_div/floating_point_div.xci
+set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/floating_point_div_ooc.xdc]
+
+read_ip -quiet /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/sources_1/ip/floating_point_add/floating_point_add.xci
+set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add_ooc.xdc]
+
 add_files /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc]
 set_property used_in_synthesis false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
@@ -132,15 +140,7 @@ set_property used_in_synthesis false [get_files -all /home/vinhphat-josh/Repos/C
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/bd/design_1/design_1_ooc.xdc]
-
-read_ip -quiet /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/sources_1/ip/floating_point_add/floating_point_add.xci
-set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_add/floating_point_add_ooc.xdc]
-
-read_ip -quiet /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.srcs/sources_1/ip/floating_point_div/floating_point_div.xci
-set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryption/Chaos_Based_Symmetric_Image_Encryption.gen/sources_1/ip/floating_point_div/floating_point_div_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -151,9 +151,6 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Arty-Z7-20-Master.xdc
-set_property used_in_implementation false [get_files /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Arty-Z7-20-Master.xdc]
-
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
