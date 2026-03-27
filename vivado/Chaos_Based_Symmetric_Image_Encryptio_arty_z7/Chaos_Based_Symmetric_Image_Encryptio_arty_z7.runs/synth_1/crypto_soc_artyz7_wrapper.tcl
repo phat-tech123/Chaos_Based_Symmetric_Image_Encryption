@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -84,7 +83,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:arty-z7-20:part0:1.1 [current_project]
-set_property ip_repo_paths /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo/crypto_engine_arty_z7 [current_project]
+set_property ip_repo_paths /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/ip_repo [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -102,9 +101,6 @@ set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Re
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_rst_ps7_0_100M_0/crypto_soc_artyz7_rst_ps7_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_xbar_1/crypto_soc_artyz7_xbar_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_pc_0/crypto_soc_artyz7_auto_pc_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_us_0/crypto_soc_artyz7_auto_us_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_us_0/crypto_soc_artyz7_auto_us_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_us_0/crypto_soc_artyz7_auto_us_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_ds_0/crypto_soc_artyz7_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_ds_0/crypto_soc_artyz7_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_ds_0/crypto_soc_artyz7_auto_ds_0_ooc.xdc]
@@ -123,6 +119,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.srcs/utils_1/imports/synth_1/crypto_soc_artyz7_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

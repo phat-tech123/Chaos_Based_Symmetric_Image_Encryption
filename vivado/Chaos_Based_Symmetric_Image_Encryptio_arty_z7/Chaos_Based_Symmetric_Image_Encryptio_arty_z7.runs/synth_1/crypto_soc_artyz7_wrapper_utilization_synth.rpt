@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Wed Mar 18 16:10:33 2026
+| Date         : Fri Mar 27 14:24:58 2026
 | Host         : ubuntu running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_utilization -file crypto_soc_artyz7_wrapper_utilization_synth.rpt -pb crypto_soc_artyz7_wrapper_utilization_synth.pb
 | Design       : crypto_soc_artyz7_wrapper
@@ -181,9 +181,8 @@ Table of Contents
 | crypto_soc_artyz7_xbar_0                 |    1 |
 | crypto_soc_artyz7_rst_ps7_0_100M_0       |    1 |
 | crypto_soc_artyz7_processing_system7_0_0 |    1 |
-| crypto_soc_artyz7_crypto_engine_v1_0_0_1 |    1 |
+| crypto_soc_artyz7_crypto_engine_v1_0_0_4 |    1 |
 | crypto_soc_artyz7_axi_dma_0_0            |    1 |
-| crypto_soc_artyz7_auto_us_0              |    1 |
 | crypto_soc_artyz7_auto_pc_1              |    1 |
 | crypto_soc_artyz7_auto_pc_0              |    1 |
 | crypto_soc_artyz7_auto_ds_0              |    1 |

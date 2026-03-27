@@ -1,35 +1,39 @@
 verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/6b2b/hdl" \
 "../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_processing_system7_0_0/sim/crypto_soc_artyz7_processing_system7_0_0.v" \
-"../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_1/src/floating_point_add/sim/floating_point_add.v" \
-"../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_1/src/floating_point_mul/sim/floating_point_mul.v" \
-"../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_1/src/floating_point_div/sim/floating_point_div.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/CTR_mode_feistel_encrypt.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/Crypto_Engine.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/F.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/PRNG.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/addroundkey.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/affine_transform.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/chaos_cryptor_v1_0_S00_AXI.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/extractor.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/feistel_encrypt.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/key_generator.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/mixcolumns.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/mixer.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/sawtooth.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/sbox_generator.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/shiftrows.v" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/subbytes.v" \
-
-sv xil_defaultlib --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/6b2b/hdl" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/controller.sv" \
-
-verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/6b2b/hdl" \
-"../../../bd/crypto_soc_artyz7/ipshared/2d8e/src/chaos_cryptor_v1_0.v" \
-"../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_1/sim/crypto_soc_artyz7_crypto_engine_v1_0_0_1.v" \
 "../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_xbar_0/sim/crypto_soc_artyz7_xbar_0.v" \
 "../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_xbar_1/sim/crypto_soc_artyz7_xbar_1.v" \
+
+verilog floating_point_v7_1_16 --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/6b2b/hdl" \
+"../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_4/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/ip/floating_point_add/hdl/floating_point_v7_1_rfs.v" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/6b2b/hdl" \
+"../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_4/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/ip/floating_point_add/sim/floating_point_add.v" \
+"../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_4/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/ip/floating_point_mul/sim/floating_point_mul.v" \
+"../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_4/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/ip/floating_point_div/sim/floating_point_div.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/CTR_mode_feistel_encrypt.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/Crypto_Engine.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/F.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/PRNG.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/addroundkey.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/affine_transform.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/chaos_cryptor_v1_0_S00_AXI.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/extractor.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/feistel_encrypt.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/key_generator.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/mixcolumns.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/mixer.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/sawtooth.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/sbox_generator.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/shiftrows.v" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/subbytes.v" \
+
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/6b2b/hdl" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/controller.sv" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/ec67/hdl" --include "../../../../Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ipshared/6b2b/hdl" \
+"../../../bd/crypto_soc_artyz7/ipshared/d4ce/crypto_engine_arty_z7/crypto_engine_arty_z7.srcs/sources_1/imports/src/chaos_cryptor_v1_0.v" \
+"../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_4/sim/crypto_soc_artyz7_crypto_engine_v1_0_0_4.v" \
 "../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_pc_0/sim/crypto_soc_artyz7_auto_pc_0.v" \
-"../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_us_0/sim/crypto_soc_artyz7_auto_us_0.v" \
 "../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_ds_0/sim/crypto_soc_artyz7_auto_ds_0.v" \
 "../../../bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_pc_1/sim/crypto_soc_artyz7_auto_pc_1.v" \
 "../../../bd/crypto_soc_artyz7/sim/crypto_soc_artyz7.v" \

@@ -91,7 +91,7 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
   // 'S_AXI' transactor parameters
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "256");
-    S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "2");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -108,10 +108,10 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -194,7 +194,7 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
   // 'M_AXI' transactor parameters
     xsc::common_cpp::properties M_AXI_transactor_param_props;
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -211,10 +211,10 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "64");
+    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -322,7 +322,7 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
   // 'S_AXI' transactor parameters
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "256");
-    S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "2");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -339,10 +339,10 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -425,7 +425,7 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
   // 'M_AXI' transactor parameters
     xsc::common_cpp::properties M_AXI_transactor_param_props;
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -442,10 +442,10 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "64");
+    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -553,7 +553,7 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
   // 'S_AXI' transactor parameters
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "256");
-    S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "2");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -570,10 +570,10 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -656,7 +656,7 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
   // 'M_AXI' transactor parameters
     xsc::common_cpp::properties M_AXI_transactor_param_props;
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -673,10 +673,10 @@ void crypto_soc_artyz7_auto_ds_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "64");
+    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -773,7 +773,7 @@ crypto_soc_artyz7_auto_ds_0::crypto_soc_artyz7_auto_ds_0(const sc_core::sc_modul
   // configure S_AXI_transactor
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "256");
-    S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "2");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -790,10 +790,10 @@ crypto_soc_artyz7_auto_ds_0::crypto_soc_artyz7_auto_ds_0(const sc_core::sc_modul
     S_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -857,7 +857,7 @@ crypto_soc_artyz7_auto_ds_0::crypto_soc_artyz7_auto_ds_0(const sc_core::sc_modul
   // configure M_AXI_transactor
     xsc::common_cpp::properties M_AXI_transactor_param_props;
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -874,10 +874,10 @@ crypto_soc_artyz7_auto_ds_0::crypto_soc_artyz7_auto_ds_0(const sc_core::sc_modul
     M_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "64");
+    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -1004,7 +1004,7 @@ crypto_soc_artyz7_auto_ds_0::crypto_soc_artyz7_auto_ds_0(const sc_core::sc_modul
   // configure S_AXI_transactor
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "256");
-    S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "2");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1021,10 +1021,10 @@ crypto_soc_artyz7_auto_ds_0::crypto_soc_artyz7_auto_ds_0(const sc_core::sc_modul
     S_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -1088,7 +1088,7 @@ crypto_soc_artyz7_auto_ds_0::crypto_soc_artyz7_auto_ds_0(const sc_core::sc_modul
   // configure M_AXI_transactor
     xsc::common_cpp::properties M_AXI_transactor_param_props;
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1105,10 +1105,10 @@ crypto_soc_artyz7_auto_ds_0::crypto_soc_artyz7_auto_ds_0(const sc_core::sc_modul
     M_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
-    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
     M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "64");
+    M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");

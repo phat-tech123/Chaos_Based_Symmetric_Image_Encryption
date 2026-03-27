@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
--- Date        : Wed Mar 18 15:56:50 2026
+-- Date        : Wed Mar 25 10:00:20 2026
 -- Host        : ubuntu running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top crypto_soc_artyz7_auto_pc_1 -prefix
 --               crypto_soc_artyz7_auto_pc_1_ crypto_soc_artyz7_auto_pc_1_stub.vhdl

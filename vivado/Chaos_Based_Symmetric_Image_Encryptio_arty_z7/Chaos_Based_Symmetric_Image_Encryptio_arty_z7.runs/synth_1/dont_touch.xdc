@@ -10,9 +10,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_
 # IP: bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_axi_dma_0_0/crypto_soc_artyz7_axi_dma_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_artyz7_axi_dma_0_0 || ORIG_REF_NAME==crypto_soc_artyz7_axi_dma_0_0} -quiet] -quiet
 
-# IP: bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_1/crypto_soc_artyz7_crypto_engine_v1_0_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_artyz7_crypto_engine_v1_0_0_1 || ORIG_REF_NAME==crypto_soc_artyz7_crypto_engine_v1_0_0_1} -quiet] -quiet
-
 # IP: bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_xbar_0/crypto_soc_artyz7_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_artyz7_xbar_0 || ORIG_REF_NAME==crypto_soc_artyz7_xbar_0} -quiet] -quiet
 
@@ -28,11 +25,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_
 # IP: bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_axi_mem_intercon_0/crypto_soc_artyz7_axi_mem_intercon_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_artyz7_axi_mem_intercon_0 || ORIG_REF_NAME==crypto_soc_artyz7_axi_mem_intercon_0} -quiet] -quiet
 
+# IP: bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_4/crypto_soc_artyz7_crypto_engine_v1_0_0_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_artyz7_crypto_engine_v1_0_0_4 || ORIG_REF_NAME==crypto_soc_artyz7_crypto_engine_v1_0_0_4} -quiet] -quiet
+
 # IP: bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_pc_0/crypto_soc_artyz7_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_artyz7_auto_pc_0 || ORIG_REF_NAME==crypto_soc_artyz7_auto_pc_0} -quiet] -quiet
-
-# IP: bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_us_0/crypto_soc_artyz7_auto_us_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_artyz7_auto_us_0 || ORIG_REF_NAME==crypto_soc_artyz7_auto_us_0} -quiet] -quiet
 
 # IP: bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_auto_ds_0/crypto_soc_artyz7_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==crypto_soc_artyz7_auto_ds_0 || ORIG_REF_NAME==crypto_soc_artyz7_auto_ds_0} -quiet] -quiet

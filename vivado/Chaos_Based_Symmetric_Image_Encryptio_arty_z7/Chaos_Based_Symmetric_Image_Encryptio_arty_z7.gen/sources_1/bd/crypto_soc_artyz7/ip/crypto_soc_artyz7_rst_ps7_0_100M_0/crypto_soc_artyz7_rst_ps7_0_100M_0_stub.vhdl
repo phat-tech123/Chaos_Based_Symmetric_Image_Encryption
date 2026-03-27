@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
--- Date        : Wed Mar 18 16:06:45 2026
+-- Date        : Wed Mar 25 09:58:49 2026
 -- Host        : ubuntu running 64-bit Ubuntu 24.04.3 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.gen/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_rst_ps7_0_100M_0/crypto_soc_artyz7_rst_ps7_0_100M_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top crypto_soc_artyz7_rst_ps7_0_100M_0 -prefix
+--               crypto_soc_artyz7_rst_ps7_0_100M_0_ crypto_soc_artyz7_rst_ps7_0_100M_0_stub.vhdl
 -- Design      : crypto_soc_artyz7_rst_ps7_0_100M_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
