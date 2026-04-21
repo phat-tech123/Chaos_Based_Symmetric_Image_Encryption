@@ -27,6 +27,8 @@ The design was synthesized and implemented on the **Xilinx Arty-Z7 (XC7Z020)**. 
 
 ### 2. Execution Time & Throughput
 Performance measured at a **100 MHz** clock frequency for a **256x256** grayscale image.
+![result](./pic/lena.png)
+![histogram](./pic/lena_his.png)
 
 | Operating Mode | Description | Execution Time |
 | :--- | :--- | :---: |
@@ -38,7 +40,7 @@ The cryptosystem provides robust resistance against common cryptographic attacks
 
 - **Information Entropy:** **7.9976** (Near-ideal 8.0).
 - **Correlation Coefficients (CC):**
-  - ![CC Test](./pic/lena_corr.png)
+  ![CC Test](./pic/lena_corr.png)
   - Horizontal: **-0.0012**
   - Vertical: **0.0039**
   - Diagonal: **0.0097**
