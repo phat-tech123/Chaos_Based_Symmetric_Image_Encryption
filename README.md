@@ -41,11 +41,8 @@ The cryptosystem provides robust resistance against common cryptographic attacks
 - **Information Entropy:** **7.9976** (Near-ideal 8.0).
 - **Histogram:** 
   ![histogram](./pic/lena_his.png)
-- **Correlation Coefficients (CC):**
+- **Correlation Coefficients (CC):** Horizontal: **-0.0012**; Vertical: **0.0039**; Diagonal: **0.0097**
   ![CC Test](./pic/lena_corr.png)
-  - Horizontal: **-0.0012**
-  - Vertical: **0.0039**
-  - Diagonal: **0.0097**
 - **Diffusion Analysis:**
   - **NPCR:** 99.6155% (Ideal: 99.6094%)
   - **UACI:** 33.4572% (Ideal: 33.4635%)
