@@ -1,0 +1,273 @@
+
+*** Running vivado
+    with args -log design_1_TRNG_top_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_TRNG_top_0_1.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_TRNG_top_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1269.188 ; gain = 5.965 ; free physical = 299 ; free virtual = 4917
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_TRNG_top_0_1
+Command: synth_design -top design_1_TRNG_top_0_1 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 174085
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2040.066 ; gain = 404.598 ; free physical = 198 ; free virtual = 2971
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'z0', assumed default net type 'wire' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:14]
+CRITICAL WARNING: [Synth 8-9339] data object 'z1' is already declared [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:18]
+INFO: [Synth 8-6826] previous declaration of 'z1' is from here [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:11]
+CRITICAL WARNING: [Synth 8-11152] second declaration of 'z1' is ignored [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:18]
+CRITICAL WARNING: [Synth 8-9339] data object 'z2' is already declared [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:18]
+INFO: [Synth 8-6826] previous declaration of 'z2' is from here [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:11]
+CRITICAL WARNING: [Synth 8-11152] second declaration of 'z2' is ignored [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:18]
+CRITICAL WARNING: [Synth 8-9339] data object 'z3' is already declared [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:18]
+INFO: [Synth 8-6826] previous declaration of 'z3' is from here [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:11]
+CRITICAL WARNING: [Synth 8-11152] second declaration of 'z3' is ignored [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:18]
+INFO: [Synth 8-6157] synthesizing module 'design_1_TRNG_top_0_1' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ip/design_1_TRNG_top_0_1/synth/design_1_TRNG_top_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'TRNG_top' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'TRNG' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:3]
+INFO: [Synth 8-6157] synthesizing module 'RO' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:1]
+INFO: [Synth 8-6157] synthesizing module 'LUT4' [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81407]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4' (0#1) [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81407]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized0' [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81407]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized0' (0#1) [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81407]
+INFO: [Synth 8-6155] done synthesizing module 'RO' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'TRNG' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'TRNG_top' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_TRNG_top_0_1' (0#1) [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ip/design_1_TRNG_top_0_1/synth/design_1_TRNG_top_0_1.v:53]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'LUT4_not1'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:20]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'LUT4_not2'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'LUT4_not3'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/RO.v:22]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RO_GEN[0].my_ro_inst'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RO_GEN[1].my_ro_inst'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RO_GEN[2].my_ro_inst'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RO_GEN[3].my_ro_inst'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RO_GEN[4].my_ro_inst'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RO_GEN[5].my_ro_inst'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RO_GEN[6].my_ro_inst'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RO_GEN[7].my_ro_inst'. This will prevent further optimization [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ipshared/3b50/src/TRNG.v:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2121.004 ; gain = 485.535 ; free physical = 128 ; free virtual = 2750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2135.848 ; gain = 500.379 ; free physical = 127 ; free virtual = 2749
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2135.848 ; gain = 500.379 ; free physical = 127 ; free virtual = 2749
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2141.785 ; gain = 0.000 ; free physical = 166 ; free virtual = 2745
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ip/design_1_TRNG_top_0_1/src/trng_constraint.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ip/design_1_TRNG_top_0_1/src/trng_constraint.xdc] for cell 'inst'
+Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.runs/design_1_TRNG_top_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.runs/design_1_TRNG_top_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2281.598 ; gain = 0.000 ; free physical = 165 ; free virtual = 2728
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2281.633 ; gain = 0.000 ; free physical = 164 ; free virtual = 2728
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 137 ; free virtual = 2720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 137 ; free virtual = 2720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.runs/design_1_TRNG_top_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 136 ; free virtual = 2720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 134 ; free virtual = 2720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 8     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 8     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 175 ; free virtual = 2723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 238 ; free virtual = 2728
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 238 ; free virtual = 2728
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 238 ; free virtual = 2728
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 266 ; free virtual = 2659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 266 ; free virtual = 2659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 265 ; free virtual = 2659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 265 ; free virtual = 2659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 265 ; free virtual = 2659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 265 ; free virtual = 2659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     4|
+|2     |LUT1   |     3|
+|3     |LUT2   |    34|
+|4     |LUT3   |     9|
+|5     |LUT4   |    45|
+|6     |LUT5   |     2|
+|7     |LUT6   |     5|
+|8     |FDCE   |    21|
+|9     |FDPE   |    12|
+|10    |FDRE   |    85|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 265 ; free virtual = 2659
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2281.633 ; gain = 500.379 ; free physical = 265 ; free virtual = 2659
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2281.633 ; gain = 646.164 ; free physical = 265 ; free virtual = 2659
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2281.633 ; gain = 0.000 ; free physical = 263 ; free virtual = 2660
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2281.633 ; gain = 0.000 ; free physical = 538 ; free virtual = 2942
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c05056a5
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 1 Warnings, 6 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:52 . Memory (MB): peak = 2281.633 ; gain = 994.633 ; free physical = 537 ; free virtual = 2941
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1720.437; main = 1396.553; forked = 339.354
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3248.539; main = 2281.602; forked = 998.953
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2305.609 ; gain = 0.000 ; free physical = 536 ; free virtual = 2941
+INFO: [Common 17-1381] The checkpoint '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.runs/design_1_TRNG_top_0_1_synth_1/design_1_TRNG_top_0_1.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 10 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2305.609 ; gain = 0.000 ; free physical = 509 ; free virtual = 2915
+INFO: [Common 17-1381] The checkpoint '/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.runs/design_1_TRNG_top_0_1_synth_1/design_1_TRNG_top_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_TRNG_top_0_1_utilization_synth.rpt -pb design_1_TRNG_top_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  8 10:02:18 2026...

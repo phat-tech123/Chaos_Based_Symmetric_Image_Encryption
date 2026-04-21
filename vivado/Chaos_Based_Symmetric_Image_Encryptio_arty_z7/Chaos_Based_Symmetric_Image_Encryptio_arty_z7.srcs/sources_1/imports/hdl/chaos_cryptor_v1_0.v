@@ -15,6 +15,11 @@
 	(
 	
 		// Users to add ports here 
+		// TRNG signals
+        input [96-1:0] s_axis_trng_tdata, 
+        input   s_axis_trng_tvalid,
+        output  s_axis_trng_tready, 
+        
         input wire s_axis_tvalid,
         output wire s_axis_tready,
         input wire [255:0] s_axis_tdata,
@@ -77,6 +82,10 @@
 		.S_AXI_RRESP(s00_axi_rresp),
 		.S_AXI_RVALID(s00_axi_rvalid),
 		.S_AXI_RREADY(s00_axi_rready),
+		
+		.s_axis_trng_tdata(s_axis_trng_tdata),
+		.s_axis_trng_tvalid(s_axis_trng_tvalid),
+		.s_axis_trng_tready(s_axis_trng_tready),
 		
 		.s_axis_tvalid(s_axis_tvalid),
 		.s_axis_tready(s_axis_tready),

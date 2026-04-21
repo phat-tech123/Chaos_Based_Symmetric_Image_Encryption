@@ -1,36 +1,36 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.627512",
-   "Default View_TopLeft":"164,320",
+   "Default View_ScaleFactor":"0.642322",
+   "Default View_TopLeft":"199,199",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 2110 -y 490 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 2110 -y 750 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 6 -x 2550 -y 490 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 2550 -y 750 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -x 550 -y 470 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 3 -x 1480 -y 1100 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 4 -x 1930 -y 1090 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 1480 -y 700 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -x 1030 -y 700 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 3 -x 1480 -y 350 -defaultsOSRD
-preplace inst crypto_engine_v1_0_0 -pg 1 -lvl 4 -x 1930 -y 750 -defaultsOSRD
-preplace netloc axi_dma_0_m_axis_mm2s_tdata 1 3 1 1700 700n
-preplace netloc axi_dma_0_m_axis_mm2s_tlast 1 3 1 1720 720n
-preplace netloc axi_dma_0_m_axis_mm2s_tvalid 1 3 1 1750 740n
-preplace netloc crypto_engine_v1_0_0_s_axis_tready 1 3 1 1760 760n
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 330 360 770 360 1250 840 1730
+preplace inst crypto_engine_v1_0_0 -pg 1 -lvl 5 -x 2390 -y 770 -defaultsOSRD
+preplace netloc axi_dma_0_m_axis_mm2s_tdata 1 4 1 2140 720n
+preplace netloc axi_dma_0_m_axis_mm2s_tlast 1 4 1 2150 740n
+preplace netloc axi_dma_0_m_axis_mm2s_tvalid 1 4 1 2170 760n
+preplace netloc crypto_engine_v1_0_0_s_axis_tready 1 4 1 2180 780n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 330 360 770 360 1290 840 1720 820 N
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 760J 520n
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 2 1260 850 1740
-preplace netloc axi_dma_0_M_AXI_MM2S 1 2 2 1280 170 1680
-preplace netloc axi_dma_0_M_AXI_S2MM 1 2 2 1280 550 1690
-preplace netloc axi_mem_intercon_M00_AXI 1 0 4 340 580 N 580 1280 560 1670
-preplace netloc crypto_engine_v1_0_0_m_axis 1 2 3 1290 880 N 880 2070
-preplace netloc processing_system7_0_DDR 1 1 4 N 420 1270 530 1690 490 N
-preplace netloc processing_system7_0_FIXED_IO 1 1 4 N 440 1220 540 N 540 2080
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 3 1300 850 1730 840 N
+preplace netloc axi_dma_0_M_AXI_MM2S 1 2 3 1330 860 N 860 2120
+preplace netloc axi_dma_0_M_AXI_S2MM 1 2 3 1320 870 N 870 2130
+preplace netloc axi_mem_intercon_M00_AXI 1 0 4 340 580 N 580 1310 560 1630
+preplace netloc crypto_engine_v1_0_0_m_axis 1 3 3 1740 900 N 900 2530
+preplace netloc processing_system7_0_DDR 1 1 5 N 420 1310 530 1660 490 N 490 N
+preplace netloc processing_system7_0_FIXED_IO 1 1 5 N 440 1220 550 N 550 N 550 2530
 preplace netloc processing_system7_0_M_AXI_GP0 1 1 2 NJ 480 1210
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 2 1280 860 1670
-preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1710 710n
-levelinfo -pg 1 -90 550 1030 1480 1930 2110
-pagesize -pg 1 -db -bbox -sgen -90 -80 2310 1260
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1630 690n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 2 N 710 2160
+levelinfo -pg 1 -90 550 1030 1480 1930 2390 2550
+pagesize -pg 1 -db -bbox -sgen -90 -80 2660 1260
 "
 }
 {

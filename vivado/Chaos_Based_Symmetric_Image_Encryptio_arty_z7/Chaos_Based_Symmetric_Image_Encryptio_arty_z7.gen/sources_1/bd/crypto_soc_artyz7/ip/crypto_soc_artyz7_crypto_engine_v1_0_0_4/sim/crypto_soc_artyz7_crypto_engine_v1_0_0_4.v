@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:crypto_engine_v1_0:1.0
-// IP Revision: 3
+// IP Revision: 5
 
 `timescale 1ns/1ps
 

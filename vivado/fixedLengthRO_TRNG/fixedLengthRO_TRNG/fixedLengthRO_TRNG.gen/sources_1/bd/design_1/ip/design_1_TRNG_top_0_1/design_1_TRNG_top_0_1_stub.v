@@ -1,0 +1,29 @@
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+// --------------------------------------------------------------------------------
+// Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+// Date        : Wed Apr  8 10:02:17 2026
+// Host        : ubuntu running 64-bit Ubuntu 24.04.3 LTS
+// Command     : write_verilog -force -mode synth_stub
+//               /home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/fixedLengthRO_TRNG/fixedLengthRO_TRNG.gen/sources_1/bd/design_1/ip/design_1_TRNG_top_0_1/design_1_TRNG_top_0_1_stub.v
+// Design      : design_1_TRNG_top_0_1
+// Purpose     : Stub declaration of top-level module interface
+// Device      : xc7z020clg400-1
+// --------------------------------------------------------------------------------
+
+// This empty module with port declaration file causes synthesis tools to infer a black box for IP.
+// The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
+// Please paste the declaration into a Verilog source file or add the file as an additional source.
+(* X_CORE_INFO = "TRNG_top,Vivado 2023.2" *)
+module design_1_TRNG_top_0_1(aclk, aresetn, enable, m_axis_tdata, 
+  m_axis_tvalid, m_axis_tlast, m_axis_tready)
+/* synthesis syn_black_box black_box_pad_pin="aresetn,enable,m_axis_tdata[31:0],m_axis_tvalid,m_axis_tlast,m_axis_tready" */
+/* synthesis syn_force_seq_prim="aclk" */;
+  input aclk /* synthesis syn_isclock = 1 */;
+  input aresetn;
+  input enable;
+  output [31:0]m_axis_tdata;
+  output m_axis_tvalid;
+  output m_axis_tlast;
+  input m_axis_tready;
+endmodule

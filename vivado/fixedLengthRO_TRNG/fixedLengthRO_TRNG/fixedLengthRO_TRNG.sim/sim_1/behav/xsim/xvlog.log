@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RO
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/TRNG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TRNG_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/TRNG_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_TRNG_Top

@@ -83,7 +83,7 @@ always@(posedge clk or negedge reset_n) begin
 	    end else if(tvalid) begin
 			encr_tvalid <= 1;
 //			counter <= counter + 1;
-            counter <= {counter[DATA_WIDTH-1 : 64], counter[63:0] + 64'd1};
+            counter <= {counter[DATA_WIDTH-1 : 48], counter[47:0] + 64'd1};
 			plaintext_t[0] <= plaintext;
 		end else begin
 			encr_tvalid <= 0;

@@ -2967,7 +2967,7 @@
       },
       "crypto_engine_v1_0_0": {
         "vlnv": "user.org:user:crypto_engine_v1_0:1.0",
-        "ip_revision": "3",
+        "ip_revision": "5",
         "xci_name": "crypto_soc_artyz7_crypto_engine_v1_0_0_4",
         "xci_path": "ip/crypto_soc_artyz7_crypto_engine_v1_0_0_4/crypto_soc_artyz7_crypto_engine_v1_0_0_4.xci",
         "inst_hier_path": "crypto_engine_v1_0_0",

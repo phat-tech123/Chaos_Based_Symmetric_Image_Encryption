@@ -1,0 +1,106 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Wed Apr  8 10:46:58 2026
+| Host         : ubuntu running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_design_1_wrapper
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 9
++----------+----------+----------------------------+------------+
+| Rule     | Severity | Description                | Violations |
++----------+----------+----------------------------+------------+
+| LUTLP-2  | Warning  | Combinatorial Loop Allowed | 8          |
+| REQP-181 | Advisory | writefirst                 | 1          |
++----------+----------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTLP-2#1 Warning
+Combinatorial Loop Allowed  
+4 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[0].my_ro_inst/LUT4_and,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[0].my_ro_inst/LUT4_not1,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[0].my_ro_inst/LUT4_not2
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[0].my_ro_inst/LUT4_not3.
+Related violations: <none>
+
+LUTLP-2#2 Warning
+Combinatorial Loop Allowed  
+4 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[1].my_ro_inst/LUT4_and,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[1].my_ro_inst/LUT4_not1,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[1].my_ro_inst/LUT4_not2
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[1].my_ro_inst/LUT4_not3.
+Related violations: <none>
+
+LUTLP-2#3 Warning
+Combinatorial Loop Allowed  
+4 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[2].my_ro_inst/LUT4_and,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[2].my_ro_inst/LUT4_not1,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[2].my_ro_inst/LUT4_not2
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[2].my_ro_inst/LUT4_not3.
+Related violations: <none>
+
+LUTLP-2#4 Warning
+Combinatorial Loop Allowed  
+4 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[3].my_ro_inst/LUT4_and,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[3].my_ro_inst/LUT4_not1,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[3].my_ro_inst/LUT4_not2
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[3].my_ro_inst/LUT4_not3.
+Related violations: <none>
+
+LUTLP-2#5 Warning
+Combinatorial Loop Allowed  
+4 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[4].my_ro_inst/LUT4_and,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[4].my_ro_inst/LUT4_not1,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[4].my_ro_inst/LUT4_not2
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[4].my_ro_inst/LUT4_not3.
+Related violations: <none>
+
+LUTLP-2#6 Warning
+Combinatorial Loop Allowed  
+4 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[5].my_ro_inst/LUT4_and,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[5].my_ro_inst/LUT4_not1,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[5].my_ro_inst/LUT4_not2
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[5].my_ro_inst/LUT4_not3.
+Related violations: <none>
+
+LUTLP-2#7 Warning
+Combinatorial Loop Allowed  
+4 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[6].my_ro_inst/LUT4_and,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[6].my_ro_inst/LUT4_not1,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[6].my_ro_inst/LUT4_not2
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[6].my_ro_inst/LUT4_not3.
+Related violations: <none>
+
+LUTLP-2#8 Warning
+Combinatorial Loop Allowed  
+4 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[7].my_ro_inst/LUT4_and,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[7].my_ro_inst/LUT4_not1,
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[7].my_ro_inst/LUT4_not2
+design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[7].my_ro_inst/LUT4_not3.
+Related violations: <none>
+
+REQP-181#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+

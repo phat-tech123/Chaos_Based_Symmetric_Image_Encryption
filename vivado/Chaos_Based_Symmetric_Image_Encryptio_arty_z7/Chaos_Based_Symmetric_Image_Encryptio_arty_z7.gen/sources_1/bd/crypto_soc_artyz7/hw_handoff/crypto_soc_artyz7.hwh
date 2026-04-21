@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 27 14:21:25 2026" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr  2 15:10:29 2026" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:arty-z7-20:part0:1.1" DEVICE="7z020" NAME="crypto_soc_artyz7" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -2377,7 +2377,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="3" FULLNAME="/crypto_engine_v1_0_0" HWVERSION="1.0" INSTANCE="crypto_engine_v1_0_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="crypto_engine_v1_0" VLNV="user.org:user:crypto_engine_v1_0:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/crypto_engine_v1_0_0" HWVERSION="1.0" INSTANCE="crypto_engine_v1_0_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="crypto_engine_v1_0" VLNV="user.org:user:crypto_engine_v1_0:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="s00_axi" NAME="reg0" RANGE="4096" USAGE="register"/>

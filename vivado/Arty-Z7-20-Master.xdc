@@ -7,7 +7,7 @@
 #set_property -dict { PACKAGE_PIN H16    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_35 Sch=SYSCLK
 #create_clock -add -name sys_clk_pin -period 100000.00 -waveform {0 50000} [get_ports { clk }];#set
 
-create_clock -add -name sys_clk_pin -period 2.50 -waveform {0 1.125} [get_ports { clk }];#set
+create_clock -add -name sys_clk_pin -period 7.00 -waveform {0 3.500} [get_ports { s00_axi_aclk }];#set
 
 ### Switches
 ##set_property -dict { PACKAGE_PIN M20    IOSTANDARD LVCMOS33 } [get_ports { sw[0] }]; #IO_L7N_T1_AD2N_35 Sch=SW0

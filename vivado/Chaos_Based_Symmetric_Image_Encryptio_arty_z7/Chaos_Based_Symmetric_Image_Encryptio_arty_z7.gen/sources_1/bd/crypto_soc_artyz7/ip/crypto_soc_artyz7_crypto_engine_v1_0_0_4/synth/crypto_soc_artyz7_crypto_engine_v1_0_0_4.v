@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:crypto_engine_v1_0:1.0
-// IP Revision: 3
+// IP Revision: 5
 
 (* X_CORE_INFO = "crypto_engine_v1_0,Vivado 2023.2" *)
 (* CHECK_LICENSE_TYPE = "crypto_soc_artyz7_crypto_engine_v1_0_0_4,crypto_engine_v1_0,{}" *)

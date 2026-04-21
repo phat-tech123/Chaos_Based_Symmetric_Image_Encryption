@@ -19,6 +19,8 @@ module crypto_engine_core #(
     // Config inputs (Parameters & TRNG)
     input wire trng_valid,  
     input wire [PRECISION-1:0] trng_x0, trng_x1, trng_x2,
+    output wire prng_ready,
+    
     input wire [DATA_WIDTH-1:0] iv,
     
     input wire [PRECISION-1:0] user_sigma,
@@ -60,8 +62,6 @@ module crypto_engine_core #(
     
     wire key_gen_valid;
     wire [KEY_SIZE-1:0] key_round;
-    
-//    wire [2:0] status_state;
     
     reg is_first_block_internal;
     always @(posedge clk or negedge reset_n) begin
@@ -110,7 +110,10 @@ module crypto_engine_core #(
         .clk(clk), 
         .reset_n(reset_n), 
         .tvalid(sbox_gen_trigger), 
+        
+        .trng_valid(trng_valid),
         .x0(trng_x0), .x1(trng_x1), .x2(trng_x2),
+        .prng_ready(prng_ready),
         
         // Parameters from User (Software Config)
         .A00(user_A00), .A01(user_A01), .A02(user_A02),

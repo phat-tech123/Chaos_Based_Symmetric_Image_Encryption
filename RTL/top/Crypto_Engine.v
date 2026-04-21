@@ -61,7 +61,6 @@ module crypto_engine_core #(
     wire key_gen_valid;
     wire [KEY_SIZE-1:0] key_round;
     
-//    wire [2:0] status_state;
     
     reg is_first_block_internal;
     always @(posedge clk or negedge reset_n) begin

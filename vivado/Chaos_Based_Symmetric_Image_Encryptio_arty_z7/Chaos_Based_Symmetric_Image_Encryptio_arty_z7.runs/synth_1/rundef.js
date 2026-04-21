@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log crypto_soc_artyz7_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source crypto_soc_artyz7_wrapper.tcl" );
+         "-log crypto_engine_v1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source crypto_engine_v1_0.tcl" );
 
 
 

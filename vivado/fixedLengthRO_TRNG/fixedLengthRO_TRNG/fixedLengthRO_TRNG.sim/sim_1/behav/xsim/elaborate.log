@@ -1,0 +1,35 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_TRNG_Top_behav xil_defaultlib.tb_TRNG_Top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'I2' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v:19]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'I3' [/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v:20]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/fixedLengthRO_TRNG/RO.v" Line 1. Module RO doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.LUT4
+Compiling module xil_defaultlib.RO
+Compiling module xil_defaultlib.TRNG_Top_default
+Compiling module xil_defaultlib.tb_TRNG_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_TRNG_Top_behav

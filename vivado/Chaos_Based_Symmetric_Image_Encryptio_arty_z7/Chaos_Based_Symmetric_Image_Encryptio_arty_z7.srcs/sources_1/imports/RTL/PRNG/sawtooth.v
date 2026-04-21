@@ -200,30 +200,53 @@ function [31:0] floor(input [31:0] x);
     end
 endfunction
 
-
 function is_ood(input [PRECISION-1:0] x);
-	reg [7:0] exponent;
-    	reg [22:0] fraction;
-    	reg [23:0] mantissa;
-    	integer int_bits;
-    	reg [23:0] shifted;
-
-	begin
-		exponent = x[30:23];
-		fraction = x[22:0];
-		mantissa = {1'b1, fraction};       
-		int_bits = exponent - 127;
-
-		if (exponent < 127)
-			is_ood = 1'b0;    
-		else if (int_bits >= 24)
-			is_ood = 1'b0;  
-		else begin
-			shifted = mantissa >> (23 - int_bits); 
-			is_ood = shifted[0];           
-		end
-	end
+    reg [7:0] exponent;
+    reg [23:0] mantissa;
+    reg [4:0] shift_amount;
+    reg [23:0] shifted;
+    
+    begin
+        exponent = x[30:23];
+        mantissa = {1'b1, x[22:0]};
+        
+        // Gộp 2 phép trừ: 23 - (exponent - 127) = 150 - exponent
+        // Chỉ dùng 5-bit vì lượng dịch tối đa cần thiết chỉ là 23
+        shift_amount = 8'd150 - exponent; 
+        
+        // Nếu số mũ nằm ngoài vùng [127, 149], nó không phải là số lẻ hợp lệ
+        if (exponent < 8'd127 || exponent >= 8'd150) begin
+            is_ood = 1'b0;
+        end else begin
+            // Chỉ dịch bit khi chắc chắn nó nằm trong vùng an toàn
+            shifted = mantissa >> shift_amount;
+            is_ood = shifted[0];
+        end
+    end
 endfunction
+//function is_ood(input [PRECISION-1:0] x);
+//	reg [7:0] exponent;
+//    	reg [22:0] fraction;
+//    	reg [23:0] mantissa;
+//    	integer int_bits;
+//    	reg [23:0] shifted;
+
+//	begin
+//		exponent = x[30:23];
+//		fraction = x[22:0];
+//		mantissa = {1'b1, fraction};       
+//		int_bits = exponent - 127;
+
+//		if (exponent < 127)
+//			is_ood = 1'b0;    
+//		else if (int_bits >= 24)
+//			is_ood = 1'b0;  
+//		else begin
+//			shifted = mantissa >> (23 - int_bits); 
+//			is_ood = shifted[0];           
+//		end
+//	end
+//endfunction
 
 function [31:0] mul_half(input [31:0] x);
 	reg sign;

@@ -15,6 +15,13 @@
 	)
 	(
 		// Users to add ports here		
+		         
+		// TRNG signals
+        input [C_S_AXI_DATA_WIDTH*3-1:0] s_axis_trng_tdata, 
+        input   s_axis_trng_tvalid,
+        output  s_axis_trng_tready, 
+        
+        
         input s_axis_tvalid,
         output s_axis_tready,
         input [255:0] s_axis_tdata,
@@ -287,7 +294,7 @@
 	      slv_reg28 <= 0;
 	      slv_reg29 <= 0;
 	      slv_reg30 <= 0;
-	      slv_reg31 <= 0;
+//	      slv_reg31 <= 0;
 	    end 
 	  else begin
 	    if (slv_reg_wren)
@@ -510,13 +517,13 @@
 	                // Slave register 30
 	                slv_reg30[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
-	          5'h1F:
-	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
-	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
-	                // Respective byte enables are asserted as per write strobes 
-	                // Slave register 31
-	                slv_reg31[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
-	              end  
+//	          5'h1F:
+//	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+//	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+//	                // Respective byte enables are asserted as per write strobes 
+//	                // Slave register 31
+//	                slv_reg31[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+//	              end  
 	          default : begin
 	                      slv_reg0 <= slv_reg0;
 	                      slv_reg1 <= slv_reg1;
@@ -549,7 +556,7 @@
 	                      slv_reg28 <= slv_reg28;
 	                      slv_reg29 <= slv_reg29;
 	                      slv_reg30 <= slv_reg30;
-	                      slv_reg31 <= slv_reg31;
+//	                      slv_reg31 <= slv_reg31;
 	                    end
 	        endcase
 	      end
@@ -716,11 +723,11 @@
 	// Add user logic here
     wire        cmd_start_wire  = slv_reg0[0];
     wire [1:0]  op_mode_wire    = slv_reg0[2:1];
-    wire        trng_valid_wire = slv_reg0[3];
     
-    wire [31:0] trng_x0_wire = slv_reg1;
-    wire [31:0] trng_x1_wire = slv_reg2;
-    wire [31:0] trng_x2_wire = slv_reg3;
+    wire        trng_valid_wire = s_axis_trng_tvalid;
+    wire [31:0] trng_x0_wire = s_axis_trng_tdata[31:0];
+    wire [31:0] trng_x1_wire = s_axis_trng_tdata[63:32];
+    wire [31:0] trng_x2_wire = s_axis_trng_tdata[95:64];
     
     wire [31:0] user_sigma_wire = slv_reg4;
     wire [31:0] user_A00_wire = slv_reg5, user_A01_wire = slv_reg6, user_A02_wire = slv_reg7;
@@ -728,8 +735,8 @@
     wire [31:0] user_A20_wire = slv_reg11, user_A21_wire = slv_reg12, user_A22_wire = slv_reg13;
 
     wire [127:0] user_key_wire = {slv_reg17, slv_reg16, slv_reg15, slv_reg14};
-    wire [255:0] iv = { slv_reg23, slv_reg22, slv_reg21, slv_reg20, 
-                        slv_reg19, slv_reg18, slv_reg25, slv_reg24  };
+    wire [255:0] iv = { slv_reg25, slv_reg24, slv_reg23, slv_reg22, 
+                        slv_reg21, slv_reg20, slv_reg19, slv_reg18  };
 
     crypto_engine_core #(
         .PRECISION(32),
@@ -754,6 +761,7 @@
         .trng_x0(trng_x0_wire), 
         .trng_x1(trng_x1_wire), 
         .trng_x2(trng_x2_wire),
+        .prng_ready(s_axis_trng_tready),
         
         // Chaotic Parameters
         .user_sigma(slv_reg4),
@@ -776,6 +784,17 @@
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tlast(m_axis_tlast)
     );
+    
+    // Thêm logic này để CPU có thể đọc trạng thái READY
+    always @(posedge S_AXI_ACLK) begin
+        if (S_AXI_ARESETN == 1'b0) begin
+            slv_reg31 <= 32'b0;
+        end else begin
+            // Gán bit 0 của slv_reg24 bằng tín hiệu s_axis_tready
+            // Các bit còn lại giữ bằng 0
+            slv_reg31 <= {31'b0, s_axis_tready};
+        end
+    end
 	// User logic ends
 
 	endmodule

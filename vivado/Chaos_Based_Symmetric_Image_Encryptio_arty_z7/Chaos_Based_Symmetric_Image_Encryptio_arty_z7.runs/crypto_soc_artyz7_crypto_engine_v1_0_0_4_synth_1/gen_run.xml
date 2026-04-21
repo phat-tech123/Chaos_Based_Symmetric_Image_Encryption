@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="crypto_soc_artyz7_crypto_engine_v1_0_0_4_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1774596142">
-  <File Type="VDS-TIMINGSUMMARY" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4_timing_summary_synth.rpt"/>
+<GenRun Id="crypto_soc_artyz7_crypto_engine_v1_0_0_4_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1775117433">
   <File Type="RDS-DCP" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4.dcp"/>
   <File Type="RDS-UTIL-PB" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4.vds"/>
-  <File Type="REPORTS-TCL" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4.tcl"/>
+  <File Type="RDS-UTIL" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4_reports.tcl"/>
+  <File Type="RDS-RDS" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4.vds"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/crypto_soc_artyz7_crypto_engine_v1_0_0_4" RelGenDir="$PGENDIR/crypto_soc_artyz7_crypto_engine_v1_0_0_4">
     <File Path="$PSRCDIR/sources_1/bd/crypto_soc_artyz7/ip/crypto_soc_artyz7_crypto_engine_v1_0_0_4/crypto_soc_artyz7_crypto_engine_v1_0_0_4.xci">
       <FileInfo>
@@ -52,9 +49,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

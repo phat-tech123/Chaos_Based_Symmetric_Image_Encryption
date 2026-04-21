@@ -113,6 +113,7 @@ always @(posedge clk or negedge reset_n) begin
         end else if(shiltMant_valid) begin
 		mul_valid <= 1;
             	for (i = 0; i < 3; i = i + 1) tmp1[i] <= (tmp[i] * 56'd1000000) >> 23;
+            	//for (i = 0; i < 3; i = i + 1) tmp1[i] <= tmp[i] << 20;
 	end else begin
 		mul_valid <= 0;
 	end

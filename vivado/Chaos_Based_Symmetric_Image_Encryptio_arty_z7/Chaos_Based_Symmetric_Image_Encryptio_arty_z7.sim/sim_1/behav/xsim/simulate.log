@@ -1,7 +1,59 @@
 Time resolution is 1 ps
-[557118000] DMA is BUSY initially...
-[557314000] DMA is now READY!
-[557338000] DMA is BUSY initially...
-[557354000] DMA is now READY!
-$finish called at time : 559362 ns : File "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/vivado/Chaos_Based_Symmetric_Image_Encryptio_arty_z7/Chaos_Based_Symmetric_Image_Encryptio_arty_z7.srcs/sim_1/imports/testbench/Crypto_Engine_tb.v" Line 401
-INFO: xsimkernel Simulation Memory Usage: 148332 KB (Peak: 198556 KB), Simulation CPU Usage: 94920 ms
+========================================
+[150000] PHASE 1: FULL INITIALIZATION
+========================================
+[5785000] PHASE 2: ENCRYPT (10 BLOCKS)
+[1970175000] [Phase 0] RX Ciphertext 0: fa293d97499c1266fdc72463661b3a1c6f5662e645d41550a215908c496c1396
+[1970185000] [Phase 0] RX Ciphertext 1: d243bc84191f1fff1a0f689685c43115e0712c0bcd7f98d506226ccd9e8daf6e
+[1970195000] [Phase 0] RX Ciphertext 2: d5b824bf8d6936d959d9ca3abf86b9464b17f545135b39d5d4dca836f9988fd8
+[1970205000] [Phase 0] RX Ciphertext 3: 3002d29379364054046fe3665620c95df4476b5232486b3dbacd0f362d882987
+[1970215000] [Phase 0] RX Ciphertext 4: 30d9adb3d6a11a6247429efaa4044691072ee14dd51c2ad5e01d45fc210a55bb
+[1970225000] [Phase 0] RX Ciphertext 5: 701280f33cc83f11aa84bc50ad638c7a52832d552755dc4bd66f2f41471381f6
+[1970235000] [Phase 0] RX Ciphertext 6: f6211f8a3a04e9a9b99377729868575b229394e922ed379cdd0a406245e7029d
+[1970245000] [Phase 0] RX Ciphertext 7: e8035a188738617f2b42afb72dad092f0417bca61e3f3b28a78ca35f8b021e5d
+[1970255000] [Phase 0] RX Ciphertext 8: 51839b0ea7bdd47bb4c262a89fb8b8932c3f575186e8cf69a9d46b575e63e48b
+[1970265000] [Phase 0] RX Ciphertext 9: 50f639aac5dfa3e7129db0325d9847bc9f6436b7f577280fa9db4a1f2122479a
+[1970265000] ---> DA NHAN DUOC GOI TLAST!
+========================================
+[1970455000] PHASE 3: DECRYPT (10 BLOCKS)
+[1970875000] [Phase 1] RX Decrypted Plaintext 0: 89375212b2c2846546df998d06b97b0db1f056638484d609c0895e8112153524
+[1970885000] [Phase 1] RX Decrypted Plaintext 1: e33724c67cfde9f9462df78c76d457ed1e8dcd3d3b23f17606d7cd0d00f3e301
+[1970895000] [Phase 1] RX Decrypted Plaintext 2: e77696ce793069f247ecdb8f8932d612bbd2727772aff7e5d513d2aae2f784c5
+[1970905000] [Phase 1] RX Decrypted Plaintext 3: 0573870ab1ef6263b2a7266596ab582dde8e28bd2e58495ce2ca4ec5f4007ae8
+[1970915000] [Phase 1] RX Decrypted Plaintext 4: a9a7d65386bc380d8983b813cb203e96cecccc9d557845aa10642120c03b2280
+[1970925000] [Phase 1] RX Decrypted Plaintext 5: 0509650a11844923e7c572cf0effe91dd7563eae81174a02eaa62ad5359fdd6b
+[1970935000] [Phase 1] RX Decrypted Plaintext 6: c48a12893c20f378ec4b34d820c4b341452e618a7968bdf29e314c3ce5730aca
+[1970945000] [Phase 1] RX Decrypted Plaintext 7: b897be7185d79a0b150fdd2ade7502bc571513ae634bf9c65b0265b675c50deb
+[1970955000] [Phase 1] RX Decrypted Plaintext 8: 6c9c4bd978d99bf10aaa4b15bf23327e1d06333a9dcc603b27f2554f42f24185
+[1970965000] [Phase 1] RX Decrypted Plaintext 9: ae7d945ccfc4569fdbcd60b77c6da9f847b9a18f4fa1559f2635fb4c31230762
+[1970965000] ---> DA NHAN DUOC GOI TLAST!
+========================================
+[1971155000] PHASE 4: RE-KEY & ENCRYPT VỚI KHÓA MỚI
+[1972805000] [Phase 2] RX Ciphertext 0: f674e25ab05e5be26f716acfd1cd202d8469394589d595f87e4c208788cfb0d6
+[1972815000] [Phase 2] RX Ciphertext 1: ef0049f2e4ef50d903430618facb2a8b1655400132d0e2308c4d1c4baedf6459
+[1972825000] [Phase 2] RX Ciphertext 2: d25bb877308570f1b6f2194483c51d7490b835c6a5f65c58ebdef5cb80369b81
+[1972835000] [Phase 2] RX Ciphertext 3: b3bbe8b8b61d497c6ca7da849314b910e098d54b985d3feb4ee420d24317d7cb
+[1972845000] [Phase 2] RX Ciphertext 4: 53680cc280fe7c5f4c870084e5677b44e087356a64645a087d3d7399258a219b
+[1972855000] [Phase 2] RX Ciphertext 5: a556ee731386a63798e3e3ebeece1879c48c59db2dc6c691d4598d9a5a679f58
+[1972865000] [Phase 2] RX Ciphertext 6: 48c2a6b1436e78a49eca500a1ce499a1c3b94faed5435e0bed309e85ec856efa
+[1972875000] [Phase 2] RX Ciphertext 7: c241a38ebc37cca0d291831ab049c9b3510ba4ffcd2c59d1f705e7ec812bb192
+[1972885000] [Phase 2] RX Ciphertext 8: 65c9c2c861faf1f3b63ebb5f0342b9a1ab65abe8171cdca90f23e990a428b27c
+[1972895000] [Phase 2] RX Ciphertext 9: b4b9ced795309aa6690d88d816216ffdcf4f128868d85e59e6b0d97541120027
+[1972895000] ---> DA NHAN DUOC GOI TLAST!
+========================================
+[1973085000] PHASE 5: DECRYPT VỚI KHÓA MỚI
+[1973505000] [Phase 3] RX Decrypted Plaintext 0: 89375212b2c2846546df998d06b97b0db1f056638484d609c0895e8112153524
+[1973515000] [Phase 3] RX Decrypted Plaintext 1: e33724c67cfde9f9462df78c76d457ed1e8dcd3d3b23f17606d7cd0d00f3e301
+[1973525000] [Phase 3] RX Decrypted Plaintext 2: e77696ce793069f247ecdb8f8932d612bbd2727772aff7e5d513d2aae2f784c5
+[1973535000] [Phase 3] RX Decrypted Plaintext 3: 0573870ab1ef6263b2a7266596ab582dde8e28bd2e58495ce2ca4ec5f4007ae8
+[1973545000] [Phase 3] RX Decrypted Plaintext 4: a9a7d65386bc380d8983b813cb203e96cecccc9d557845aa10642120c03b2280
+[1973555000] [Phase 3] RX Decrypted Plaintext 5: 0509650a11844923e7c572cf0effe91dd7563eae81174a02eaa62ad5359fdd6b
+[1973565000] [Phase 3] RX Decrypted Plaintext 6: c48a12893c20f378ec4b34d820c4b341452e618a7968bdf29e314c3ce5730aca
+[1973575000] [Phase 3] RX Decrypted Plaintext 7: b897be7185d79a0b150fdd2ade7502bc571513ae634bf9c65b0265b675c50deb
+[1973585000] [Phase 3] RX Decrypted Plaintext 8: 6c9c4bd978d99bf10aaa4b15bf23327e1d06333a9dcc603b27f2554f42f24185
+[1973595000] [Phase 3] RX Decrypted Plaintext 9: ae7d945ccfc4569fdbcd60b77c6da9f847b9a18f4fa1559f2635fb4c31230762
+[1973595000] ---> DA NHAN DUOC GOI TLAST!
+========================================
+[1974085000] HOAN TAT TOAN BO KICH BAN MO PHONG!
+$finish called at time : 1974085 ns : File "/home/vinhphat-josh/Repos/Chaos_Based_Symmetric_Image_Encryption/testbench/tb_crypto_axi.v" Line 312
+INFO: xsimkernel Simulation Memory Usage: 148852 KB (Peak: 199052 KB), Simulation CPU Usage: 328560 ms

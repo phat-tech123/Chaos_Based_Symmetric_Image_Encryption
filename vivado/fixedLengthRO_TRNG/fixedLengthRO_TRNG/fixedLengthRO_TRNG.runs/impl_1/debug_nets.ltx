@@ -1,0 +1,728 @@
+{
+    "ltx_root": {
+        "version": 4,
+        "minor": 0,
+        "ltx_data": [
+            {
+                "name": "EDA_PROBESET",
+                "active": true,
+                "debug_cores": [
+                    {
+                        "type": "XSDB_V3",
+                        "name": "dbg_hub",
+                        "spec": "labtools_xsdbm_v3",
+                        "clk_input_freq_hz": "24000000"
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "design_1_i/system_ila_0/inst/ila_lib",
+                        "spec": "labtools_ila_v6",
+                        "ipName": "ila",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 0,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "CD4C83C823A6596D99AD09BE1335C6B0",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 0,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/inst/probe0_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "native_ports": [
+                            {
+                                "name": "probe0",
+                                "connectedBus": "axi_gpio_0_gpio_io_o",
+                                "protocol": "PROBE",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "probe0",
+                                        "physical_pin": {
+                                            "id": 0,
+                                            "name": "probe0",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "design_1_i/system_ila_1/inst/ila_lib",
+                        "spec": "labtools_ila_v6",
+                        "ipName": "ila",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 1,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "1AC8C4C2D1AC5FAAB5D99A6CA09C91E7",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 1,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[31]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[30]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[29]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[28]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[27]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[26]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[25]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[24]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[23]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[22]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[21]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[20]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[19]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[18]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[17]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[16]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[15]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[14]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[13]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[12]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[11]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[10]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[9]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[8]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[7]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[6]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[5]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[4]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[3]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[2]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[1]"
+                                            },
+                                            {
+                                                "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tdata[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 2,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tvalid",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tready",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 4,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_1/inst/net_slot_0_axis_tlast",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "bus_interfaces": [
+                            {
+                                "name": "SLOT_0_AXIS",
+                                "vlnv": "xilinx.com:interface:axis:1.0",
+                                "connectedBus": "TRNG_top_0_m_axis",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "TDATA",
+                                        "physical_pin": {
+                                            "id": 1,
+                                            "name": "probe0",
+                                            "leftBit": 0,
+                                            "width": 32
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "TLAST",
+                                        "physical_pin": {
+                                            "id": 4,
+                                            "name": "probe3",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "TREADY",
+                                        "physical_pin": {
+                                            "id": 3,
+                                            "name": "probe2",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "TVALID",
+                                        "physical_pin": {
+                                            "id": 2,
+                                            "name": "probe1",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "u_ila_0",
+                        "spec": "labtools_ila_v6",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 2,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "23e7d65a79bc59f7bc47406c1714dfae",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 5,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/ro_feedback",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/ro_feedback[7]"
+                                            },
+                                            {
+                                                "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/ro_feedback[6]"
+                                            },
+                                            {
+                                                "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/ro_feedback[5]"
+                                            },
+                                            {
+                                                "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/ro_feedback[4]"
+                                            },
+                                            {
+                                                "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/ro_feedback[3]"
+                                            },
+                                            {
+                                                "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/ro_feedback[2]"
+                                            },
+                                            {
+                                                "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/ro_feedback[1]"
+                                            },
+                                            {
+                                                "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/ro_feedback[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 6,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[0].my_ro_inst/z1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 7,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[3].my_ro_inst/z1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 8,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[1].my_ro_inst/z1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe4",
+                                "id": 9,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[2].my_ro_inst/z1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe5",
+                                "id": 10,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[4].my_ro_inst/z1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe6",
+                                "id": 11,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[5].my_ro_inst/z1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 12,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[6].my_ro_inst/z1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe8",
+                                "id": 13,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[7].my_ro_inst/z1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe9",
+                                "id": 14,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[0].my_ro_inst/z2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe10",
+                                "id": 15,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 10,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[1].my_ro_inst/z2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 16,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[2].my_ro_inst/z2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe12",
+                                "id": 17,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[3].my_ro_inst/z2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe13",
+                                "id": 18,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 13,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[4].my_ro_inst/z2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 19,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[5].my_ro_inst/z2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe15",
+                                "id": 20,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 15,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[6].my_ro_inst/z2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe16",
+                                "id": 21,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 16,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[7].my_ro_inst/z2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe17",
+                                "id": 22,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 17,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[0].my_ro_inst/z3",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe18",
+                                "id": 23,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 18,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[7].my_ro_inst/z3",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe19",
+                                "id": 24,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 19,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[1].my_ro_inst/z3",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe20",
+                                "id": 25,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 20,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[2].my_ro_inst/z3",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe21",
+                                "id": 26,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 21,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[4].my_ro_inst/z3",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe22",
+                                "id": 27,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 22,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[3].my_ro_inst/z3",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe23",
+                                "id": 28,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 23,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[5].my_ro_inst/z3",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe24",
+                                "id": 29,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 24,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/TRNG_top_0/inst/trng_core_inst/RO_GEN[6].my_ro_inst/z3",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

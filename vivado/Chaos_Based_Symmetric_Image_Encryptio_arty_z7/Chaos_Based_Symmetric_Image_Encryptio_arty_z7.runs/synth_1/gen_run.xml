@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1774596142" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/crypto_soc_artyz7_wrapper.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="crypto_soc_artyz7_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="crypto_soc_artyz7_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="crypto_soc_artyz7_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="crypto_soc_artyz7_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="crypto_soc_artyz7_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="crypto_soc_artyz7_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="crypto_soc_artyz7_wrapper_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="crypto_soc_artyz7_wrapper_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="crypto_soc_artyz7_wrapper.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1776048771" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/crypto_soc_artyz7_wrapper.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="crypto_engine_v1_0_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="crypto_engine_v1_0.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="crypto_engine_v1_0_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="crypto_engine_v1_0_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="crypto_engine_v1_0_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="crypto_engine_v1_0.vds"/>
+  <File Type="REPORTS-TCL" Name="crypto_engine_v1_0_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="crypto_engine_v1_0_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="crypto_engine_v1_0.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/bd/crypto_soc_artyz7/crypto_soc_artyz7.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PGENDIR/sources_1/bd/crypto_soc_artyz7/hdl/crypto_soc_artyz7_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/encryptor/CTR_mode_feistel_encrypt.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/encryptor/CTR_mode_feistel_encrypt.v"/>
         <Attr Name="ImportTime" Val="1772115426"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -37,7 +22,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/top/Crypto_Engine.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/top/Crypto_Engine.v"/>
         <Attr Name="ImportTime" Val="1772435957"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -47,7 +31,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/encryptor/F.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/encryptor/F.v"/>
         <Attr Name="ImportTime" Val="1764859771"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -57,7 +40,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/PRNG/PRNG.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/PRNG/PRNG.v"/>
         <Attr Name="ImportTime" Val="1772113005"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -67,7 +49,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/encryptor/addroundkey.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/encryptor/addroundkey.v"/>
         <Attr Name="ImportTime" Val="1764701988"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -77,7 +58,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/PRNG/affine_transform.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/PRNG/affine_transform.v"/>
         <Attr Name="ImportTime" Val="1767881719"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -87,7 +67,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/hdl/chaos_cryptor_v1_0_S00_AXI.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/chaos_cryptor_1_0/hdl/chaos_cryptor_v1_0_S00_AXI.v"/>
         <Attr Name="ImportTime" Val="1773655280"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -97,7 +76,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/Sbox_generator/extractor.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/Sbox_generator/extractor.v"/>
         <Attr Name="ImportTime" Val="1772114325"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -107,7 +85,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/encryptor/feistel_encrypt.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/encryptor/feistel_encrypt.v"/>
         <Attr Name="ImportTime" Val="1772435909"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -117,7 +94,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/Key_generator/key_generator.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/Key_generator/key_generator.v"/>
         <Attr Name="ImportTime" Val="1770123412"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -127,7 +103,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/encryptor/mixcolumns.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/encryptor/mixcolumns.v"/>
         <Attr Name="ImportTime" Val="1764811056"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -137,7 +112,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/Sbox_generator/mixer.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/Sbox_generator/mixer.v"/>
         <Attr Name="ImportTime" Val="1763125944"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -147,7 +121,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/PRNG/sawtooth.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/PRNG/sawtooth.v"/>
         <Attr Name="ImportTime" Val="1767888959"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -157,7 +130,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/Sbox_generator/sbox_generator.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/Sbox_generator/sbox_generator.v"/>
         <Attr Name="ImportTime" Val="1769824306"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -167,7 +139,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/encryptor/shiftrows.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/encryptor/shiftrows.v"/>
         <Attr Name="ImportTime" Val="1764681511"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -177,7 +148,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/encryptor/subbytes.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/encryptor/subbytes.v"/>
         <Attr Name="ImportTime" Val="1770124379"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -187,7 +157,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RTL/controller/controller.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/controller/controller.sv"/>
         <Attr Name="ImportTime" Val="1772269579"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -197,9 +166,24 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/hdl/chaos_cryptor_v1_0.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/chaos_cryptor_1_0/hdl/chaos_cryptor_v1_0.v"/>
         <Attr Name="ImportTime" Val="1773644115"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/crypto_soc_artyz7/crypto_soc_artyz7.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/crypto_soc_artyz7/hdl/crypto_soc_artyz7_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -213,11 +197,19 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="crypto_soc_artyz7_wrapper"/>
+      <Option Name="TopModule" Val="crypto_engine_v1_0"/>
+      <Option Name="TopLib" Val="xil_defaultlib"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/imports/hdl/chaos_cryptor_v1_0.v"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../Arty-Z7-20-Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
@@ -242,4 +234,7 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="crypto_soc_artyz7_crypto_engine_v1_0_0_4"/>
   <BlockFileSet Type="BlockSrcs" Name="crypto_soc_artyz7_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="floating_point_div"/>
+  <BlockFileSet Type="BlockSrcs" Name="floating_point_mul"/>
+  <BlockFileSet Type="BlockSrcs" Name="floating_point_add"/>
 </GenRun>
