@@ -14,6 +14,7 @@ This repository contains the hardware implementation of a high-efficiency chaos-
 
 ### 1. Hardware Resource Utilization
 The design was synthesized and implemented on the **Xilinx Arty-Z7 (XC7Z020)**. It demonstrates high efficiency with low logic footprints.
+![prototype](./pic/prototype.png)
 
 | Resources | Standalone IP | Full SoC System | Available | Utilization (%) |
 | :--- | :---: | :---: | :---: | :---: |
@@ -28,7 +29,6 @@ The design was synthesized and implemented on the **Xilinx Arty-Z7 (XC7Z020)**. 
 ### 2. Execution Time & Throughput
 Performance measured at a **100 MHz** clock frequency for a **256x256** grayscale image.
 ![result](./pic/lena.png)
-![histogram](./pic/lena_his.png)
 
 | Operating Mode | Description | Execution Time |
 | :--- | :--- | :---: |
@@ -39,6 +39,8 @@ Performance measured at a **100 MHz** clock frequency for a **256x256** grayscal
 The cryptosystem provides robust resistance against common cryptographic attacks.
 
 - **Information Entropy:** **7.9976** (Near-ideal 8.0).
+- **Histogram:** 
+  ![histogram](./pic/lena_his.png)
 - **Correlation Coefficients (CC):**
   ![CC Test](./pic/lena_corr.png)
   - Horizontal: **-0.0012**
