@@ -3,3 +3,23 @@
     <Process Command="vivado" Owner="vinhphat-josh" Host="ubuntu" Pid="43094" HostCore="12" HostMemory="7753560">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="vinhphat-josh" Host="ubuntu" Pid="33540" HostCore="12" HostMemory="7753568">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="vinhphat-josh" Host="ubuntu" Pid="34132" HostCore="12" HostMemory="7753568">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="vinhphat-josh" Host="ubuntu" Pid="87422" HostCore="12" HostMemory="7753568">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="vinhphat-josh" Host="ubuntu" Pid="10285" HostCore="12" HostMemory="7753548">
+    </Process>
+</ProcessHandle>
