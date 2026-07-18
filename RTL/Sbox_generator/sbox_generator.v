@@ -1,5 +1,37 @@
 module sbox_generator#(
 	parameter SIZE = 256,
+	parameter PRECISION = 32,
+	parameter EXTRACT_WIDTH = 23,
+	parameter MIX_WIDTH = 8
+)(
+	input clk, 
+	input reset_n,
+	input tvalid,
+	input [PRECISION-1:0] pseudoRandomNumber1,
+	input [PRECISION-1:0] pseudoRandomNumber2,
+	input [PRECISION-1:0] pseudoRandomNumber3,
+
+	output reg valid,
+	output reg [MIX_WIDTH-1:0] V_out
+);
+always @(posedge clk or negedge reset_n) begin
+    if (!reset_n) begin
+        valid <= 0;
+        V_out <= 8'b0;
+    end else if (tvalid) begin
+        valid <= 1;
+        V_out <= pseudoRandomNumber1[7:0] ^ 
+                 pseudoRandomNumber2[7:0] ^ 
+                 pseudoRandomNumber3[7:0];
+    end else begin
+        valid <= 0;
+    end
+end
+
+endmodule
+/*
+* module sbox_generator#(
+	parameter SIZE = 256,
     parameter PRECISION = 32,
 	parameter EXTRACT_WIDTH = 23,
 	parameter MIX_WIDTH = 8
@@ -112,3 +144,5 @@ always@(posedge clk or negedge reset_n) begin
 end
 
 endmodule
+
+*/
